@@ -6,6 +6,7 @@ Le dossier contient/contiendra plusieurs fichiers :
 
 Pour que le travail collaboratif fonctionne bien, il faut que vous : téléchargiez ("clonez") le répertoire depuis mon github sur votre ordi (sur un dossier local, les dropbox sont interdites), voici son adresse : https://github.com/roamdam/Dataviz.git.
 
-Ensuite vous pouvez travailler directement depuis votre ordi sur les documents. Au moment où vous commencez le travail, faites un "pull" pour récupérer toutes les modifications que les autres auront pu faire, puis quand vous avez fini, faites un "push" qui permet de mettre les fichiers à jour sur github. 
+Ensuite vous pouvez travailler directement depuis votre ordi sur les documents. Au moment où vous commencez le travail, faites un "pull" pour récupérer toutes les modifications que les autres auront pu faire, puis quand vous avez fini, faites un "push" qui permet de mettre les fichiers à jour sur github.  j'ai l'impression que si vous utilisez github desktop il suffit de faire "sync".
 
 Pensez à bien commentez vos motifs (normalement le github desktop vous demande de le faire lors du commit), comme ça les autres captent bien ce qui a été fait. 
+
