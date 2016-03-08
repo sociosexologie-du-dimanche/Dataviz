@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        
+        <link rel="stylesheet" href="style.css" />
+        <title>Dataviz sur le sexe (pour l'instant trame copiée sur accidentologie cycliste)</title>
+
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.scrollTo').click( function() { // Au clic sur un élément
+					var page = $(this).attr('href'); // Page cible
+					var speed = 900; // Durée de l'animation (en ms)
+					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+					return false;
+				});
+			});
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+
+
+
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="http://code.highcharts.com/modules/exporting.js"></script>
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+  		<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
+  		<script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
+
+ 
+
+		<style type="text/css">a:link{text-decoration:none}</style>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-61746180-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+
+
+
+
+  		
+    </head>
+
+
+		<style>
+
+
+		path {
+		  stroke:white;
+		  stroke-width: 1px;
+		}
+
+		.legend {
+		  font-size: 11px;
+		}
+
+
+		div.tooltip {   
+		  position: relative;
+		  top: -403px;
+		  left: 620px;                    
+		  width: 320px;                  
+		  height: 20px;                 
+		  padding: 2px;             
+		  font-size: 1.2em;     
+		  background-color: white;
+		  border: 1px;      
+		  border-radius: 8px;           
+		  pointer-events: none; 
+		  font-family: 'bebas_neueregular', Arial, sans-serif;
+		  color: #44646f;        
+		} 
+
+		</style>
+
+
+    <body>
+    	 <div id="bloc_page">
+	        <header>
+	            
+		        <nav>
+		            <ul>
+		                <li><a class="scrollTo" href="#scooter">VÉLO VS SCOOTER</a></li>
+		                <li><a class="scrollTo" href="#typologie">TYPOLOGIE DES ACCIDENTS</a></li>
+		                <li><a class="scrollTo" href="#angle_mort">ANGLE MORT</a></li>
+		                <li><a class="scrollTo" href="#journee_type">TRAFIC</a></li>
+		               	<li><a class="scrollTo" href="#grands_axes">GRANDS AXES</a></li>
+		                <li><a class="scrollTo" href="#pistes_cyclables">PISTES CYCLABLES</a></li>
+		            </ul>
+		        </nav>
+	        </header>
+	        
+			<div id="banniere_image">
+                <div id="banniere_description">
+                   LES ACCIDENTS DE VÉLO
+                </div>
+            </div>
+            	<hr class="hr2"/>
+            	<p> L'engouement pour le vélo n'a jamais été aussi fort dans la capitale. En 10 ans, le nombre de vélo en circulation dans les rues de Paris a triplé. Avec son Plan Vélo 2015-2020, la mairie de Paris souhaite accompagner cette dynamique et faire de Paris la capitale européenne du vélo. Avec un objectif majeur : atteindre les 15% de trajets dans la capitale effectués à vélo. </p>
+            	<p>Aujourd'hui, près d'un cycliste sur deux affirme avoir déjà eu un accident. La question de la sécurité cycliste apparaît ainsi centrale dans la réalisation d'un tel projet. A partir du recensement des accidents corporels de l'année 2012 (fichier BAAC), nous nous proposons d'établir un aperçu chiffré de l'accidentologie cycliste à Paris.</p>
+            	<hr class="hr2"/>
+			</section>
+				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="scooter">Vélo VS scooter</h1></a>
+				<h1 class="titre_subsection">LE VÉLO MOINS RISQUÉ QUE LE SCOOTER</h1>
+
+		        <div class="dangereux">
+		        	<p>Le nombre de vélo en circulation à Paris a triplé entre 2000 et 2012. Pourtant, le trafic cycliste ne représente encore que 4% du trafic parisien pour 702 accidents en 2012, soit 10% des accidents recensés.</p>
+		        	<p class="pchiffre"><span class="chiffre">4%</span>  du trafic</p>
+		        	<p class="pchiffre"><span class="chiffre">10%</span>  des accidents</p>
+
+		        	<div class="logo"><img src="images/Bikielogo.png" width="100" height="100" />  </div>
+
+		        	<p class="pchiffre"><span class="chiffre">1</span>  accident tous les <span class="chiffre">60.000</span>  trajets</p>
+		        	<p class="pchiffre"><span class="chiffre">2</span>  accidents par jour</p>
+
+		        </div>
+
+		        <div class="dangereux">
+		        	<p>Le nombre de deux roues motorisés a quant à lui doublé entre 2000 et 2012. Le trafic deux roues représente ainsi près de 12% du trafic parisien en 2012 pour 4116 accidents, soit 59% des accidents recensés. </p>
+		        	<p class="pchiffre"><span class="chiffre">12%</span>  du trafic</p>
+		        	<p class="pchiffre"><span class="chiffre">59%</span>  des accidents</p>
+
+		        	<div class="logo"><img src="images/Scootlogo.png" width="65" height="100" />  </div>
+
+		        	<p class="pchiffre"><span class="chiffre">1</span>  accident tous les <span class="chiffre">32.000</span>  trajets</p>
+		        	<p class="pchiffre"><span class="chiffre">15</span>  accidents par jour</p>
+
+
+		        </div>
+
+		        
+
+		        <h1 class="titre_subsection" style="margin-top:100px">MAIS DES ACCIDENTS TOUT AUSSI GRAVES</h1>
+
+
+				<p>La pratique du vélo à Paris semble donc moins risquée que celle du scooter. Mais qu'en est-il de la gravité des accidents ? Les cyclistes sont-ils plus vulnérables ?<p>
+
+				<div class="dangereux">
+	        		<iframe src="http://cf.datawrapper.de/J63Ou/4/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="600" height="400"></iframe>
+				</div>
+
+				<div class="dangereux" style="margin-top:50px">
+					<p class="pchiffre" style="text-align: left"><span class="exergue">8</span> fois moins de cyclistes accidentés... </p>
+
+	         		<p>Avec 716 accidentés (pour 702 accidents) en 2012, les cyclistes sont 8 fois moins nombreux à être impliqués dans un accident de la route que les conducteurs de deux roues motorisés.</p>
+
+	         		<p class="pchiffre" style="text-align: right">... pour une <span class="exergue">vulnérabilité similaire</span> </p>
+
+	         		<p>Contrairement à certaines idées reçues, les cyclistes ne sont pas moins vulnérables que leurs homologues motorisés dans Paris. La répartition entre les usagers resortant indemnes de l'accident, les blessés légers ou graves et les décès est ainsi identique au sein des deux catégories.</p>
+	         	</div>
+
+				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="typologie">Typologie des accidents</h1></a>
+				<h1 class="titre_subsection">LA VOITURE, DANGER N°1 DU CYCLISTE</h1>
+
+		        <p>Parmi les quelques 700 accidents cyclistes recensés à Paris en 2012, plus d'un accident sur deux implique une voiture. On observe aussi une forte proportion d'accidents cyclistes n'impliquant aucun autre type de véhicule, correspondant majoritairement à des chutes.</p>
+		        	
+
+
+				<select id="chartType">
+								<!-- <option value="0">-select series-</option>     -->               
+								<option value="Cyclistes"> Cyclistes</option>
+								<option value="Autres usagers"> Autres usagers </option>
+							</select>
+										
+
+						<div id="container" style="min-width: 620px; max-width:800px; height: 400px; margin: 0 auto;"  class="ChartBox" >
+									
+						        	<script type="text/javascript">
+
+									var data = {'Cyclistes':[{
+										name: 'Tués',
+										data: [1,0,0,0,2]
+									}, {
+										name: 'Blessés hospitalisés',
+										data: [17,15,1,7,6]
+									}, {
+										name: 'Blessés légers',
+										data: [346,75,27,49,31]
+									}, {
+										name: 'Indemnes',
+										data: [3,2,56,17,0]
+									}],
+										'Autres usagers':[{
+										name: 'Tués',
+										data: [0,0,1,0,0]
+									}, {
+										name: 'Blessés hospitalisés',
+										data: [0,0,8,1,0]
+									}, {
+										name: 'Blessés légers',
+										data: [6,0,69,36,0]
+									}, {
+										name: 'Indemnes',
+										data: [360,0,6,38,41]
+									}]};
+
+									var options = {
+												chart: {
+													renderTo: 'container',
+													type: 'bar',
+													style:{
+														"font-family":"\"Trebuchet MS\", helvetica, clean, sans-serif",
+														fontWeight:'bold'
+													}
+												},
+				     							colors: ['#824400', '#cc5600', '#df924a', '#44646f'],
+												title: {
+													text: ''
+												},
+												xAxis: {
+													categories: ['Vélo + Voiture', 'Vélo seul(s)', 'Vélo + Piéton', 'Vélo + Deux roues', 'Vélo + Poids lourd']
+												},
+												yAxis: {
+													min: 0,
+													title: {
+														text: 'Nombre de blessés'
+													}
+												},
+												legend: {
+													reversed: true
+												},
+												plotOptions: {
+													series: {
+														stacking: 'normal'
+													}
+												},
+												exporting: {
+													enabled: false
+												},
+												credits: {
+													enabled: false
+												},
+												series: data['Cyclistes']     
+											};
+
+									$(document).ready(function () {
+										
+											var cdhleads = new Highcharts.Chart(options);
+										
+										
+										$('#chartType').change(function(){
+											var selected  = this.value;
+											options.series = data[selected];
+											chart = $('#container').highcharts(options);
+										});
+										
+										
+									});
+				               
+									  </script>
+
+								</div>
+
+
+		        <h1 class="titre_subsection" style="margin-top:30px">UNE VULNÉRABILITÉ QUI DIFFÈRE SELON L'USAGER</h1>
+
+
+				<p>Suivant le type de véhicule impliqué dans l'accident, la gravité de celui-ci diffère fortement. On remarque logiquement que les accidentés cyclistes ressortent plus fréquemment indemnes de l'accident si celui-ci implique un piéton qu'une voiture. Par ailleurs, les chutes semblent occasionner des blessures conséquentes et peu de cyclistes en sortent indemnes. Rappelons toutefois que les accidents étudiés ont nécessité le déplacement de force de l'ordre sur le lieu de l'accident, impliquant soit la présence de blessés soit de dégâts matériels notables.</p>
+					
+
+
+
+
+
+
+				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="angle_mort">Angle mort : attention danger !</h1></a>
+		        <p>Plus de trois quarts des accidents impliquant un cycliste et une voiture ou un poids lourd sont liés à un choc latéral. Parmi ceux-ci, près d'un sur deux ont lieu lors d'un dépassement, d'un changement de file ou de direction suggérant la possibilité que le cycliste n'ait pas été vu par l'automobiliste. </p>
+
+		        <div class="dangereux3">
+
+
+		        	<div class="logo"><img src="images/arriere.png" width="100" height="200" />  </div>
+
+					<p class="pchiffre"><span class="chiffre">17%</span> <br/> par choc arrière</p>
+		        	
+
+		        </div>
+
+
+		        <div class="dangereux3">
+
+					
+
+		         		<div class="logo" style="margin-bottom:40px"><img src="images/lateral.png" width="140" height="120" />  </div>
+		        	
+						<p class="pchiffre"><span class="chiffre">76%</span> <br/> par choc latéral</p> 
+						<p class="pchiffre_small">dont  <span class="chiffre">51%</span> dûs à un angle mort</p> 
+						<p class="pchiffre_small">et  <span class="chiffre">20%</span> à l'ouverture d'une portière</p> 
+		        		
+				</div>
+
+				<div class="dangereux3">
+
+
+		        	<div class="logo"><img src="images/frontal.png" width="100" height="200" />  </div>
+
+					<p class="pchiffre"><span class="chiffre">3%</span> <br/> par choc frontal</p>
+		        	
+
+		        </div>
+
+
+
+
+
+
+
+					
+
+		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="journee_type">Risque d'accident, plutôt matin ou soir ?</h1></a>
+		      	<h1 class="titre_subsection">LES TRAJETS DOMICILE-TRAVAIL, PREMIERE SOURCE DE TRAFIC...</h1>
+
+		      	<div class="dangereux">
+
+		        <p>Le trafic cycliste suit une tendance atypique marquée par une forte distinction entre les jours de semaine et les week-end et jours fériés. Avec deux pics de trafic, l'un vers 8-9h l'autre vers 18-19h, la journée type de semaine met en évidence la part croissante de parisiens se rendant au travail à vélo. </p> 
+
+		        <p class="pchiffre" style="text-align: left">Un pic de trafic le <span class="exergue">matin</span> et le <span class="exergue">soir</span> </p>
+
+		        <p>A l'inverse, le week-end est caractérisé par un unique pic de midi à 20h plus en phase avec la grasse matinée hebdomadaire, et par un trafic nocturne plus important.</p>
+
+		        </div>
+				
+
+		        <div class="dangereux">
+
+					<div class="graph" style="margin-top:7px">
+
+		         		<iframe src="http://cf.datawrapper.de/EiW4g/4/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="530" height="320"></iframe>
+
+					</div>
+
+		        </div>	
+
+				<p> <i> <span class="cle">Clé de lecture</span> : en moyenne, entre 8 et 9h, 9.483 trajets de vélibs sont effectués un jour de semaine contre 1.378 un jour de week-end. Le trafic Vélib est utilisé comme variable proxy du trafic cycliste global. </i> </p> 
+
+
+		      	<h1 class="titre_subsection" style="margin-top:50px">... ET D'ACCIDENTS</h1>
+		        
+		      	<div class="dangereux">
+		        <p>Comment se répartissent les accidents de vélo au cours de la journée ? Suivent-ils la même dynamique que celle du trafic ? Est-il plus risqué de se déplacer à vélo à certaines heures de la journée ?</p>
+
+		        <p class="pchiffre" style="text-align: left">Un risque d'accident <span class="exergue">stable</span> au cours de la journée</p>
+
+		        <p>La répartition des accidents est similaire à celle du trafic cycliste. Ainsi, pour un nombre de vélo donné, la proportion d'accidents semble constante. En particulier, elle ne dépend pas des conditions de circulation. Contre intuitif ? Sauf si on considére que le cycliste adapte sa vigilance au trafic routier. </p>
+
+		        </div>
+
+
+		        <div class="dangereux">
+		        	<div class="graph" style="margin-top:7px">
+		        		<iframe src="http://cf.datawrapper.de/9wjAK/1/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="530" height="320"></iframe>
+		        	</div>
+		        </div>
+
+		        <p> <i> <span class="cle">Clé de lecture</span> : au cours d'une journée type de semaine, entre 8 et 9h, le trafic cycliste atteint 2,5 fois son niveau moyen de la journée et le nombre d'accidents 1,77 fois le sien.</i> </p> 
+
+
+
+
+		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="grands_axes">Les grands axes, vecteur de trafic et d'accidents</h1>
+		        </a>
+
+
+
+		        
+
+
+
+
+
+		        <div id="carte">
+					
+		         <script type="text/javascript">
+
+
+					// Size of the canvas on which the map will be rendered
+					var width = 600,  
+					    height = 400;
+
+					var color_domain = [25, 40, 50, 100];
+					var ext_color_domain = [0, 25, 40, 50];
+					var legend_labels = ["< 25 accidents", "25-40", "40-50", ">50"];              
+					var color = d3.scale.threshold()
+					  .domain(color_domain)
+					  .range(["#f8af6b", "#df924a", "#a26b33", "#6a4622"]);
+					  //.range(["#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1"]);
+
+					var svg = d3.select("div#carte").append("svg")
+					      .attr("width", width)
+					      .attr("height", height);
+					//   .style("margin", "10px auto");
+
+					var div = d3.select("div#carte").append("div")
+					  .attr("class", "tooltip")
+					  // .text("Paris")
+					  .html(   "<b>" + "<font face='ralewayextralight' size=5>" + "1" + "<sup>" + "er" + "</sup>" + " ARRONDISSEMENT" + "</font>" + "</b>" +  
+					          "<br/>" +  "<br/>" + 
+					          "<b>" + "<font color=#df924a size=5>" + "22" + "</font>" + "</b>" +
+					          " accidents cyclistes" + 
+					          "<br/>" +  "<br/>" + 
+					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a size=5>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
+					          //"<br/>" +  //"<br/>" + 
+					          " avec " + "<b>" + "<font color=#df924a size=5>" + "8" + "</font>" + "</b>" +  " accidents" +    
+
+  								//"<br/>" +  "<br/>" + 
+					          //"<br/>" + 
+					          " <hr />" +
+
+					          "<font face='ralewayextralight' size=5 size=5>" + "PARIS" + "</font>" + "</b>" +  
+					          "<br/>" +  "<br/>" + 
+					          "<b>" + "<font color=#df924a size=5>" + "702" + "</font>" + "</b>" +
+					          " accidents cyclistes" + 
+					          "<br/>" +  "<br/>" + 
+					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a size=5>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
+					          //"<br/>" +  //"<br/>" + 
+					          " avec " + "<b>" + "<font color=#df924a size=5>" + "16" + "</font>" + "</b>" +  " accidents" 
+					                  );            
+					//   .style("opacity", 0);
+
+					var center = [2.3488000, 48.8534100];
+
+					// Instantiate the projection object
+					var projection = d3.geo.mercator()  //conicConformal() 
+					    .center(center)
+					    //.clipAngle(180)
+					    // Size of the map itself, you may want to play around with this in 
+					    // relation to your canvas size
+					    .scale(110000)
+					    // Center the map in the middle of the canvas
+					    .translate([width/2, height / 2])
+					    .precision(.1);
+
+
+					var path = d3.geo.path().projection(projection); 
+
+					var arr = svg
+					    .append("g")
+					    .attr("id", "arrondissements");
+
+
+					d3.json("https://api.myjson.com/bins/n005", function(err, map) {    
+
+					    var features = arr
+					           .selectAll("path")
+					               .data(map.features);
+					     
+
+					    var test = "Acc";
+
+					    //var colorScale = d3.scale.category20c();
+
+					    features.enter()
+					        .append("path")
+					            .attr('class', 'arrondissement')
+					            .attr('fill', function(d) { 
+					                return color(+d.properties[test]); //colorScale(+d.properties.Acc);
+					            })
+					            .attr("d", path)
+
+
+					    .on("mouseover", function() {
+					      d3.select(this).style("opacity", 0.8);
+					    })
+					    .on("mouseout", function() {
+					      d3.select(this).style("opacity", 1);
+					    })
+
+					    .on("click", function(d) {
+					      div.style("opacity", 1)
+					        .attr("class", "tooltip")
+					        .html(      "<b>" + "<font face='ralewayextralight' size=5>" + d.properties["C_AR"] + "<sup>" + d.properties["ind"] + "</sup>" + " ARRONDISSEMENT" + "</font>" + "</b>" +  
+					          "<br/>" +  "<br/>" + 
+					          "<b>" + "<font color=#df924a size=5>" + d.properties["Acc"] + "</font>" + "</b>" +
+					          " accidents cyclistes" + 
+					          "<br/>" +  "<br/>" + 
+					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a size=5>" + d.properties["AXE"] + "</font>" + "</b>" + "," +
+					          //"<br/>" +  //"<br/>" + 
+					          " avec " + "<b>" + "<font color=#df924a size=5>" + d.properties["Nb_AXE"] + "</font>" + "</b>" +  " accidents"       +
+
+					          //"<br/>" +  "<br/>" + 
+					          //"<br/>" + 
+					          " <hr />" +
+
+					           "<font face='ralewayextralight' size=5>" + "PARIS" + "</font>" + "</b>" +  
+					          "<br/>" +  "<br/>" + 
+					          "<b>" + "<font color=#df924a size=5>" + "702" + "</font>" + "</b>" +
+					          " accidents cyclistes" + 
+					          "<br/>" +  "<br/>" + 
+					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a size=5>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
+					          //"<br/>" +  //"<br/>" + 
+					          " avec " + "<b>" + "<font color=#df924a size=5>" + "16" + "</font>" + "</b>" +  " accidents" 
+
+					          ); 
+					      // div.transition().duration(300)
+					      // .style("opacity", 1)
+					      // .text("Paris " + d.properties["L_AR"])
+					    });
+
+
+					});
+
+
+					 //Adding legend for our Choropleth
+
+					  var legend = svg.selectAll("g.legend")
+					  .data(ext_color_domain)
+					  .enter().append("g")
+					  .attr("class", "legend");
+
+					  var ls_w = 15, ls_h = 15;
+
+
+					  legend.append("rect")
+					  .attr("x", 50)
+					  .attr("y", function(d, i){ return height - 40 - (i*ls_h) - 2*ls_h;})
+					  .attr("width", ls_w)
+					  .attr("height", ls_h)
+					  .style("fill", function(d, i) { return color(d); })
+					  .style("opacity", 0.8);
+
+					  legend.append("text")
+					  .attr("x", 70)
+					  .attr("y", function(d, i){ return height - (i*ls_h) - ls_h - 44;})
+					  .text(function(d, i){ return legend_labels[i]; });
+
+					  </script>
+
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		        <p>Les plus grands arrondissements tels que le 16e et 12e concentrent un nombre important d'accidents cyclistes. Toutefois, le 18e et 19e ne suivent pas cette tendance. Leur dénivelé important pouvant expliquer un trafic cycliste plus faible et donc des accidents moins nombreux.</p>
+
+				<p class="pchiffre" style="text-align: left"> Des grands axes <span class="exergue">peu adaptés</span> à la pratique du vélo</p>
+
+
+				<p>
+
+		         Par ailleurs, dans la plupart des arrondissements, les voies les plus accidentées sont de grands axes, à fort trafic. La rue de Rivoli recense ainsi le nombre le plus élevé d'accidents cyclistes de la capitale en 2012. La rue de Tolbiac ou l'avenue Daumesnil dénombrent quant à elles 11 et 14 accidents cyclistes. </p>
+
+
+
+
+
+		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="pistes_cyclables">Voies réservées ? Et pourtant</h1></a>
+		        <p>Un pan entier du Nouveau Plan Vélo de la Ville de Paris est tourné vers les aménagements cyclables, avec notamment pour objectif de doubler la longueur des pistes cyclables d'ici à 2020. Si l'effort est donné sur ces aménagements, ces derniers restent encore peu sécurisants. Ainsi, en 2012, 16% des accidents cyclistes ont eu lieu sur une piste cyclable, dont 59% avec des véhicules motorisés ! <p>Par ailleurs, et preuve de la difficulté des cyclistes à s'intégrer dans le paysage urbain, on dénombre 23 accidents qui ont eu lieu... sur le trottoir.</p>
+
+		        
+		        <div class="dangereux" >
+		      	<h1 class="titre_subsection" id="piste_cyclable">PISTE CYCLABLE</h1>
+
+
+		        	<div class="logo" ><img src="images/pistecyclable.png" width="140" height="120" />  </div>
+
+					<p class="pchiffre"><span class="chiffre">111</span>  accidents cyclistes</p>
+		        	<p class="pchiffre"><span class="chiffre">59%</span>  avec un véhicule motorisé</p>
+		        	<p class="pchiffre"><span class="chiffre">28%</span>  avec un piéton</p>
+
+		        </div>
+
+
+		        <div class="dangereux" >
+
+						<h1 class="titre_subsection">TROTTOIR</h1>
+
+
+		         		<div class="logo"><img src="images/trottoir.png" width="140" height="120" />  </div>
+		        	
+						<p class="pchiffre"><span class="chiffre">23</span>  accidents cyclistes</p>
+		        		<p class="pchiffre"><span class="chiffre">35%</span>  avec un piéton</p>
+		        		<p class="pchiffre"><span class="chiffre">35%</span>  seul</p>
+
+
+
+					
+		        </div>	
+
+
+			
+
+
+			
+
+
+
+
+
+
+
+		    </section>
+	        
+
+	        <footer>
+	            <div class="bloc_final" style="margin-top:300px">
+
+	                <div class="tweet">
+						<div style="margin-top: 50px"><img src="images/logo_ensae.jpg" width="138" height="100" />  </div>
+	                </div>
+
+	                <div class="contact">
+	                    <h1 style ="text-align: center">Sources</h1>
+	      	             <ul style ="text-align: justify">
+
+	                        <li> <a class="link" target="_blank" href="https://www.data.gouv.fr/fr/datasets/donnees-des-accidents-corporels-de-la-circulation-routiere/"> Fichier national des accidents corporels de la circulation 2012<a></li>
+	                        	<br />
+	                        <li><a class="link" target="_blank" href="http://www.paris.fr/pratique/deplacements-voirie/dossier/bilan-des-deplacements-a-paris/le-bilan-des-deplacements-a-paris-en-2012/rub_7096_dossier_103374_port_16333_sheet_24056">Le Bilan des Déplacements à Paris en 2012<a></li>
+	                        	<br />
+	                        <li><a class="link" target="_blank" href="https://developer.jcdecaux.com/#/home">La plateforme OpenData de JC Decaux sur les Vélibs<a></li>
+	                      
+	                        
+	                    </ul>
+	                </div>
+
+	                <div class="note">
+						<h1 style ="text-align: center">Notes</h1>
+						<ul style ="text-align: justify">
+
+	                        <li>Pas de distinction possible entre Vélibs/vélos personnels</li>
+	                        	<br />
+	                        <li>Données incomplètes concernant la sécurité (casque, objets réfléchissants...)</li>
+	                        	
+	                        
+	                      
+	                        
+	                    </ul>
+	                </div>
+
+
+	               	<div class="formulaire">
+						<h1 style ="text-align: center">Nous contacter</h1>
+						<ul style ="text-align: justify">
+
+							lesaccidentsdeveloaparis@gmail.com 
+
+	                       	<br/> <br/>
+
+	                       	Réalisé par Tanguy Foujols, Bettina Hermant et Anna Korba
+
+<!-- 	                    </ul>
+	                        
+	                        <br/>
+
+						<h1 style ="text-align: center">Réalisation</h1>
+						<ul style ="text-align: justify">	                         	
+	                        Tanguy Foujols, Bettina Hermant et Anna Korba -->
+	                        	
+	                    </ul>
+	                </div>
+
+<!-- 	                <div class="formulaire">
+
+	                    <h1 style ="text-align: right">Nous contacter</h1>
+	                    <form action="traitement.php" method="post" id="formulaire">
+
+						    <div>
+						        <label for="courriel">E-mail :</label>
+						        <input type="email" id="courriel" name="courriel"/>
+						    </div>
+						    <div>
+						        <label for="message">Message :</label>
+						        <textarea id="message" name="message"></textarea>
+						    </div>
+						    
+						    <div class="button">
+						        <button type="submit">Envoyer votre message</button>
+						    </div>
+						</form>
+
+
+	                </div> -->
+<!-- 	                <div>
+	                	<p class="signature">Réalisé par Tanguy Foujols, Bettina Hermant et Anna Korba<p/> 
+	                </div> -->
+						
+
+	            </div>
+            </footer>
+
+ 		</div>
+
+    </body>
+</html>
