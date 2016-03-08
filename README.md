@@ -1,6 +1,12 @@
 # Dataviz
 
-## Choses à faire
+## Choses à faire 
+>*(n'hésitez pas à modifier ce fichier au fur et à mesure que vous faites des trucs)*
+
+- Faire la liste des histoires qu'on raconte (Marie le fait sur un autre fichier)
+- adapter le site de tanguy à ce qu'on veut faire
+- trouver les graphiques dont on a besoin si on en a besoin et aller chercher les données qu'il faut
+- remplir le site en racontant les histoires et en insérant les graphiques
 
 ## Utilisation de github
 Le dossier contient/contiendra plusieurs fichiers :
