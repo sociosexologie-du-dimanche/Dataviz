@@ -6,50 +6,11 @@
         <link rel="stylesheet" href="style.css" />
         <title>Tout ce que vous avez toujours cru savoir sur le sexe</title>
 
-
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.scrollTo').click( function() { // Au clic sur un élément
-					var page = $(this).attr('href'); // Page cible
-					var speed = 900; // Durée de l'animation (en ms)
-					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-					return false;
-				});
-			});
-		</script>
-
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
-
-
-
-		<script src="http://code.highcharts.com/highcharts.js"></script>
-		<script src="http://code.highcharts.com/modules/exporting.js"></script>
-        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
-  		<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
-  		<script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
-
- 
-
-		<style type="text/css">a:link{text-decoration:none}</style>
-
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-61746180-1', 'auto');
-		  ga('send', 'pageview');
-
-		</script>
-
-
-
-
-
   		
+		<script type="text/javascript" src="js/paper-full.js"></script>
+		<script type="text/paperscript" src="js/sperm.js" canvas="mycanvas"></script>
+
+
     </head>
 
 
@@ -74,7 +35,7 @@
 		  height: 20px;                 
 		  padding: 2px;             
 		  font-size: 1.2em;     
-		  background-color: white;
+		  background-color: pink;
 		  border: 1px;      
 		  border-radius: 8px;           
 		  pointer-events: none; 
@@ -82,25 +43,29 @@
 		  color: #44646f;        
 		} 
 
+
 		</style>
 
 
     <body>
+    	 <canvas id="mycanvas" style="background:pink"></canvas>
+
     	 <div id="bloc_page">
 	        <header>
-	            
+
 		        <nav>
 		            <ul>
-		                <li><a class="scrollTo" href="#scooter">VÉLO VS SCOOTER</a></li>
-		                <li><a class="scrollTo" href="#typologie">TYPOLOGIE DES ACCIDENTS</a></li>
-		                <li><a class="scrollTo" href="#angle_mort">ANGLE MORT</a></li>
-		                <li><a class="scrollTo" href="#journee_type">TRAFIC</a></li>
-		               	<li><a class="scrollTo" href="#grands_axes">GRANDS AXES</a></li>
-		                <li><a class="scrollTo" href="#pistes_cyclables">PISTES CYCLABLES</a></li>
+		                <li><a class="scrollTo" href="#scooter">Histoire 1</a></li>
+		                <li><a class="scrollTo" href="#typologie">Histoire 2</a></li>
+		                <li><a class="scrollTo" href="#angle_mort">Histoire 3</a></li>
+		                <li><a class="scrollTo" href="#journee_type">Histoire 4</a></li>
+		               	<li><a class="scrollTo" href="#grands_axes">Histoire 5</a></li>
+		                <li><a class="scrollTo" href="#pistes_cyclables">Histoire 6</a></li>
 		            </ul>
 		        </nav>
 	        </header>
-	        
+	       
+	        <div class="titre_section"> Ceci est un test. Où sont les spermatozoïdes ?</div>
 			<div id="banniere_image">
                 <div id="banniere_description">
                    LES ACCIDENTS DE VÉLO
@@ -111,7 +76,7 @@
             	<p>Aujourd'hui, près d'un cycliste sur deux affirme avoir déjà eu un accident. La question de la sécurité cycliste apparaît ainsi centrale dans la réalisation d'un tel projet. A partir du recensement des accidents corporels de l'année 2012 (fichier BAAC), nous nous proposons d'établir un aperçu chiffré de l'accidentologie cycliste à Paris.</p>
             	<hr class="hr2"/>
 			</section>
-				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="scooter">Vélo VS scooter</h1></a>
+				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="scooter">Histoire 1</h1></a>
 				<h1 class="titre_subsection">LE VÉLO MOINS RISQUÉ QUE LE SCOOTER</h1>
 
 		        <div class="dangereux">
@@ -160,7 +125,7 @@
 	         		<p>Contrairement à certaines idées reçues, les cyclistes ne sont pas moins vulnérables que leurs homologues motorisés dans Paris. La répartition entre les usagers resortant indemnes de l'accident, les blessés légers ou graves et les décès est ainsi identique au sein des deux catégories.</p>
 	         	</div>
 
-				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="typologie">Typologie des accidents</h1></a>
+				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="typologie">Histoire 2</h1></a>
 				<h1 class="titre_subsection">LA VOITURE, DANGER N°1 DU CYCLISTE</h1>
 
 		        <p>Parmi les quelques 700 accidents cyclistes recensés à Paris en 2012, plus d'un accident sur deux implique une voiture. On observe aussi une forte proportion d'accidents cyclistes n'impliquant aucun autre type de véhicule, correspondant majoritairement à des chutes.</p>
@@ -274,7 +239,7 @@
 
 
 
-				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="angle_mort">Angle mort : attention danger !</h1></a>
+				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="angle_mort">Histoire 3</h1></a>
 		        <p>Plus de trois quarts des accidents impliquant un cycliste et une voiture ou un poids lourd sont liés à un choc latéral. Parmi ceux-ci, près d'un sur deux ont lieu lors d'un dépassement, d'un changement de file ou de direction suggérant la possibilité que le cycliste n'ait pas été vu par l'automobiliste. </p>
 
 		        <div class="dangereux3">
@@ -318,7 +283,7 @@
 
 					
 
-		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="journee_type">Risque d'accident, plutôt matin ou soir ?</h1></a>
+		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="journee_type">Histoire 4</h1></a>
 		      	<h1 class="titre_subsection">LES TRAJETS DOMICILE-TRAVAIL, PREMIERE SOURCE DE TRAFIC...</h1>
 
 		      	<div class="dangereux">
@@ -368,7 +333,7 @@
 
 
 
-		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="grands_axes">Les grands axes, vecteur de trafic et d'accidents</h1>
+		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="grands_axes">Histoire 5</h1>
 		        </a>
 
 
@@ -563,7 +528,7 @@
 
 
 
-		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="pistes_cyclables">Voies réservées ? Et pourtant</h1></a>
+		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="pistes_cyclables">Histoire 6</h1></a>
 		        <p>Un pan entier du Nouveau Plan Vélo de la Ville de Paris est tourné vers les aménagements cyclables, avec notamment pour objectif de doubler la longueur des pistes cyclables d'ici à 2020. Si l'effort est donné sur ces aménagements, ces derniers restent encore peu sécurisants. Ainsi, en 2012, 16% des accidents cyclistes ont eu lieu sur une piste cyclable, dont 59% avec des véhicules motorisés ! <p>Par ailleurs, et preuve de la difficulté des cyclistes à s'intégrer dans le paysage urbain, on dénombre 23 accidents qui ont eu lieu... sur le trottoir.</p>
 
 		        
@@ -698,6 +663,44 @@
             </footer>
 
  		</div>
+ 		
+ 		
+ 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.scrollTo').click( function() { // Au clic sur un élément
+					var page = $(this).attr('href'); // Page cible
+					var speed = 900; // Durée de l'animation (en ms)
+					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+					return false;
+				});
+			});
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="http://code.highcharts.com/modules/exporting.js"></script>
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+  		<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
+  		<script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
+
+ 
+
+		<style type="text/css">a:link{text-decoration:none}</style>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-61746180-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+
 
     </body>
 </html>
