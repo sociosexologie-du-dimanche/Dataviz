@@ -4,16 +4,22 @@ body, nav a
     color: #143218;
 }
 
+nav {
+	display: block;
+	position: relative;
+	top : 20px;	
+}
+
 		
 canvas {
             display: block;
-            position: relative;
+            position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
             width: 100%;
-            height: 150px;
+            height: 100%;
         }
 
 
@@ -22,6 +28,7 @@ canvas {
     width: 1000px;
     margin: auto;
 }
+
 .graph
 {
     width: 600px;
@@ -160,7 +167,7 @@ nav a:hover
 {
 
     width: 1000px;
-    background: url('images/Vue_Paris_flou.jpg') no-repeat;
+    background: url('images/marmotte.jpg') no-repeat;
     margin-top: 0px;
     height: 580px;
     position: relative;
@@ -174,7 +181,7 @@ nav a:hover
 	font-size: 4.5em;
 	line-height: 490px;
 	text-align: center;
-	color: white;
+	color: black;
 	opacity: 0.99;
 }
 
