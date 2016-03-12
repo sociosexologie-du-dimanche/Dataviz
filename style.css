@@ -1,33 +1,37 @@
+header {
+	margin: auto;
+	width:1000px;	
+}
+
 body, nav a
 {
     font-family: 'ralewayextralight', Arial, sans-serif;
     color: #143218;
+    background:pink;
 }
-
-nav {
-	display: block;
-	position: relative;
-	top : 20px;	
+div {
+	z-index:1;
+	}
+article {
+	width : 78% ;
+	margin-right:auto;
+	margin-left:2%;
+	background:pink;
+	overflow-x:auto;
 }
 
 		
 canvas {
-            display: block;
+            display: inline;
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            width: 100%;
+            width: 80%;
             height: 100%;
         }
 
-
-#bloc_page
-{
-    width: 1000px;
-    margin: auto;
-}
 
 .graph
 {
@@ -117,13 +121,25 @@ hr
 }
 
 /* Navigation */
-
-nav
-{
-    display: inline-block;
-    width: 1000px;
+.box {
+	width:20%;
+	height:100%;
+	position:fixed;
+	display: inline-block;
     text-align: center;
-
+	top:0px;
+	left:80%;
+	overflow-x: auto;
+  	overflow-y: hidden;
+  	background:white;
+  	border-left-style:solid;
+  	
+}
+nav {
+	width:150px;
+	margin:auto;
+	text-align:left;
+	background:white;
 }
 
 nav ul
@@ -194,6 +210,10 @@ nav a:hover
 	color: white;
 }
 
+.titre_principal {
+	margin-top:110%;	
+}
+
 .titre_section
 {
 	background:  url('images/marmotte.jpg') no-repeat top center ;
@@ -202,7 +222,7 @@ nav a:hover
 	text-align: center;
 	margin-top: 100px;
 	padding-top: 300px;
-	color: #44646f;
+	color: black;
 }
 .titre_subsection
 {
@@ -235,6 +255,7 @@ footer
 {
     background:  url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
     padding-top: 25px;
+    width:80%;
 }
 
 footer p, footer ul
