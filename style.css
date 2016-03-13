@@ -1,16 +1,38 @@
+header {
+	margin: auto;
+	width:1000px;	
+}
+
 body, nav a
 {
-
     font-family: 'ralewayextralight', Arial, sans-serif;
     color: #143218;
+    background:pink;
+}
+div {
+	z-index:1;
+	}
+article {
+	width : 78% ;
+	margin-right:auto;
+	margin-left:2%;
+	background:pink;
+	overflow-x:auto;
 }
 
+		
+canvas {
+            display: inline;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 80%;
+            height: 100%;
+        }
 
-#bloc_page
-{
-    width: 1000px;
-    margin: auto;
-}
+
 .graph
 {
     width: 600px;
@@ -99,13 +121,25 @@ hr
 }
 
 /* Navigation */
-
-nav
-{
-    display: inline-block;
-    width: 1000px;
+.box {
+	width:20%;
+	height:100%;
+	position:fixed;
+	display: inline-block;
     text-align: center;
-
+	top:0px;
+	left:80%;
+	overflow-x: auto;
+  	overflow-y: hidden;
+  	background:white;
+  	border-left-style:solid;
+  	
+}
+nav {
+	width:150px;
+	margin:auto;
+	text-align:left;
+	background:white;
 }
 
 nav ul
@@ -149,7 +183,7 @@ nav a:hover
 {
 
     width: 1000px;
-    background: url('images/Vue_Paris_flou.jpg') no-repeat;
+    background: url('images/marmotte.jpg') no-repeat;
     margin-top: 0px;
     height: 580px;
     position: relative;
@@ -163,7 +197,7 @@ nav a:hover
 	font-size: 4.5em;
 	line-height: 490px;
 	text-align: center;
-	color: white;
+	color: black;
 	opacity: 0.99;
 }
 
@@ -176,15 +210,19 @@ nav a:hover
 	color: white;
 }
 
+.titre_principal {
+	margin-top:110%;	
+}
+
 .titre_section
 {
-	background:  url('images/Biketitre11.png') no-repeat top center ;
+	background:  url('images/marmotte.jpg') no-repeat top center ;
 	font-family: 'bebas_neueregular', serif;
 	font-size: 3.15em;
 	text-align: center;
-	margin-top: 150px;
-	padding-top: 75px;
-	color: #44646f;
+	margin-top: 100px;
+	padding-top: 300px;
+	color: black;
 }
 .titre_subsection
 {
@@ -217,6 +255,7 @@ footer
 {
     background:  url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
     padding-top: 25px;
+    width:80%;
 }
 
 footer p, footer ul
