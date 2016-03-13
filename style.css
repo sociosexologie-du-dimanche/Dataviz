@@ -1,26 +1,21 @@
-header {
-	margin: auto;
-	width:1000px;	
+/* Elements html prédéfinis */
+
+body
+{
+    font-family: 'droid', Arial, sans-serif;
+    color: #143218;
+    background:#FFD6DD;
+    text-rendering: optimizeLegibility;
 }
 
-body, nav a
-{
-    font-family: 'ralewayextralight', Arial, sans-serif;
-    color: #143218;
-    background:pink;
-}
-div {
-	z-index:1;
-	}
 article {
 	width : 78% ;
 	margin-right:auto;
 	margin-left:2%;
-	background:pink;
+	background:#FFD6DD;
 	overflow-x:auto;
 }
-
-		
+	
 canvas {
             display: inline;
             position: absolute;
@@ -30,7 +25,111 @@ canvas {
             bottom: 0;
             width: 80%;
             height: 100%;
-        }
+ }
+
+
+/* Navigation */
+.box {
+	width:20%;
+	height:100%;
+	position:fixed;
+	display: inline-block;
+    text-align: center;
+	top:0px;
+	left:80%;
+	overflow-x: auto;
+  	overflow-y: hidden;
+  	background:white;
+  	box-shadow: 0 0 20px rgba(0,0,0,.30);
+  	
+}
+
+nav {
+	font-family: 'droid-bold', Arial, sans-serif;
+    color: #143218;
+	width:150px;
+	margin:auto;
+	text-align:left;
+	background:white;
+	font-weight:500;
+	font-size:large;
+}
+
+nav ul
+{
+    list-style-type: none;
+}
+
+nav li
+{
+    display: inline-block;
+    margin-right: 20px;
+
+}
+
+nav a
+{
+	color: #143218;
+    padding-bottom: 3px;
+    text-decoration: none;
+    transition: all .1s ease;
+}
+
+nav a:hover
+{
+   color: #FFD6DD;
+   cursor: pointer;
+   padding: 3px;
+}
+
+
+.link
+{
+    color: #ffffff;
+}
+
+
+/* Classes crées */
+
+.titre_principal {
+	margin-top:110%;
+	font-family:'poetsen',Arial, serif;	
+}
+
+.titre_section
+{
+	background:  url('images/marmotte.jpg') no-repeat top center ;
+	font-family: 'poetsen', 'Gill Sans', Arial, sans-serif;
+	font-size: 3.15em;
+	text-align: center;
+	margin-top: 100px;
+	padding-top: 300px;
+	color: black;
+}
+.titre_subsection
+{
+	font-family: 'Gill Sans', serif;
+	font-size: 1.8em;
+	margin: auto;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 25px;
+	color: #44646f;
+	opacity: 0.99;
+	position: relative;
+}
+
+.logo
+{
+	margin-left: auto;
+    margin-right: auto;
+    position: relative;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
 
 
 .graph
@@ -42,7 +141,7 @@ canvas {
 .chiffre
 {
     color: #df924a;
-    font-family: 'bebas_neueregular', serif;
+    font-family: 'Gill Sans', serif;
     font-size: 1.7em;
     
 }
@@ -59,14 +158,14 @@ canvas {
 .exergue
 {
     color: #df924a;
-    font-family: 'bebas_neueregular', serif;
+    font-family: 'Gill Sans', serif;
     font-size: 1.0em;
     
 }
 .exergue:hover
 {
     color: #df924a;
-    font-family: 'bebas_neueregular', serif;
+    font-family: 'Gill Sans', serif;
     font-size: 1.0em;
     opacity: 0.8;
     
@@ -75,7 +174,7 @@ canvas {
 .chiffre:hover
 {
     opacity: 0.8;
-    font-family: 'bebas_neueregular', serif;
+    font-family: 'Gill Sans', serif;
     font-size: 1.7em;
     
 }
@@ -88,7 +187,7 @@ canvas {
 
 section h1, footer h1
 {
-    font-family: 'bebas_neueregular', serif;
+    font-family: 'Gill Sans', serif;
     font-weight: normal;
     text-transform: uppercase;
 }
@@ -120,64 +219,8 @@ hr
    margin-bottom: 20px;
 }
 
-/* Navigation */
-.box {
-	width:20%;
-	height:100%;
-	position:fixed;
-	display: inline-block;
-    text-align: center;
-	top:0px;
-	left:80%;
-	overflow-x: auto;
-  	overflow-y: hidden;
-  	background:white;
-  	border-left-style:solid;
-  	
-}
-nav {
-	width:150px;
-	margin:auto;
-	text-align:left;
-	background:white;
-}
 
-nav ul
-{
-    list-style-type: none;
-}
-
-nav li
-{
-    display: inline-block;
-    margin-right: 20px;
-
-}
-
-nav a
-{
-    font-size: 0.9em;
-    color: #000000;
-    padding-bottom: 3px;
-    text-decoration: none;
-
-}
-
-.link
-{
-
-    color: #ffffff;
-
-
-}
-
-nav a:hover
-{
-   color: #df924a;
- /*  border-bottom: 1px solid #df924a; */
-}
-
-/* Bannière */
+/* Identités créées */
 
 #banniere_image
 {
@@ -203,50 +246,13 @@ nav a:hover
 
 #Bike
 {
-	font-family: 'bebas_neueregular', serif;
+	font-family: 'Gill Sans', serif;
 	font-size: 4.15em;
 	line-height: 550px;
 	text-align: center;
 	color: white;
 }
 
-.titre_principal {
-	margin-top:110%;	
-}
-
-.titre_section
-{
-	background:  url('images/marmotte.jpg') no-repeat top center ;
-	font-family: 'bebas_neueregular', serif;
-	font-size: 3.15em;
-	text-align: center;
-	margin-top: 100px;
-	padding-top: 300px;
-	color: black;
-}
-.titre_subsection
-{
-	font-family: 'ralewayextralight', serif;
-	font-size: 1.8em;
-	margin: auto;
-	text-align: center;
-	margin-top: 0px;
-	margin-bottom: 25px;
-	color: #44646f;
-	opacity: 0.99;
-	position: relative;
-}
-
-.logo
-{
-	margin-left: auto;
-    margin-right: auto;
-    position: relative;
-	text-align: center;
-	margin-top: 20px;
-	margin-bottom: 20px;
-
-}
 
 
 /* Footer */
@@ -292,7 +298,7 @@ footer h1
 {
 
     text-align: center;
-    font-family: 'bebas_neueregular', serif;
+    font-family: 'Gill Sans', serif;
     font-size: 1.4em;
     font-weight: bold;
     color: #44646f;
@@ -304,7 +310,7 @@ footer h1
 {
 
     text-align: center;
-    font-family: 'bebas_neueregular', serif;
+    font-family: 'Gill Sans', serif;
     font-size: 1.0em;
     font-weight: bold;
     color: #44646f;
@@ -412,44 +418,39 @@ textarea {
 }
 
 
-
-
 @font-face {
-    font-family: 'helvetica_neueregular';
-    src: url('HelveticaNeue-UltraLight-webfont.eot');
-    src: url('HelveticaNeue-UltraLight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('HelveticaNeue-UltraLight-webfont.woff2') format('woff2'),
-         url('HelveticaNeue-UltraLight-webfont.woff') format('woff'),
-         url('HelveticaNeue-UltraLight-webfont.ttf') format('truetype'),
-         url('HelveticaNeue-UltraLight-webfont.svg#helvetica_neueregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-@font-face {
-    font-family: 'bebas_neueregular';
-    src: url('BebasNeue-webfont.eot');
-    src: url('BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('BebasNeue-webfont.woff2') format('woff2'),
-         url('BebasNeue-webfont.woff') format('woff'),
-         url('BebasNeue-webfont.ttf') format('truetype'),
-         url('BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-family: 'poetsen';
+    src: url('Police/PoetsenOne-Regular-webfont.eot');
+    src: url('Police/PoetsenOne-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Police/PoetsenOne-Regular-webfont.woff') format('woff'),
+         url('Police/PoetsenOne-Regular-webfont.ttf') format('truetype'),
+         url('Police/PoetsenOne-Regular-webfont.svg#poetsenoneregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'ralewayextralight';
-    src: url('Raleway-ExtraLight-webfont.eot');
-    src: url('Raleway-ExtraLight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Raleway-ExtraLight-webfont.woff2') format('woff2'),
-         url('Raleway-ExtraLight-webfont.woff') format('woff'),
-         url('Raleway-ExtraLight-webfont.ttf') format('truetype'),
-         url('Raleway-ExtraLight-webfont.svg#ralewayextralight') format('svg');
+    font-family: 'droid-bold';
+    src: url('Police/DroidSans-Bold-webfont.eot');
+    src: url('Police/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Police/DroidSans-Bold-webfont.woff') format('woff'),
+         url('Police/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('Police/DroidSans-Bold-webfont.svg#droid_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'droid';
+    src: url('Police/DroidSans-webfont.eot');
+    src: url('Police/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Police/DroidSans-webfont.woff') format('woff'),
+         url('Police/DroidSans-webfont.ttf') format('truetype'),
+         url('Police/DroidSans-webfont.svg#droid_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
+
