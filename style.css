@@ -3,13 +3,16 @@
 body
 {
     font-family: 'droid', Arial, sans-serif;
-    color: #143218;
+    color: #0E5348;
     background:#FFD6DD;
     text-rendering: optimizeLegibility;
 }
 
 article {
+	display:block;
+	position:absolute;
 	width : 78% ;
+	top:105%;
 	margin-right:auto;
 	margin-left:2%;
 	background:#FFD6DD;
@@ -26,6 +29,14 @@ canvas {
             width: 80%;
             height: 100%;
  }
+ 
+p
+{
+    padding-left: 20px;
+    padding-right: 30px;
+    text-align: justify;
+}
+
 
 
 /* Navigation */
@@ -33,25 +44,23 @@ canvas {
 	width:20%;
 	height:100%;
 	position:fixed;
-	display: inline-block;
-    text-align: center;
+	display: inline;
 	top:0px;
 	left:80%;
 	overflow-x: auto;
   	overflow-y: hidden;
   	background:white;
   	box-shadow: 0 0 20px rgba(0,0,0,.30);
-  	
+  	z-index:3;
 }
 
 nav {
 	font-family: 'droid-bold', Arial, sans-serif;
-    color: #143218;
-	width:150px;
-	margin:auto;
+    color: #0E5348;
+	width:180px;
+	left: 0px;
 	text-align:left;
 	background:white;
-	font-weight:500;
 	font-size:large;
 }
 
@@ -62,15 +71,14 @@ nav ul
 
 nav li
 {
-    display: inline-block;
-    margin-right: 20px;
+    display: block;
+    margin-bottom: 30px;
 
 }
 
 nav a
 {
-	color: #143218;
-    padding-bottom: 3px;
+	color: #0E5348;
     text-decoration: none;
     transition: all .1s ease;
 }
@@ -79,7 +87,7 @@ nav a:hover
 {
    color: #FFD6DD;
    cursor: pointer;
-   padding: 3px;
+   padding: 10px;
 }
 
 
@@ -88,13 +96,21 @@ nav a:hover
     color: #ffffff;
 }
 
+/* Identités créées */
+#banniere
+{	
+	font-family: 'poetsen', serif;
+	font-size: 2.5em;
+	margin-top:10px;
+	margin-left:20px;
+	margin-bottom:50px;
+	line-height: 1.2em;
+	text-align: left;
+}
+
+
 
 /* Classes crées */
-
-.titre_principal {
-	margin-top:110%;
-	font-family:'poetsen',Arial, serif;	
-}
 
 .titre_section
 {
@@ -104,7 +120,12 @@ nav a:hover
 	text-align: center;
 	margin-top: 100px;
 	padding-top: 300px;
-	color: black;
+	color: #0E5348;
+}
+
+.titre_section:hover{
+	opacity:0.8;
+	transition: all .1s ease	
 }
 .titre_subsection
 {
@@ -114,7 +135,7 @@ nav a:hover
 	text-align: center;
 	margin-top: 0px;
 	margin-bottom: 25px;
-	color: #44646f;
+	color: #0E5348;
 	opacity: 0.99;
 	position: relative;
 }
@@ -130,7 +151,13 @@ nav a:hover
 
 }
 
+.emph { 
+	color: #F54765;
+}
 
+.emph:hover {
+	opacity:0.8;
+}
 
 .graph
 {
@@ -192,15 +219,8 @@ section h1, footer h1
     text-transform: uppercase;
 }
 
-p
-{
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: justify;
-}
 
-
-/* Trait */
+/* Trait
 .hr2
 {
    width: 30%;
@@ -218,41 +238,7 @@ hr
    margin-top: 30px;
    margin-bottom: 20px;
 }
-
-
-/* Identités créées */
-
-#banniere_image
-{
-
-    width: 1000px;
-    background: url('images/marmotte.jpg') no-repeat;
-    margin-top: 0px;
-    height: 580px;
-    position: relative;
-    margin-bottom: 25px;
-}
-
-
-#banniere_description
-{
-	font-family: 'helvetica_neueregular', serif;
-	font-size: 4.5em;
-	line-height: 490px;
-	text-align: center;
-	color: black;
-	opacity: 0.99;
-}
-
-#Bike
-{
-	font-family: 'Gill Sans', serif;
-	font-size: 4.15em;
-	line-height: 550px;
-	text-align: center;
-	color: white;
-}
-
+*/
 
 
 /* Footer */
