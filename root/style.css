@@ -18,6 +18,8 @@ canvas {
             width: 80%;
             height: 100%;
  }
+
+
  
 p
 {
@@ -64,25 +66,42 @@ nav li
     margin-bottom: 30px;
 }
 
-nav a
+nav a, footer a
 {
 	color: #0E5348;
     text-decoration: none;
     transition: all .1s ease;
 }
 
-nav a:hover
+nav a:hover, footer a:hover
 {
-   color: 'white';
+   color: #107671;
    cursor: pointer;
-   padding: 10px;
+   padding: 5px;
 }
 
+/* Footer */
 
-.link
+footer
 {
-    color: #ffffff;
+    padding-top: 10px;
+    margin-right:2px;
+    margin-left:2px;
+    display:block ;
+    position : fixed ;
+    width:180px;
+    bottom : 2px ;
+    font-size : 0.8em ;
+    font-family: 'droid-bold' ;
 }
+
+footer ul
+{
+    list-style-image: url('Images/coeur.png') ;
+}
+
+/* Fin footer */
+
 
 /* Identités créées */
 #banniere
@@ -204,13 +223,8 @@ nav a:hover
     
 }
 
-.bloc_final
-{
-	background-color:#44646f;
-    
-}
 
-section h1, footer h1
+section h1
 {
     font-family: 'Gill Sans', serif;
     font-weight: normal;
@@ -239,26 +253,6 @@ hr
 */
 
 
-/* Footer */
-
-footer
-{
-    background:  url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
-    padding-top: 25px;
-    margin-right:20px;
-    margin-left:20px;
-    display:block ;
-}
-
-footer p, footer ul
-{
-    font-size: 0.8em;
-}
-
-footer h1
-{
-    font-size: 1.1em;
-}
 
 .dangereux
 {
@@ -304,40 +298,6 @@ footer h1
 
 }
 
-
-.note
-{
-    display: inline-block;
-    vertical-align: top;
-    width: 26%;
-    color: white;
-    padding-left: 15px;
-}
-.tweet
-{
-    display: inline-block;
-    vertical-align: top;
-    width: 10%;
-    color: white;
-    padding-left: 10px;
-}
-.contact
-{
-    display: inline-block;
-    vertical-align: top;
-    width: 26%;
-    color: white;
-    padding-left: 15px;
-}
-
-.formulaire
-{
-    display: inline-block;
-    vertical-align: top;
-    width: 26%;
-    color: white;
-    padding-left: 15px;
-}
 
 .signature
 {
