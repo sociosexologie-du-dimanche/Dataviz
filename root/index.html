@@ -5,7 +5,6 @@
         
         <link rel="stylesheet" href="style.css" />
         <title>Tout ce que vous avez toujours cru savoir sur le sexe</title>
-
   		
 		<script type="text/javascript" src="js/paper-full.js"></script>
 		<script type="text/paperscript" src="js/sperm.js" canvas="mycanvas"></script>
@@ -13,14 +12,9 @@
   		<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
   		<script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
 
- 
-
-
     </head>
 
-
-		<style>
-
+    <style>
 
 		path {
 		  stroke:white;
@@ -30,7 +24,6 @@
 		.legend {
 		  font-size: 11px;
 		}
-
 
 		div.tooltip {   
 		  position: relative;
@@ -48,19 +41,24 @@
 		  color: #44646f;        
 		} 
 
-
-		</style>
+    </style>
 
 
     <body> 
      
 		<div>
 			<a class="scrollTo" href="#mycanvas"><canvas id="mycanvas" style="background:'white'"></canvas></a>
+            <a class="scrollTo" href="#mycanvas" id="lienHaut"></a>
+            <div id="banniere">
+                   Tout ce que vous avez toujours <br/>
+                   cru savoir sur le <span class="emph">sexe</span>... <br/>
+                   ... sans jamais oser le vérifier
+                </div>
 	    
      		<span class="box">
 	        	<nav>
 		            <ul>
-		                <li><a class="scrollTo" href="#scooter">Homosexualité et religion</a></li>
+		                <li><a class="scrollTo" href="#religion">Homosexualité et religion</a></li>
 		                <li><a class="scrollTo" href="#typologie">Extraconjugalité</a></li>
 		                <li><a class="scrollTo" href="#angle_mort">La satisfaction du nombre ?</a></li>
 		                <li><a class="scrollTo" href="#journee_type">Vieillir...</a></li>
@@ -80,22 +78,15 @@
 		      </span>
 		</div>   
 		
+        
 		
 	       
 	    <section id="corps">
-                <div id="banniere">
-                   Tout ce que vous avez toujours <br/>
-                   cru savoir sur le <span class="emph">sexe</span>... <br/>
-                   ... sans jamais oser le vérifier
-                </div>
            
-				
-
-
-           
-            	<p> Parce que le sexe relève du plus intime pour chacun , les discours autour des pratiques sexuelles nourrisent souvent de nombreux fantasmes. Vous vous êtes peut-être déjà demandé quels étaient les petits plaisirs secrets de vos copains copines, voisins, ou encore patrons. La mauvaise - mais plutôt bonne finalement - nouvelle, c'est qu'à moins de tester vous n'irez pas bien loin. C'est pourquoi certains clichés ont la vie dure. Testez donc maintenant vos a priori sur le sexe en toute impunité! </p>
-				<a class="scrollTo" href="#mycanvas"><h1 class="titre_section" id="scooter">Histoire 1</h1></a>
-				<h1 class="titre_subsection">Homosexualité et religion</h1>
+            <p id="pIntro"> Parce que le sexe relève du plus intime pour chacun , les discours autour des pratiques sexuelles nourrisent souvent de nombreux fantasmes. Vous vous êtes peut-être déjà demandé quels étaient les petits plaisirs secrets de vos copains copines, voisins, ou encore patrons. La mauvaise nouvelle - mais plutôt bonne finalement, c'est qu'à moins de tester vous n'irez pas bien loin, c'est pourquoi certains clichés ont la vie dure. Y'a-t-il vraiment moins d'homos chez les cathos ? Sodomise-t-on plus souvent selon qu'on est de droite ou de gauche ? Testez donc maintenant vos a priori sur le sexe en toute impunité ! <span class="hidden">Promis, on ne se moquera pas si vous avez tout faux</span> </p>
+            
+				<a class="scrollTo" href="#lienHaut"><h1 id="religion">Cathos et homos</h1></a>
+				<h1 class="titre_subsection">Insérer ici une petite citation ou autre</h1>
 
 		        <div class="dangereux">
 		        	<p> La part des individus en France se déclarant "non-religieux" et ayant déjà eu un rapport sexuel avec quelqu'un du même sexe est de 16% </p>
@@ -139,7 +130,7 @@
 	         		<p>Contrairement à certaines idées reçues, les cyclistes ne sont pas moins vulnérables que leurs homologues motorisés dans Paris. La répartition entre les usagers resortant indemnes de l'accident, les blessés légers ou graves et les décès est ainsi identique au sein des deux catégories.</p>
 	         	</div>
 
-				<a class="scrollTo" href="#mycanvas"><h1 class="titre_section" id="typologie">Histoire 2</h1></a>
+				<a class="scrollTo" href="#lienHaut"><h1 class="titre_section" id="typologie">Histoire 2</h1></a>
 				<h1 class="titre_subsection">LA VOITURE, DANGER N°1 DU CYCLISTE</h1>
 
 		        <p>Parmi les quelques 700 accidents cyclistes recensés à Paris en 2012, plus d'un accident sur deux implique une voiture. On observe aussi une forte proportion d'accidents cyclistes n'impliquant aucun autre type de véhicule, correspondant majoritairement à des chutes.</p>
@@ -253,7 +244,7 @@
 
 
 
-				<a class="scrollTo" href="#mycanvas"><h1 class="titre_section" id="angle_mort">Histoire 3</h1></a>
+				<a class="scrollTo" href="#lienHaut"><h1 class="titre_section" id="angle_mort">Histoire 3</h1></a>
 		        <p>Plus de trois quarts des accidents impliquant un cycliste et une voiture ou un poids lourd sont liés à un choc latéral. Parmi ceux-ci, près d'un sur deux ont lieu lors d'un dépassement, d'un changement de file ou de direction suggérant la possibilité que le cycliste n'ait pas été vu par l'automobiliste. </p>
 
 		        <div class="dangereux3">
@@ -297,7 +288,7 @@
 
 					
 
-		        <a class="scrollTo" href="#mycanvas"><h1 class="titre_section" id="journee_type">Histoire 4</h1></a>
+		        <a class="scrollTo" href="#lienHaut"><h1 class="titre_section" id="journee_type">Histoire 4</h1></a>
 		      	<h1 class="titre_subsection">LES TRAJETS DOMICILE-TRAVAIL, PREMIERE SOURCE DE TRAFIC...</h1>
 
 		      	<div class="dangereux">
@@ -347,7 +338,7 @@
 
 
 
-		        <a class="scrollTo" href="#mycanvas"><h1 class="titre_section" id="grands_axes">Histoire 5</h1>
+		        <a class="scrollTo" href="#lienHaut"><h1 class="titre_section" id="grands_axes">Histoire 5</h1>
 		        </a>
 
 
@@ -542,7 +533,7 @@
 
 
 
-		        <a class="scrollTo" href="#mycanvas"><h1 class="titre_section" id="pistes_cyclables">Histoire 6</h1></a>
+		        <a class="scrollTo" href="#lienHaut"><h1 class="titre_section" id="pistes_cyclables">Histoire 6</h1></a>
 		        <p>Un pan entier du Nouveau Plan Vélo de la Ville de Paris est tourné vers les aménagements cyclables, avec notamment pour objectif de doubler la longueur des pistes cyclables d'ici à 2020. Si l'effort est donné sur ces aménagements, ces derniers restent encore peu sécurisants. Ainsi, en 2012, 16% des accidents cyclistes ont eu lieu sur une piste cyclable, dont 59% avec des véhicules motorisés ! <p>Par ailleurs, et preuve de la difficulté des cyclistes à s'intégrer dans le paysage urbain, on dénombre 23 accidents qui ont eu lieu... sur le trottoir.</p>
 
 		        
