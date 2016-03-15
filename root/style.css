@@ -4,21 +4,10 @@ body
 {
     font-family: 'droid', Arial, sans-serif;
     color: #0E5348;
-    background:#FFD6DD;
+    background:'white';
     text-rendering: optimizeLegibility;
 }
 
-article {
-	display:block;
-	position:absolute;
-	width : 78% ;
-	top:105%;
-	margin-right:auto;
-	margin-left:2%;
-	background:#FFD6DD;
-	overflow-x:auto;
-}
-	
 canvas {
             display: inline;
             position: absolute;
@@ -29,6 +18,8 @@ canvas {
             width: 80%;
             height: 100%;
  }
+
+
  
 p
 {
@@ -49,7 +40,7 @@ p
 	left:80%;
 	overflow-x: auto;
   	overflow-y: hidden;
-  	background:white;
+  	background:#FFD6DD;
   	box-shadow: 0 0 20px rgba(0,0,0,.30);
   	z-index:3;
 }
@@ -60,7 +51,7 @@ nav {
 	width:180px;
 	left: 0px;
 	text-align:left;
-	background:white;
+	background:#FFD6DD;
 	font-size:large;
 }
 
@@ -73,28 +64,44 @@ nav li
 {
     display: block;
     margin-bottom: 30px;
-
 }
 
-nav a
+nav a, footer a
 {
 	color: #0E5348;
     text-decoration: none;
     transition: all .1s ease;
 }
 
-nav a:hover
+nav a:hover, footer a:hover
 {
-   color: #FFD6DD;
+   color: #107671;
    cursor: pointer;
-   padding: 10px;
+   padding: 5px;
 }
 
+/* Footer */
 
-.link
+footer
 {
-    color: #ffffff;
+    padding-top: 10px;
+    margin-right:2px;
+    margin-left:2px;
+    display:block ;
+    position : fixed ;
+    width:180px;
+    bottom : 2px ;
+    font-size : 0.8em ;
+    font-family: 'droid-bold' ;
 }
+
+footer ul
+{
+    list-style-image: url('Images/coeur.png') ;
+}
+
+/* Fin footer */
+
 
 /* Identités créées */
 #banniere
@@ -108,7 +115,17 @@ nav a:hover
 	text-align: left;
 }
 
-
+#corps {
+	display:block;
+	position:absolute;
+	width : 78% ;
+	top:105%;
+	margin-right:auto;
+	margin-left:2%;
+	background:'white';
+	overflow-x:auto;
+}
+	
 
 /* Classes crées */
 
@@ -206,13 +223,8 @@ nav a:hover
     
 }
 
-.bloc_final
-{
-	background-color:#44646f;
-    
-}
 
-section h1, footer h1
+section h1
 {
     font-family: 'Gill Sans', serif;
     font-weight: normal;
@@ -241,24 +253,6 @@ hr
 */
 
 
-/* Footer */
-
-footer
-{
-    background:  url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
-    padding-top: 25px;
-    width:80%;
-}
-
-footer p, footer ul
-{
-    font-size: 0.8em;
-}
-
-footer h1
-{
-    font-size: 1.1em;
-}
 
 .dangereux
 {
@@ -304,40 +298,6 @@ footer h1
 
 }
 
-
-.note
-{
-    display: inline-block;
-    vertical-align: top;
-    width: 26%;
-    color: white;
-    padding-left: 15px;
-}
-.tweet
-{
-    display: inline-block;
-    vertical-align: top;
-    width: 10%;
-    color: white;
-    padding-left: 10px;
-}
-.contact
-{
-    display: inline-block;
-    vertical-align: top;
-    width: 26%;
-    color: white;
-    padding-left: 15px;
-}
-
-.formulaire
-{
-    display: inline-block;
-    vertical-align: top;
-    width: 26%;
-    color: white;
-    padding-left: 15px;
-}
 
 .signature
 {

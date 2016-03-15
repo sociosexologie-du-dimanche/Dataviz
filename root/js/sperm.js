@@ -55,11 +55,11 @@ var Boid = Base.extend({
 		this.head = new Shape.Ellipse({
 			center: [0, 0],
 			size: [13, 8],
-			fillColor: 'white'
+			fillColor: '#004C59'
 		});
 
 		this.path = new Path({
-			strokeColor: 'white',
+			strokeColor: '#107671',
 			strokeWidth: 2,
 			strokeCap: 'round'
 		});
@@ -67,7 +67,7 @@ var Boid = Base.extend({
 			this.path.add(new Point());
 
 		this.shortPath = new Path({
-			strokeColor: 'white',
+			strokeColor: '#CBA148',
 			strokeWidth: 4,
 			strokeCap: 'round'
 		});

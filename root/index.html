@@ -9,6 +9,11 @@
   		
 		<script type="text/javascript" src="js/paper-full.js"></script>
 		<script type="text/paperscript" src="js/sperm.js" canvas="mycanvas"></script>
+		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+  		<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
+  		<script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
+
+ 
 
 
     </head>
@@ -50,7 +55,7 @@
     <body> 
      
 		<div>
-			<a class="scrollTo" href="#mycanvas"><canvas id="mycanvas" style="background:#FFD6DD"></canvas></a>
+			<a class="scrollTo" href="#mycanvas"><canvas id="mycanvas" style="background:'white'"></canvas></a>
 	    
      		<span class="box">
 	        	<nav>
@@ -64,16 +69,29 @@
 		                <li><a class="scrollTo" href="#pistes_cyclables">Parthouzes politisées</a></li>
 		            </ul>
 		        </nav>
+                
+                <footer>
+	      	             <ul style ="text-align: justify">
+                             <li><a class="link" target="_blank" href="https://www.data.gouv.fr/fr/datasets/donnees-des-accidents-corporels-de-la-circulation-routiere/"> Données de l'ifop (à préciser)</a></li></br>
+                    <li>Réalisé par nous.</li></br>
+	                        <li><a class="link" target="_blank" href="mailto:romain.damian@ensae.fr?Subject=Contact">Nous contacter<a></li>
+	                    </ul>
+                </footer>	
 		      </span>
 		</div>   
+		
+		
 	       
-	    <article>
+	    <section id="corps">
                 <div id="banniere">
                    Tout ce que vous avez toujours <br/>
                    cru savoir sur le <span class="emph">sexe</span>... <br/>
                    ... sans jamais oser le vérifier
                 </div>
            
+				
+
+
            
             	<p> L'engouement pour le vélo n'a jamais été aussi fort dans la capitale. En 10 ans, le nombre de vélo en circulation dans les rues de Paris a triplé. Avec son Plan Vélo 2015-2020, la mairie de Paris souhaite accompagner cette dynamique et faire de Paris la capitale européenne du vélo. Avec un objectif majeur : atteindre les 15% de trajets dans la capitale effectués à vélo. </p>
             	<p>Aujourd'hui, près d'un cycliste sur deux affirme avoir déjà eu un accident. La question de la sécurité cycliste apparaît ainsi centrale dans la réalisation d'un tel projet. A partir du recensement des accidents corporels de l'année 2012 (fichier BAAC), nous nous proposons d'établir un aperçu chiffré de l'accidentologie cycliste à Paris.</p>
@@ -561,111 +579,11 @@
 
 
 					
-		        </div>	
+		        </div>		
+        
+        </section>
 
-
-			
-
-
-			
-
-
-
-
-
-
-
-		    </section>
-	        </article>
-
-	        <footer>
-	            <div class="bloc_final" style="margin-top:300px">
-
-	                <div class="tweet">
-						<div style="margin-top: 50px"><img src="images/logo_ensae.jpg" width="138" height="100" />  </div>
-	                </div>
-
-	                <div class="contact">
-	                    <h1 style ="text-align: center">Sources</h1>
-	      	             <ul style ="text-align: justify">
-
-	                        <li> <a class="link" target="_blank" href="https://www.data.gouv.fr/fr/datasets/donnees-des-accidents-corporels-de-la-circulation-routiere/"> Fichier national des accidents corporels de la circulation 2012<a></li>
-	                        	<br />
-	                        <li><a class="link" target="_blank" href="http://www.paris.fr/pratique/deplacements-voirie/dossier/bilan-des-deplacements-a-paris/le-bilan-des-deplacements-a-paris-en-2012/rub_7096_dossier_103374_port_16333_sheet_24056">Le Bilan des Déplacements à Paris en 2012<a></li>
-	                        	<br />
-	                        <li><a class="link" target="_blank" href="https://developer.jcdecaux.com/#/home">La plateforme OpenData de JC Decaux sur les Vélibs<a></li>
-	                      
-	                        
-	                    </ul>
-	                </div>
-
-	                <div class="note">
-						<h1 style ="text-align: center">Notes</h1>
-						<ul style ="text-align: justify">
-
-	                        <li>Pas de distinction possible entre Vélibs/vélos personnels</li>
-	                        	<br />
-	                        <li>Données incomplètes concernant la sécurité (casque, objets réfléchissants...)</li>
-	                        	
-	                        
-	                      
-	                        
-	                    </ul>
-	                </div>
-
-
-	               	<div class="formulaire">
-						<h1 style ="text-align: center">Nous contacter</h1>
-						<ul style ="text-align: justify">
-
-							lesaccidentsdeveloaparis@gmail.com 
-
-	                       	<br/> <br/>
-
-	                       	Réalisé par Tanguy Foujols, Bettina Hermant et Anna Korba
-
-<!-- 	                    </ul>
-	                        
-	                        <br/>
-
-						<h1 style ="text-align: center">Réalisation</h1>
-						<ul style ="text-align: justify">	                         	
-	                        Tanguy Foujols, Bettina Hermant et Anna Korba -->
-	                        	
-	                    </ul>
-	                </div>
-
-<!-- 	                <div class="formulaire">
-
-	                    <h1 style ="text-align: right">Nous contacter</h1>
-	                    <form action="traitement.php" method="post" id="formulaire">
-
-						    <div>
-						        <label for="courriel">E-mail :</label>
-						        <input type="email" id="courriel" name="courriel"/>
-						    </div>
-						    <div>
-						        <label for="message">Message :</label>
-						        <textarea id="message" name="message"></textarea>
-						    </div>
-						    
-						    <div class="button">
-						        <button type="submit">Envoyer votre message</button>
-						    </div>
-						</form>
-
-
-	                </div> -->
-<!-- 	                <div>
-	                	<p class="signature">Réalisé par Tanguy Foujols, Bettina Hermant et Anna Korba<p/> 
-	                </div> -->
-						
-
-	            </div>
-            </footer>
-
- 		</div>
- 		
+	      
  		
  		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>
@@ -683,11 +601,7 @@
 		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
 		<script src="http://code.highcharts.com/highcharts.js"></script>
 		<script src="http://code.highcharts.com/modules/exporting.js"></script>
-        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
-  		<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
-  		<script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
-
- 
+   
 
 		<style type="text/css">a:link{text-decoration:none}</style>
 
