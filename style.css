@@ -110,6 +110,17 @@ nav a:hover
 
 
 
+#chart {
+  position: absolute;
+  left: 40%;
+  top: 45%;
+  bottom: auto;
+  right: auto;
+  width: 90%;
+  max-width: 768px;
+  text-align: center;
+}
+
 /* Classes crées */
 
 .titre_section

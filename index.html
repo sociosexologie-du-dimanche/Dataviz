@@ -9,7 +9,8 @@
   		
 		<script type="text/javascript" src="js/paper-full.js"></script>
 		<script type="text/paperscript" src="js/sperm.js" canvas="mycanvas"></script>
-
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="js/heatmap.js"></script>
 
     </head>
 
@@ -42,6 +43,112 @@
 		  font-family: 'bebas_neueregular', Arial, sans-serif;
 		  color: #44646f;        
 		} 
+		
+      text.axis-workweek {
+        fill: #fff;
+      }
+
+      text {
+        fill: #fff;
+      }
+
+      text.caption {
+        fill:#868686;        
+        font-variant: uppercase;
+      }
+        
+
+
+  svg *::selection {
+         background : transparent;
+      }
+     
+      svg *::-moz-selection {
+         background:transparent;
+      } 
+     
+      svg *::-webkit-selection {
+         background:transparent;
+      }
+      rect.selection {
+        stroke          : #333;
+        stroke-dasharray: 4px;
+        stroke-opacity  : 0.5;
+        fill            : transparent;
+      }
+
+      rect.cell-border {
+        stroke: #eee;
+        stroke-width:0.3px;   
+      }
+
+      rect.cell-selected {
+        stroke: rgb(51,102,153);
+        stroke-width:0.5px;   
+      }
+
+      rect.cell-hover {
+        fill: #fff;
+      }
+
+      rect.bordered {
+        
+        stroke: rgba(64, 76, 87, 0.99);
+        stroke-width:2px;   
+      }
+      
+
+      text.text-selected {
+        fill: #fff;
+      }
+
+      
+      text.text-hover {
+        fill: #fff;
+      }
+#tooltip {
+
+        position: absolute;
+        width: auto;
+        height: auto;
+        pointer-events: none;
+         line-height: 1;
+        font-weight: bold;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 2px;
+        pointer-events: none;
+      }
+
+#tooltip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  pointer-events: none;
+}
+
+#tooltip.n:after {
+  content: "\25BC";
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+  text-align: center;
+}
+      #tooltip.hidden {
+        display: none;
+      }
+
+      #tooltip p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 20px;
+      }
+
 
 
 		</style>
@@ -74,6 +181,7 @@
                    ... sans jamais oser le vérifier
                 </div>
            
+           		<div id="chart"></div>
            
             	<p> L'engouement pour le vélo n'a jamais été aussi fort dans la capitale. En 10 ans, le nombre de vélo en circulation dans les rues de Paris a triplé. Avec son Plan Vélo 2015-2020, la mairie de Paris souhaite accompagner cette dynamique et faire de Paris la capitale européenne du vélo. Avec un objectif majeur : atteindre les 15% de trajets dans la capitale effectués à vélo. </p>
             	<p>Aujourd'hui, près d'un cycliste sur deux affirme avoir déjà eu un accident. La question de la sécurité cycliste apparaît ainsi centrale dans la réalisation d'un tel projet. A partir du recensement des accidents corporels de l'année 2012 (fichier BAAC), nous nous proposons d'établir un aperçu chiffré de l'accidentologie cycliste à Paris.</p>
