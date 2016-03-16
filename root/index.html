@@ -78,8 +78,6 @@
 		      </span>
 		</div>   
 		
-        
-		
 	       
 	    <section id="corps">
            
@@ -342,184 +340,6 @@
 		        </a>
 
 
-
-		        
-
-
-
-
-
-		        <div id="carte">
-					
-		         <script type="text/javascript">
-
-
-					// Size of the canvas on which the map will be rendered
-					var width = 600,  
-					    height = 400;
-
-					var color_domain = [25, 40, 50, 100];
-					var ext_color_domain = [0, 25, 40, 50];
-					var legend_labels = ["< 25 accidents", "25-40", "40-50", ">50"];              
-					var color = d3.scale.threshold()
-					  .domain(color_domain)
-					  .range(["#f8af6b", "#df924a", "#a26b33", "#6a4622"]);
-					  //.range(["#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1"]);
-
-					var svg = d3.select("div#carte").append("svg")
-					      .attr("width", width)
-					      .attr("height", height);
-					//   .style("margin", "10px auto");
-
-					var div = d3.select("div#carte").append("div")
-					  .attr("class", "tooltip")
-					  // .text("Paris")
-					  .html(   "<b>" + "<font face='ralewayextralight' size=5>" + "1" + "<sup>" + "er" + "</sup>" + " ARRONDISSEMENT" + "</font>" + "</b>" +  
-					          "<br/>" +  "<br/>" + 
-					          "<b>" + "<font color=#df924a size=5>" + "22" + "</font>" + "</b>" +
-					          " accidents cyclistes" + 
-					          "<br/>" +  "<br/>" + 
-					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a size=5>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
-					          //"<br/>" +  //"<br/>" + 
-					          " avec " + "<b>" + "<font color=#df924a size=5>" + "8" + "</font>" + "</b>" +  " accidents" +    
-
-  								//"<br/>" +  "<br/>" + 
-					          //"<br/>" + 
-					          " <hr />" +
-
-					          "<font face='ralewayextralight' size=5 size=5>" + "PARIS" + "</font>" + "</b>" +  
-					          "<br/>" +  "<br/>" + 
-					          "<b>" + "<font color=#df924a size=5>" + "702" + "</font>" + "</b>" +
-					          " accidents cyclistes" + 
-					          "<br/>" +  "<br/>" + 
-					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a size=5>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
-					          //"<br/>" +  //"<br/>" + 
-					          " avec " + "<b>" + "<font color=#df924a size=5>" + "16" + "</font>" + "</b>" +  " accidents" 
-					                  );            
-					//   .style("opacity", 0);
-
-					var center = [2.3488000, 48.8534100];
-
-					// Instantiate the projection object
-					var projection = d3.geo.mercator()  //conicConformal() 
-					    .center(center)
-					    //.clipAngle(180)
-					    // Size of the map itself, you may want to play around with this in 
-					    // relation to your canvas size
-					    .scale(110000)
-					    // Center the map in the middle of the canvas
-					    .translate([width/2, height / 2])
-					    .precision(.1);
-
-
-					var path = d3.geo.path().projection(projection); 
-
-					var arr = svg
-					    .append("g")
-					    .attr("id", "arrondissements");
-
-
-					d3.json("https://api.myjson.com/bins/n005", function(err, map) {    
-
-					    var features = arr
-					           .selectAll("path")
-					               .data(map.features);
-					     
-
-					    var test = "Acc";
-
-					    //var colorScale = d3.scale.category20c();
-
-					    features.enter()
-					        .append("path")
-					            .attr('class', 'arrondissement')
-					            .attr('fill', function(d) { 
-					                return color(+d.properties[test]); //colorScale(+d.properties.Acc);
-					            })
-					            .attr("d", path)
-
-
-					    .on("mouseover", function() {
-					      d3.select(this).style("opacity", 0.8);
-					    })
-					    .on("mouseout", function() {
-					      d3.select(this).style("opacity", 1);
-					    })
-
-					    .on("click", function(d) {
-					      div.style("opacity", 1)
-					        .attr("class", "tooltip")
-					        .html(      "<b>" + "<font face='ralewayextralight' size=5>" + d.properties["C_AR"] + "<sup>" + d.properties["ind"] + "</sup>" + " ARRONDISSEMENT" + "</font>" + "</b>" +  
-					          "<br/>" +  "<br/>" + 
-					          "<b>" + "<font color=#df924a size=5>" + d.properties["Acc"] + "</font>" + "</b>" +
-					          " accidents cyclistes" + 
-					          "<br/>" +  "<br/>" + 
-					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a size=5>" + d.properties["AXE"] + "</font>" + "</b>" + "," +
-					          //"<br/>" +  //"<br/>" + 
-					          " avec " + "<b>" + "<font color=#df924a size=5>" + d.properties["Nb_AXE"] + "</font>" + "</b>" +  " accidents"       +
-
-					          //"<br/>" +  "<br/>" + 
-					          //"<br/>" + 
-					          " <hr />" +
-
-					           "<font face='ralewayextralight' size=5>" + "PARIS" + "</font>" + "</b>" +  
-					          "<br/>" +  "<br/>" + 
-					          "<b>" + "<font color=#df924a size=5>" + "702" + "</font>" + "</b>" +
-					          " accidents cyclistes" + 
-					          "<br/>" +  "<br/>" + 
-					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a size=5>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
-					          //"<br/>" +  //"<br/>" + 
-					          " avec " + "<b>" + "<font color=#df924a size=5>" + "16" + "</font>" + "</b>" +  " accidents" 
-
-					          ); 
-					      // div.transition().duration(300)
-					      // .style("opacity", 1)
-					      // .text("Paris " + d.properties["L_AR"])
-					    });
-
-
-					});
-
-
-					 //Adding legend for our Choropleth
-
-					  var legend = svg.selectAll("g.legend")
-					  .data(ext_color_domain)
-					  .enter().append("g")
-					  .attr("class", "legend");
-
-					  var ls_w = 15, ls_h = 15;
-
-
-					  legend.append("rect")
-					  .attr("x", 50)
-					  .attr("y", function(d, i){ return height - 40 - (i*ls_h) - 2*ls_h;})
-					  .attr("width", ls_w)
-					  .attr("height", ls_h)
-					  .style("fill", function(d, i) { return color(d); })
-					  .style("opacity", 0.8);
-
-					  legend.append("text")
-					  .attr("x", 70)
-					  .attr("y", function(d, i){ return height - (i*ls_h) - ls_h - 44;})
-					  .text(function(d, i){ return legend_labels[i]; });
-
-					  </script>
-
-				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 		        <p>Les plus grands arrondissements tels que le 16e et 12e concentrent un nombre important d'accidents cyclistes. Toutefois, le 18e et 19e ne suivent pas cette tendance. Leur dénivelé important pouvant expliquer un trafic cycliste plus faible et donc des accidents moins nombreux.</p>
 
 				<p class="pchiffre" style="text-align: left"> Des grands axes <span class="exergue">peu adaptés</span> à la pratique du vélo</p>
@@ -559,11 +379,8 @@
 		        	
 						<p class="pchiffre"><span class="chiffre">23</span>  accidents cyclistes</p>
 		        		<p class="pchiffre"><span class="chiffre">35%</span>  avec un piéton</p>
-		        		<p class="pchiffre"><span class="chiffre">35%</span>  seul</p>
+                    <p class="pchiffre"><span class="chiffre">35%</span>  seul</p>
 
-
-
-					
 		        </div>		
         
         </section>
@@ -571,7 +388,7 @@
 	      
  		
  		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script>
+		  <script>
 			$(document).ready(function() {
 				$('.scrollTo').click( function() { // Au clic sur un élément
 					var page = $(this).attr('href'); // Page cible
@@ -580,7 +397,7 @@
 					return false;
 				});
 			});
-		</script>
+		  </script>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
@@ -598,10 +415,7 @@
 
 		  ga('create', 'UA-61746180-1', 'auto');
 		  ga('send', 'pageview');
-
 		</script>
-
-
 
     </body>
 </html>
