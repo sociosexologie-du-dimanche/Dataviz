@@ -1,0 +1,327 @@
+/* Elements html prédéfinis */
+
+body {
+    font-family: 'droid', Arial, sans-serif;
+    color: #004C59;
+    background:'white';
+    text-rendering: optimizeLegibility;
+}
+
+canvas {
+            display: inline;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 80%;
+            height: 100%;
+ }
+
+
+/* Volet de navigation */
+.box {
+	width:20%;
+	height:100%;
+	position:fixed;
+	display: inline;
+	top:0px;
+	left:80%;
+	overflow-x: auto;
+  	overflow-y: hidden;
+  	background:#FFD6DD;
+  	box-shadow: 0 0 20px rgba(0,0,0,.30);
+  	z-index:3;
+}
+
+nav {
+	font-family: 'droid-bold', Arial, sans-serif;
+    color: #0E5348;
+	width:180px;
+	left: 0px;
+	text-align:left;
+	background:#FFD6DD;
+	font-size:large;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: block;
+    margin-bottom: 30px;
+}
+
+nav a, footer a
+{
+	color: #0E5348;
+    text-decoration: none;
+    transition: all .1s ease;
+}
+
+nav a:hover, footer a:hover
+{
+   color: #107671;
+   cursor: pointer;
+   padding: 5px;
+}
+
+/* Footer */
+
+footer {
+    padding-top: 10px;
+    margin-right: 2px;
+    margin-left: 2px;
+    display: block;
+    position : fixed;
+    width:180px;
+    bottom : 2px;
+    font-size : 0.8em;
+    font-family: 'droid-bold';
+}
+
+footer ul {
+    list-style-image: url('Images/coeur.png') ;
+}
+
+/* Fin footer */
+
+
+/* Identités */
+#banniere {	
+	font-family: 'poetsen', serif;
+    position:absolute;
+	font-size: 2em;
+    right:24%;
+    top:75%;
+	line-height: 1.2em;
+	text-align: left;
+    z-index:3;
+}
+
+#corps {
+	display:block;
+	position:absolute;
+	width : 75% ;
+	top:105%;
+	margin-right:auto;
+	margin-left:2%;
+	background:#FFFFFF;
+	overflow-x:auto;
+    z-index:2;
+}
+
+#pIntro {
+    margin-top:50px;
+    margin-bottom:100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: justify;
+}
+
+#religion {
+    background: url('Images/picto_reli.jpg') no-repeat top center;
+    padding-top: 120px ;
+    font-family: 'poetsen', 'Gill Sans', Arial, sans-serif;
+	font-size: 3.15em;
+	text-align: center;
+	margin-top: 50px;
+    color: #004C59;
+}
+
+#religion:hover{
+    opacity:0.8;
+	transition: all .1s ease ;	
+}
+
+/* Classes crées */
+
+.titre_section{
+	background:  url('images/marmotte.jpg') no-repeat top center ;
+	font-family: 'poetsen', 'Gill Sans', Arial, sans-serif;
+	font-size: 3.15em;
+	text-align: center;
+	margin-top: 100px;
+	padding-top: 300px;
+}
+
+.titre_section:hover{
+	opacity:0.8;
+	transition: all .1s ease	
+}
+
+.titre_subsection {
+	font-family: 'raleway','Gill Sans', serif;
+	font-size: 1.8em;
+	margin: auto;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 25px;
+	color: #0E5348;
+	opacity: 0.99;
+	position: relative;
+}
+
+.pPleinePage {
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: justify;
+}
+
+.hidden {
+    color:#FFFFFF;
+}
+.hidden:hover {
+    color:#0E5348;
+    opacity:0.2;
+}
+
+.emph { 
+	color: #F54765;
+}
+
+.emph:hover {
+	opacity:0.8;
+    transition: all .1s ease	;
+}
+
+.graph {
+    width: 600px;
+    margin: auto;
+}
+
+.chiffre {
+    color: #df924a; /* mettre ici la couleur orange de la palette */
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.chiffre:hover {
+    opacity: 0.8;
+    font-family: 'Gill Sans', serif;
+    font-size: 1.3em; 
+    transition: all .1s ease	;
+}
+
+/* Trait
+.hr2
+{
+   width: 30%;
+   color: #44646f; 
+   height: 1px;
+   margin-top: 60px;
+   margin-bottom: 60px;
+}
+
+hr
+{
+   width: 40%;
+   color: #44646f; 
+   height: 1px;
+   margin-top: 30px;
+   margin-bottom: 20px;
+}
+*/
+
+
+/* Partie yé comprends pas */
+form {
+    /* Pour le centrer dans la page */
+    margin: 0 auto;
+    width: 300px;
+    /* Pour voir les limites du formulaire */
+    padding: 1em;
+
+}
+form div + div {
+    margin-top: 1em;
+}
+label {
+    /* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    font: 0.8em 'ralewayextralight';
+}
+.button {
+    /* Pour positionner les boutons de la même manière que les champs textuels */
+    padding-left: 90px; /* même dimension que les étiquettes */
+}
+button {
+    /* Cette marge représente approximativement le même espace
+       que celui entre les étiquettes et les champs textuels */
+    margin-left: .5em;
+}
+input, textarea {
+    /* Afin de s'assurer que tous les champs textuels utilisent la même police
+       Par défaut, textarea utilise une police à espacement constant */
+    font: 0.8em 'ralewayextralight';
+
+    /* Pour donner la même dimension à tous les champs textuels */
+    width: 200px;
+
+    /* Pour harmoniser l'apparence des bordures des champs textuels */
+    border: 1px solid #999;
+}
+textarea {
+    /* Pour aligner correctement les champs multilignes et leurs étiquettes */
+    vertical-align: top;
+
+    /* Pour donner assez d'espace pour entrer du texte */
+    height: 4em;
+
+    /* Pour permettre aux utilisateurs de redimensionner un champ textuel horizontalement
+       Cela ne marche pas avec tous les navigateurs  */
+    resize: vertical;
+}
+/* fin de la partie yé comprends pas */
+
+/* Famille de fontes */
+
+@font-face {
+    font-family: 'poetsen';
+    src: url('Police/PoetsenOne-Regular-webfont.eot');
+    src: url('Police/PoetsenOne-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Police/PoetsenOne-Regular-webfont.woff') format('woff'),
+         url('Police/PoetsenOne-Regular-webfont.ttf') format('truetype'),
+         url('Police/PoetsenOne-Regular-webfont.svg#poetsenoneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'droid-bold';
+    src: url('Police/DroidSans-Bold-webfont.eot');
+    src: url('Police/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Police/DroidSans-Bold-webfont.woff') format('woff'),
+         url('Police/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('Police/DroidSans-Bold-webfont.svg#droid_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'droid';
+    src: url('Police/DroidSans-webfont.eot');
+    src: url('Police/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Police/DroidSans-webfont.woff') format('woff'),
+         url('Police/DroidSans-webfont.ttf') format('truetype'),
+         url('Police/DroidSans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('Police/Raleway-Light-webfont.eot');
+    src: url('Police/Raleway-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Police/Raleway-Light-webfont.woff') format('woff'),
+         url('Police/Raleway-Light-webfont.ttf') format('truetype'),
+         url('Police/Raleway-Light-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
