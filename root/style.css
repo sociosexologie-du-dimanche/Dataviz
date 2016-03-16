@@ -145,11 +145,11 @@ footer ul {
 }
 
 /* Classes crées */
-.buttonUp,.buttonDown,.bullet {
+.buttonUp,.buttonDown {
     position:absolute;
     left: 95%;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 .buttonUp {
     background: url('Images/arrow-up.png') no-repeat top center ;
@@ -157,13 +157,9 @@ footer ul {
 }
 .buttonDown {
     background: url('Images/arrow-down.png') no-repeat top center ;
-    top: 60px;
+    top: 45px;
 }
-.bullet {
-    background: url('Images/bullet.png') no-repeat top center ;
-    top : 35px;
-}
-.buttonDown:hover,.buttonUp:hover,.bullet:hover {
+.buttonDown:hover,.buttonUp:hover {
     opacity: 0.5;
 }
 
