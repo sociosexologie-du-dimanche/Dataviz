@@ -5,22 +5,14 @@
         
         <link rel="stylesheet" href="style.css" />
         <title>Tout ce que vous avez toujours cru savoir sur le sexe</title>
-
   		
-		<script type="text/javascript" src="js/paper-full.js"></script>
+        <script type="text/javascript" src="js/paper-full.js"></script>
 		<script type="text/paperscript" src="js/sperm.js" canvas="mycanvas"></script>
-		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
-  		<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
-  		<script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
-
- 
-
+		
 
     </head>
 
-
-		<style>
-
+    <style>
 
 		path {
 		  stroke:white;
@@ -30,7 +22,6 @@
 		.legend {
 		  font-size: 11px;
 		}
-
 
 		div.tooltip {   
 		  position: relative;
@@ -48,25 +39,33 @@
 		  color: #44646f;        
 		} 
 
-
-		</style>
+    </style>
 
 
     <body> 
      
 		<div>
 			<a class="scrollTo" href="#mycanvas"><canvas id="mycanvas" style="background:'white'"></canvas></a>
-	    
+            <a class="scrollTo" href="#mycanvas" id="lienHaut"></a>
+            <div id="banniere">
+                   Tout ce que vous avez toujours <br/>
+                   cru savoir sur le <span class="emph">sexe</span>... <br/>
+                   ... sans jamais oser le vérifier
+                
+            </div>
+            <a class="scrollTo" href="#pIntro"><div id="buttonOpen" style="left:55%"></div></a>
+	       
+            
      		<span class="box">
 	        	<nav>
 		            <ul>
-		                <li><a class="scrollTo" href="#scooter">Homosexualité et religion</a></li>
-		                <li><a class="scrollTo" href="#typologie">Extraconjugalité</a></li>
-		                <li><a class="scrollTo" href="#angle_mort">La satisfaction du nombre ?</a></li>
-		                <li><a class="scrollTo" href="#journee_type">Vieillir...</a></li>
-		               	<li><a class="scrollTo" href="#grands_axes">Combien de fois ?</a></li>
-		                <li><a class="scrollTo" href="#pistes_cyclables">Anus politisés</a></li>
-		                <li><a class="scrollTo" href="#pistes_cyclables">Parthouzes politisées</a></li>
+		                <li><a class="scrollTo" href="#religion">Homosexualité et religion</a></li>
+		                <li><a class="scrollTo" href="#adultere">Extraconjugalité</a></li>
+		                <li><a class="scrollTo" href="#nombre">La satisfaction du nombre ?</a></li>
+		                <li><a class="scrollTo" href="#vieillir">Vieillir...</a></li>
+		               	<li><a class="scrollTo" href="#frequence">Combien de fois ?</a></li>
+		                <li><a class="scrollTo" href="#anus">Anus politisés</a></li>
+		                <li><a class="scrollTo" href="#parthouze">Parthouzes politisées</a></li>
 		            </ul>
 		        </nav>
                 
@@ -80,14 +79,19 @@
 		      </span>
 		</div>   
 		
-		
 	       
 	    <section id="corps">
-                <div id="banniere">
-                   Tout ce que vous avez toujours <br/>
-                   cru savoir sur le <span class="emph">sexe</span>... <br/>
-                   ... sans jamais oser le vérifier
+            <p id="pIntro"> Parce que le sexe relève du plus intime pour chacun , les discours autour des pratiques sexuelles nourrisent souvent de nombreux fantasmes. Vous vous êtes peut-être déjà demandé quels étaient les petits plaisirs secrets de vos copains copines, voisins, ou encore patrons. La mauvaise nouvelle - mais plutôt bonne finalement, c'est qu'à moins de tester vous n'irez pas bien loin, c'est pourquoi certains clichés ont la vie dure. Y'a-t-il vraiment moins d'homos chez les cathos ? Sodomise-t-on plus souvent selon qu'on est de droite ou de gauche ? Testez donc maintenant vos a priori sur le sexe en toute impunité ! <span class="hidden">Promis, on ne se moquera pas si vous avez tout faux</span></p>
+            
+        
+            <section class="bloc_histoire">
+                <div class="titre_image">
+                    <a class="scrollTo" href="#lienHaut"><span id="religion">Cathos et homos</span></a>
+                    <a class="scrollTo" href="#lienHaut"><span class="buttonUp"></span></a>
+                    <a class="scrollTo" href="#adultere"><span class="buttonDown"></span></a>
+                    <a class="scrollTo" href="#lienHaut"><span class="bullet"></span></a>
                 </div>
+<<<<<<< HEAD
            
 				
            
@@ -120,6 +124,28 @@
 		        	<p> La part des individus en France se déclarant "non-religieux" et ayant déjà eu un rapport sexuel avec quelqu'un du même sexe est de 16%. Il en est de même pour les individus appartenant à une religion autre que le catholicisme </p>
 		        	<p class="pchiffre"><span class="chiffre">16%</span>  des individus non religieux et/ou non catholiques ont déjà eu une expérience homosexuelle</p>		       
                 </div>
+=======
+				<h1 class="titre_subsection">Insérer ici une petite citation ou autre</h1>
+
+		        <div class="dangereux">
+		        	<p> La part des individus en France se déclarant "non-religieux" et ayant déjà eu un rapport sexuel avec quelqu'un du même sexe est de 16% </p>
+                    <p> Il en est de même pour les individus appartenant à une religion autre que le catholicisme </p>
+		        	<p class="pchiffre"><span class="chiffre">16%</span>  des individus non religieux et/ou non catholiques ont déjà eu une relation homosexuelle</p>
+
+		        	<div class="logo"><iframe src="https://infogr.am/pratiques_religieuses_et_sexuelle_p2___non_croyants" />  </div>
+		        </div>
+
+		        <div class="dangereux">
+		        	<p> Les catholiques quant à eux sont moins tentés par les expériences homosexuelles, mais la différence n'est pas bien significative..  </p>
+		        	<p class="pchiffre"><span class="chiffre">12%</span> des catholiques ont déjà eu une expérience sexuelle avec quelqu'un du même sexe </p>
+                    <p> C'est à dire  </p>
+		        	<p class="pchiffre"><span class="chiffre">4 points de %</span> de moins que le reste de la population. </p>
+
+		        	<div class="logo"><iframe src="https://infogr.am/copy_pratiques_religieuses_et_sexuelle_p2___non_croyants" />  </div>
+
+		        	<p>  </p>
+
+>>>>>>> origin/master
 
 		        <div class="dangereux">
 		        	<p> Les catholiques quant à eux sont moins tentés par les expériences homosexuelles. 12% déclarent avoir déjà eu une expérience avec quelqu'un du même sexe, et le chiffre tombe à 11% chez les catholiques pratiquants  </p>
@@ -142,10 +168,10 @@
 				<p>La pratique du vélo à Paris semble donc moins risquée que celle du scooter. Mais qu'en est-il de la gravité des accidents ? Les cyclistes sont-ils plus vulnérables ?<p>
 
 				<div class="dangereux">
-	        		<iframe src="" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="600" height="400"></iframe>
+	        		<iframe src="https://infogr.am/pratiques_religieuses_et_pratiques_sexuelles" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="600" height="400"></iframe>
 				</div>
 
-				<div class="dangereux" style="margin-top:50px">
+				<div class="dangereux" style="padding-top:50px">
 					<p class="pchiffre" style="text-align: left"><span class="exergue">8</span> fois moins de cyclistes accidentés... </p>
 
 	         		<p>Avec 716 accidentés (pour 702 accidents) en 2012, les cyclistes sont 8 fois moins nombreux à être impliqués dans un accident de la route que les conducteurs de deux roues motorisés.</p>
@@ -155,8 +181,20 @@
 	         		<p>Contrairement à certaines idées reçues, les cyclistes ne sont pas moins vulnérables que leurs homologues motorisés dans Paris. La répartition entre les usagers resortant indemnes de l'accident, les blessés légers ou graves et les décès est ainsi identique au sein des deux catégories.</p>
 	         	</div>
 
+<<<<<<< HEAD
 
 				<a class="scrollTo" href="#mycanvas"><h1 class="titre_section" id="typologie">Histoire 2</h1></a>
+=======
+            </section>
+            <section class="bloc_histoire">
+                <div class="titre_image">
+				    <a class="scrollTo" href="#lienHaut"><span id="adultere">Allons voir ailleurs</span></a>
+                    <a class="scrollTo" href="#religion"><span class="buttonUp"></span></a>
+                    <a class="scrollTo" href="#nombre"><span class="buttonDown"></span></a>
+                    <a class="scrollTo" href="#lienHaut"><span class="bullet"></span></a>
+                </div>
+                
+>>>>>>> origin/master
 				<h1 class="titre_subsection">LA VOITURE, DANGER N°1 DU CYCLISTE</h1>
 
 		        <p>Parmi les quelques 700 accidents cyclistes recensés à Paris en 2012, plus d'un accident sur deux implique une voiture. On observe aussi une forte proportion d'accidents cyclistes n'impliquant aucun autre type de véhicule, correspondant majoritairement à des chutes.</p>
@@ -263,58 +301,17 @@
 
 
 				<p>Suivant le type de véhicule impliqué dans l'accident, la gravité de celui-ci diffère fortement. On remarque logiquement que les accidentés cyclistes ressortent plus fréquemment indemnes de l'accident si celui-ci implique un piéton qu'une voiture. Par ailleurs, les chutes semblent occasionner des blessures conséquentes et peu de cyclistes en sortent indemnes. Rappelons toutefois que les accidents étudiés ont nécessité le déplacement de force de l'ordre sur le lieu de l'accident, impliquant soit la présence de blessés soit de dégâts matériels notables.</p>
-					
+                            	
 
-
-
-
-
-
-				<a class="scrollTo" href="#mycanvas"><h1 class="titre_section" id="angle_mort">Histoire 3</h1></a>
-		        <p>Plus de trois quarts des accidents impliquant un cycliste et une voiture ou un poids lourd sont liés à un choc latéral. Parmi ceux-ci, près d'un sur deux ont lieu lors d'un dépassement, d'un changement de file ou de direction suggérant la possibilité que le cycliste n'ait pas été vu par l'automobiliste. </p>
-
-		        <div class="dangereux3">
-
-
-		        	<div class="logo"><img src="images/arriere.png" width="100" height="200" />  </div>
-
-					<p class="pchiffre"><span class="chiffre">17%</span> <br/> par choc arrière</p>
-		        	
-
-		        </div>
-
-
-		        <div class="dangereux3">
-
-					
-
-		         		<div class="logo" style="margin-bottom:40px"><img src="images/lateral.png" width="140" height="120" />  </div>
-		        	
-						<p class="pchiffre"><span class="chiffre">76%</span> <br/> par choc latéral</p> 
-						<p class="pchiffre_small">dont  <span class="chiffre">51%</span> dûs à un angle mort</p> 
-						<p class="pchiffre_small">et  <span class="chiffre">20%</span> à l'ouverture d'une portière</p> 
-		        		
-				</div>
-
-				<div class="dangereux3">
-
-
-		        	<div class="logo"><img src="images/frontal.png" width="100" height="200" />  </div>
-
-					<p class="pchiffre"><span class="chiffre">3%</span> <br/> par choc frontal</p>
-		        	
-
-		        </div>
-
-
-
-
-
-
-
-					
-
-		        <a class="scrollTo" href="#mycanvas"><h1 class="titre_section" id="journee_type">Histoire 4</h1></a>
+            </section>
+            <section class="bloc_histoire">
+                <div class="titre_image">
+				    <a class="scrollTo" href="#lienHaut"><span id="nombre">Nombre</span></a>
+                    <a class="scrollTo" href="#adultere"><span class="buttonUp"></span></a>
+                    <a class="scrollTo" href="#vieillir"><span class="buttonDown"></span></a>
+                    <a class="scrollTo" href="#lienHaut"><span class="bullet"></span></a>
+                </div>
+                	
 		      	<h1 class="titre_subsection">LES TRAJETS DOMICILE-TRAVAIL, PREMIERE SOURCE DE TRAFIC...</h1>
 
 		      	<div class="dangereux">
@@ -361,189 +358,17 @@
 
 		        <p> <i> <span class="cle">Clé de lecture</span> : au cours d'une journée type de semaine, entre 8 et 9h, le trafic cycliste atteint 2,5 fois son niveau moyen de la journée et le nombre d'accidents 1,77 fois le sien.</i> </p> 
 
+            </section>
+            <section class="bloc_histoire">
+                <div class="titre_image">
+				    <a class="scrollTo" href="#lienHaut"><span id="vieillir">Vieillir</span></a>
+                    <a class="scrollTo" href="#nombre"><span class="buttonUp"></span></a>
+                    <a class="scrollTo" href="#frequence"><span class="buttonDown"></span></a>
+                    <a class="scrollTo" href="#lienHaut"><span class="bullet"></span></a>
+                </div>
+                	
 
-
-
-		        <a class="scrollTo" href="#mycanvas"><h1 class="titre_section" id="grands_axes">Histoire 5</h1>
 		        </a>
-
-
-
-		        
-
-
-
-
-
-		        <div id="carte">
-					
-		         <script type="text/javascript">
-
-
-					// Size of the canvas on which the map will be rendered
-					var width = 600,  
-					    height = 400;
-
-					var color_domain = [25, 40, 50, 100];
-					var ext_color_domain = [0, 25, 40, 50];
-					var legend_labels = ["< 25 accidents", "25-40", "40-50", ">50"];              
-					var color = d3.scale.threshold()
-					  .domain(color_domain)
-					  .range(["#f8af6b", "#df924a", "#a26b33", "#6a4622"]);
-					  //.range(["#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1"]);
-
-					var svg = d3.select("div#carte").append("svg")
-					      .attr("width", width)
-					      .attr("height", height);
-					//   .style("margin", "10px auto");
-
-					var div = d3.select("div#carte").append("div")
-					  .attr("class", "tooltip")
-					  // .text("Paris")
-					  .html(   "<b>" + "<font face='ralewayextralight' size=5>" + "1" + "<sup>" + "er" + "</sup>" + " ARRONDISSEMENT" + "</font>" + "</b>" +  
-					          "<br/>" +  "<br/>" + 
-					          "<b>" + "<font color=#df924a size=5>" + "22" + "</font>" + "</b>" +
-					          " accidents cyclistes" + 
-					          "<br/>" +  "<br/>" + 
-					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a size=5>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
-					          //"<br/>" +  //"<br/>" + 
-					          " avec " + "<b>" + "<font color=#df924a size=5>" + "8" + "</font>" + "</b>" +  " accidents" +    
-
-  								//"<br/>" +  "<br/>" + 
-					          //"<br/>" + 
-					          " <hr />" +
-
-					          "<font face='ralewayextralight' size=5 size=5>" + "PARIS" + "</font>" + "</b>" +  
-					          "<br/>" +  "<br/>" + 
-					          "<b>" + "<font color=#df924a size=5>" + "702" + "</font>" + "</b>" +
-					          " accidents cyclistes" + 
-					          "<br/>" +  "<br/>" + 
-					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a size=5>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
-					          //"<br/>" +  //"<br/>" + 
-					          " avec " + "<b>" + "<font color=#df924a size=5>" + "16" + "</font>" + "</b>" +  " accidents" 
-					                  );            
-					//   .style("opacity", 0);
-
-					var center = [2.3488000, 48.8534100];
-
-					// Instantiate the projection object
-					var projection = d3.geo.mercator()  //conicConformal() 
-					    .center(center)
-					    //.clipAngle(180)
-					    // Size of the map itself, you may want to play around with this in 
-					    // relation to your canvas size
-					    .scale(110000)
-					    // Center the map in the middle of the canvas
-					    .translate([width/2, height / 2])
-					    .precision(.1);
-
-
-					var path = d3.geo.path().projection(projection); 
-
-					var arr = svg
-					    .append("g")
-					    .attr("id", "arrondissements");
-
-
-					d3.json("https://api.myjson.com/bins/n005", function(err, map) {    
-
-					    var features = arr
-					           .selectAll("path")
-					               .data(map.features);
-					     
-
-					    var test = "Acc";
-
-					    //var colorScale = d3.scale.category20c();
-
-					    features.enter()
-					        .append("path")
-					            .attr('class', 'arrondissement')
-					            .attr('fill', function(d) { 
-					                return color(+d.properties[test]); //colorScale(+d.properties.Acc);
-					            })
-					            .attr("d", path)
-
-
-					    .on("mouseover", function() {
-					      d3.select(this).style("opacity", 0.8);
-					    })
-					    .on("mouseout", function() {
-					      d3.select(this).style("opacity", 1);
-					    })
-
-					    .on("click", function(d) {
-					      div.style("opacity", 1)
-					        .attr("class", "tooltip")
-					        .html(      "<b>" + "<font face='ralewayextralight' size=5>" + d.properties["C_AR"] + "<sup>" + d.properties["ind"] + "</sup>" + " ARRONDISSEMENT" + "</font>" + "</b>" +  
-					          "<br/>" +  "<br/>" + 
-					          "<b>" + "<font color=#df924a size=5>" + d.properties["Acc"] + "</font>" + "</b>" +
-					          " accidents cyclistes" + 
-					          "<br/>" +  "<br/>" + 
-					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a size=5>" + d.properties["AXE"] + "</font>" + "</b>" + "," +
-					          //"<br/>" +  //"<br/>" + 
-					          " avec " + "<b>" + "<font color=#df924a size=5>" + d.properties["Nb_AXE"] + "</font>" + "</b>" +  " accidents"       +
-
-					          //"<br/>" +  "<br/>" + 
-					          //"<br/>" + 
-					          " <hr />" +
-
-					           "<font face='ralewayextralight' size=5>" + "PARIS" + "</font>" + "</b>" +  
-					          "<br/>" +  "<br/>" + 
-					          "<b>" + "<font color=#df924a size=5>" + "702" + "</font>" + "</b>" +
-					          " accidents cyclistes" + 
-					          "<br/>" +  "<br/>" + 
-					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a size=5>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
-					          //"<br/>" +  //"<br/>" + 
-					          " avec " + "<b>" + "<font color=#df924a size=5>" + "16" + "</font>" + "</b>" +  " accidents" 
-
-					          ); 
-					      // div.transition().duration(300)
-					      // .style("opacity", 1)
-					      // .text("Paris " + d.properties["L_AR"])
-					    });
-
-
-					});
-
-
-					 //Adding legend for our Choropleth
-
-					  var legend = svg.selectAll("g.legend")
-					  .data(ext_color_domain)
-					  .enter().append("g")
-					  .attr("class", "legend");
-
-					  var ls_w = 15, ls_h = 15;
-
-
-					  legend.append("rect")
-					  .attr("x", 50)
-					  .attr("y", function(d, i){ return height - 40 - (i*ls_h) - 2*ls_h;})
-					  .attr("width", ls_w)
-					  .attr("height", ls_h)
-					  .style("fill", function(d, i) { return color(d); })
-					  .style("opacity", 0.8);
-
-					  legend.append("text")
-					  .attr("x", 70)
-					  .attr("y", function(d, i){ return height - (i*ls_h) - ls_h - 44;})
-					  .text(function(d, i){ return legend_labels[i]; });
-
-					  </script>
-
-				</div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 		        <p>Les plus grands arrondissements tels que le 16e et 12e concentrent un nombre important d'accidents cyclistes. Toutefois, le 18e et 19e ne suivent pas cette tendance. Leur dénivelé important pouvant expliquer un trafic cycliste plus faible et donc des accidents moins nombreux.</p>
@@ -558,8 +383,14 @@
 
 
 
-
-		        <a class="scrollTo" href="#mycanvas"><h1 class="titre_section" id="pistes_cyclables">Histoire 6</h1></a>
+        </section>
+            <section class="bloc_histoire">
+                <div class="titre_image">
+				    <a class="scrollTo" href="#lienHaut"><span id="frequence">Fois</span></a>
+                    <a class="scrollTo" href="#vieillir"><span class="buttonUp"></span></a>
+                    <a class="scrollTo" href="#anus"><span class="buttonDown"></span></a>
+                    <a class="scrollTo" href="#lienHaut"><span class="bullet"></span></a>
+                </div>
 		        <p>Un pan entier du Nouveau Plan Vélo de la Ville de Paris est tourné vers les aménagements cyclables, avec notamment pour objectif de doubler la longueur des pistes cyclables d'ici à 2020. Si l'effort est donné sur ces aménagements, ces derniers restent encore peu sécurisants. Ainsi, en 2012, 16% des accidents cyclistes ont eu lieu sur une piste cyclable, dont 59% avec des véhicules motorisés ! <p>Par ailleurs, et preuve de la difficulté des cyclistes à s'intégrer dans le paysage urbain, on dénombre 23 accidents qui ont eu lieu... sur le trottoir.</p>
 
 		        
@@ -585,19 +416,32 @@
 		        	
 						<p class="pchiffre"><span class="chiffre">23</span>  accidents cyclistes</p>
 		        		<p class="pchiffre"><span class="chiffre">35%</span>  avec un piéton</p>
-		        		<p class="pchiffre"><span class="chiffre">35%</span>  seul</p>
+                    <p class="pchiffre"><span class="chiffre">35%</span>  seul</p>
 
-
-
-					
 		        </div>		
-        
+    </section>
+            <section class="bloc_histoire">
+                <div class="titre_image">
+				    <a class="scrollTo" href="#lienHaut"><span id="anus">Anus</span></a>
+                    <a class="scrollTo" href="#frequence"><span class="buttonUp"></span></a>
+                    <a class="scrollTo" href="#parthouze"><span class="buttonDown"></span></a>
+                    <a class="scrollTo" href="#lienHaut"><span class="bullet"></span></a>
+                </div>
+    
+    </section>
+            <section class="bloc_histoire">
+                <div class="titre_image">
+				    <a class="scrollTo" href="#lienHaut"><span id="parthouze">Parthouse</span></a>
+                    <a class="scrollTo" href="#anus"><span class="buttonUp"></span></a>
+                    <a class="scrollTo" href="#lienHaut"><span class="bullet"></span></a>
+                </div>
+    </section >
         </section>
 
 	      
  		
  		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script>
+		  <script>
 			$(document).ready(function() {
 				$('.scrollTo').click( function() { // Au clic sur un élément
 					var page = $(this).attr('href'); // Page cible
@@ -606,14 +450,19 @@
 					return false;
 				});
 			});
-		</script>
+		  </script>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
 		<script src="http://code.highcharts.com/highcharts.js"></script>
 		<script src="http://code.highcharts.com/modules/exporting.js"></script>
-   
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+  		<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
+  		<script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
 
+  
+    
+    
 		<style type="text/css">a:link{text-decoration:none}</style>
 
 		<script>
@@ -624,10 +473,7 @@
 
 		  ga('create', 'UA-61746180-1', 'auto');
 		  ga('send', 'pageview');
-
 		</script>
-
-
 
     </body>
 </html>
