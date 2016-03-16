@@ -94,7 +94,7 @@ footer ul {
     position:absolute;
 	font-size: 2em;
     right:24%;
-    top:75%;
+    top:70%;
 	line-height: 1.2em;
 	text-align: left;
     z-index:3;
@@ -120,35 +120,69 @@ footer ul {
     text-align: justify;
 }
 
-#religion {
-    background: url('Images/picto_reli.jpg') no-repeat top center;
-    padding-top: 120px ;
+#buttonOpen {
+    background: url('Images/arrow-down.png') no-repeat top center ;
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+    position: absolute ;
+    top: 90%;
+}
+#buttonOpen:hover {
+    opacity: 0.5;
+}
+
+#religion,#adultere,#nombre,#vieillir {
     font-family: 'poetsen', 'Gill Sans', Arial, sans-serif;
 	font-size: 3.15em;
 	text-align: center;
-	margin-top: 50px;
+    position:absolute;
+    top:0px;
+    left:25%;
+    width:50%;
     color: #004C59;
 }
 
-#religion:hover{
+#religion {
+    background: url('Images/picto_reli.jpg') no-repeat top center;
+    padding-top: 120px;
+}
+
+#adultere,#vieillir {
+    background: url('Images/picto_reli.jpg') no-repeat top center;
+    padding-top: 200px;
+}
+
+#religion:hover, #adultere:hover, #nombre:hover, #vieux:hover{
     opacity:0.8;
 	transition: all .1s ease ;	
 }
 
 /* Classes crées */
-
-.titre_section{
-	background:  url('images/marmotte.jpg') no-repeat top center ;
-	font-family: 'poetsen', 'Gill Sans', Arial, sans-serif;
-	font-size: 3.15em;
-	text-align: center;
-	margin-top: 100px;
-	padding-top: 300px;
+.buttonUp,.buttonDown {
+    position:absolute;
+    left: 95%;
+    width: 30px;
+    height: 30px;
+}
+.buttonUp {
+    background: url('Images/arrow-up.png') no-repeat top center ;
+    top: 40px;
+}
+.buttonDown {
+    background: url('Images/arrow-down.png') no-repeat top center ;
+    top: 75px;
+}
+.buttonDown:hover,.buttonUp:hover {
+    opacity: 0.5;
 }
 
-.titre_section:hover{
-	opacity:0.8;
-	transition: all .1s ease	
+.titre_image {
+    position:relative;
+    width:100%;
+    margin: 100px auto 50px auto;
+    display: block;
+    min-height: 200px;
 }
 
 .titre_subsection {
