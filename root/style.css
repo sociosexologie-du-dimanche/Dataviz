@@ -30,7 +30,7 @@ canvas {
   	overflow-y: hidden;
   	background:#FFD6DD;
   	box-shadow: 0 0 20px rgba(0,0,0,.30);
-  	z-index:10;
+  	z-index:4;
 }
 
 nav {
@@ -96,6 +96,7 @@ footer ul {
     top:70%;
 	line-height: 1.2em;
 	text-align: left;
+    z-index:3;
 }
 
 #corps {
@@ -107,6 +108,7 @@ footer ul {
 	margin-left:2%;
 	background:#FFFFFF;
 	overflow-x:auto;
+    z-index:2;
 }
 
 #pIntro {
@@ -121,6 +123,7 @@ footer ul {
     background: url('Images/arrow-down.png') no-repeat top center ;
     width: 30px;
     height: 30px;
+    z-index: 3;
     position: absolute ;
     top: 90%;
 }
@@ -145,11 +148,11 @@ footer ul {
 }
 
 /* Classes crées */
-.buttonUp,.buttonDown {
+.buttonUp,.buttonDown,.bullet {
     position:absolute;
     left: 95%;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 .buttonUp {
     background: url('Images/arrow-up.png') no-repeat top center ;
@@ -157,9 +160,13 @@ footer ul {
 }
 .buttonDown {
     background: url('Images/arrow-down.png') no-repeat top center ;
-    top: 45px;
+    top: 60px;
 }
-.buttonDown:hover,.buttonUp:hover {
+.bullet {
+    background: url('Images/bullet.png') no-repeat top center ;
+    top : 35px;
+}
+.buttonDown:hover,.buttonUp:hover,.bullet:hover {
     opacity: 0.5;
 }
 
@@ -168,25 +175,26 @@ footer ul {
     background: #FFFFFF;
     margin: 0px 0px 0px 0px ;
     padding : 20px 2px 10px 2px ;
+    z-index: 3;
 }
 
 .bloc_histoire:nth-of-type(1) {
-    background: radial-gradient(rgba(255,255,255,0.95),white),url('Images/picto_reli.jpg') no-repeat center 50px fixed  ;
+    background: radial-gradient(rgba(255,255,255,0.8),white),url('Images/picto_reli.jpg') no-repeat center 50px fixed  ;
 }
 
 .bloc_histoire:nth-of-type(2) {
-    background: radial-gradient(rgba(255,255,255,0.95),white), url('Images/marmotte.jpg') no-repeat center 50px  fixed  ;
+    background: radial-gradient(rgba(255,255,255,0.8),white), url('Images/marmotte.jpg') no-repeat center 50px  fixed  ;
 }
 
 .bloc_histoire:nth-of-type(3) {
-    background: radial-gradient(rgba(255,255,255,0.95),white), url('Images/danseur2.jpg') no-repeat center 50px  fixed  ;
+    background: radial-gradient(rgba(255,255,255,0.8),white), url('Images/danseur2.jpg') no-repeat center 50px  fixed  ;
 }
 
 .titre_image {
     position:relative;
     width:100%;
     padding-top : 20px;
-    margin: 0px auto 20px auto;
+    margin: -20px auto 20px auto;
     display: block;
     min-height: 100px;
 }
@@ -263,58 +271,6 @@ hr
    margin-bottom: 20px;
 }
 */
-
-/* Classes pour le script quizz */
-.fenetre {
-    position: relative;
-    display:block;
-    width: 95%;
-    margin: 50px auto 50px auto;
-}
-
-
-.infographie {
-    display:inline-block;
-    vertical-align: top;
-    width:45%;
-    height:95%;
-    margin: 5px 2% 5px 2% ;
-    -webkit-filter: blur(20px) grayscale(100%) opacity(80%);
-}
-.fenetreQuestion {
-    position:absolute;
-    top : 10%;
-    left: 20%;
-    width: 60%;
-    font-family: 'droid-bold';
-}
-
-.question{
-    text-align:center;
-    margin : 20px auto 20px auto;
-    width:70%;
-}
-.reponseV,.reponseF {
-    width: 50%;
-    margin: 20px auto 10px auto ;
-    text-align:center;
-}
-
-.reponseV:hover,.reponseF:hover {
-    padding-left:5px;
-    font-weight: 600;
-    cursor:pointer;
-    
-}
-
-.commentaire, .explications{
-    padding: 2px;
-    margin-top:5px;
-}
-
-/*.commentaire { display:none}*/
-
-/* Fin de la partie quizz */
 
 
 /* Partie yé comprends pas */
