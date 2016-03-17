@@ -1,20 +1,27 @@
-/* Ce qu'il faut faire :
+//------------------------------------------------------------
+// Création du tableau 'textes'
+var reponse1V =  "<p> Et bien oui ! La part des individus en France se déclarant <em>non-religieux</em> et ayant déjà eu un rapport sexuel avec quelqu'un du même sexe est de <span class='chiffre'>16%</span>. Il en est de même pour les individus appartenant à <span class='emph'>une religion autre que le catholicisme</span>.<p> Les catholiques quant à eux sont moins tentés par les expériences homosexuelles, mais la différence n'est pas bien significative... <span class='chiffre''>12%</span> des catholiques ont déjà eu une expérience avec quelqu'un du même sexe. C'est à dire seulement <span class='chiffre'>4 points</span> de pourcentage de moins que le reste de la population !</p>",
+    reponse1F = "<p> Pas du tout ! On est loin de l'époque où la foi et l'homosexualité sont incompatibles ! La part des individus en France se déclarant <em>non-religieux</em> et ayant déjà eu un rapport sexuel avec quelqu'un du même sexe est de <span class='chiffre'>16%</span>. Il en est de même pour les individus appartenant à <span class='emph'>une religion autre que le catholicisme</span>.<p> Les catholiques quant à eux sont moins tentés par les expériences homosexuelles, mais la différence n'est pas bien significative... <span class='chiffre''>12%</span> des catholiques ont déjà eu une expérience avec quelqu'un du même sexe. C'est à dire seulement <span class='chiffre'>4 points</span> de pourcentage de moins que le reste de la population !</p>";
 
-- créer un événement au clic de la soirée sur les div "reponseF" et "reponseV".
-    pour les div reponseF, un clic on renvoie FALSE
-    pour les div reponseV, un clic on renvoie TRUE
-        > reponseF.addEventListener('click',function(e) {return false})
-        > idem pour V
-        > à ce stage on a enregistré e qui contient false ou true (à vérifier)
-        > utiliser la structure parent pour récupérer les bonnes div
-- instructions de modifications du css en conséquence :
-        > effacer la fenetre question : question.style.display=none
-        > enlever le blur : infographie.style.filter=none
-        > afficher la fenetre commentaire : commentaire.style.display=block
-        > remplir la fenetre commentaire selon la réponse : e ? commentaire.innerHtml('Vrai') | commentaire.innerHtml('Faux')
-- trouver la commande qui gère la transition entre le blur et le non blur.
-*/
-        
+document.querySelector("#quizz1 .commentaire").innerHTML = reponse1V ;
+
+
+textes = {
+        vrai : [
+            reponse1V ,
+            "C'est vrai" ,
+            "Tout à fait"
+        ],
+        faux : [
+            reponse1F ,
+            "Pas vrai du tout" ,
+            "T'es nul." 
+    ]};
+
+
+
+//-------------------------------------------------------------
+// Début du script        
 var clics = document.querySelectorAll('.fenetreQuestion'),  // Récupération de toutes les fenêtres de question
     Reponse = {                                               // Création d'un prototype contenant la fenêtre mère parente et le clic
         init:function(bloc,result){
@@ -23,19 +30,7 @@ var clics = document.querySelectorAll('.fenetreQuestion'),  // Récupération de
         }
     },
     reponse = Object.create(Reponse),                       // Création de l'objet réponse
-    infogra, comm, question,
-    textes = {
-        vrai : [
-            "Oui" ,
-            "C'est vrai" ,
-            "Tout à fait"
-        ],
-        faux : [
-            "Non" ,
-            "Pas vrai du tout" ,
-            "T'es nul." 
-    ]};                                                     // Création des variables utilisées dans la boucle
-    console.log(textes)
+    infogra, comm, question;                                                     // Création des variables utilisées dans la boucle
 
 for (i=0, n=clics.length; i<n; i++) {                       // On 'prépare à l'écoute' toutes les fenêtres de la page
     clics[i].addEventListener('click',function(e){
@@ -54,16 +49,17 @@ for (i=0, n=clics.length; i<n; i++) {                       // On 'prépare à l
         idFenetre = reponse.fenetre.id ;
         
         if (reponse.result != 'erreur') {                                  // On ne modifie le CSS que si l'utilisateur a répondu
-            infogra = reponse.fenetre.firstElementChild ;                 // On enregistre les trois enfants de la fenêtre mère
-            question = reponse.fenetre.lastElementChild ;                                // On récupère l'élément question
+            infogra = document.querySelector("#" + idFenetre + " .infographie") ;   // On enregistre les trois enfants de la fenêtre mère
+            question = document.querySelector("#" + idFenetre + " .fenetreQuestion") ;      // On récupère l'élément question
             comm = document.querySelector("#"+ idFenetre + " .commentaire") ;       // On récupère le commentaire de réponse
             console.log(infogra) ;
             console.log(question) ;
             console.log(comm) ;
         
-            question.style.display = 'none' ;                   // On désaffiche la fenêtre question
+            question.style.WebkitFilter = 'opacity(0%)' ;                   // On désaffiche la fenêtre question
             infogra.style.WebkitFilter = 'none' ;            // On enlève le flous sur les infographies
             comm.style.WebkitFilter = 'none' ;
+            question.style.zIndex = '-1' ;
             // On remplit la fenêtre commentaire
             noQuestion = idFenetre.charAt(5) - 1;
             (reponse.result) ? comm.innerHTML = textes.vrai[noQuestion]: comm.innerHTML = textes.faux[noQuestion] ;  
