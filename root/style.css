@@ -271,7 +271,63 @@ hr
    margin-bottom: 20px;
 }
 */
+/* Classes pour le script quizz */
 
+.fenetre {
+    position: relative;
+    display:block;
+    width: 95%;
+    margin: 50px auto 50px auto;
+}
+
+
+.infographie {
+    display:inline-block;
+    vertical-align: top;
+    height:95%;
+    margin: 5px 2% 5px 2% ;
+    -webkit-filter: blur(5px) grayscale(50%) opacity(80%);
+    transition : filter 5s ;
+    transition : -webkit-filter 1s ;
+}
+
+.commentaire {
+    display:inline-block;
+    vertical-align: top;
+    text-align : justify;
+    height:95%;
+    margin: 5px 2% 5px 2% ;
+    -webkit-filter: blur(5px) grayscale(50%) opacity(80%);
+    transition : filter 5s ;
+    transition : -webkit-filter 1s ;
+}
+.fenetreQuestion {
+    display:block;
+    position:absolute;
+    top : 10%;
+    left: 20%;
+    width: 60%;
+    font-family: 'droid-bold';
+    -webkit-transition : display 0.5s ;
+}
+
+.question{
+    text-align:center;
+    margin : 20px auto 20px auto;
+    width:70%;
+}
+.reponseV,.reponseF {
+    width: 50%;
+    margin: 20px auto 10px auto ;
+    text-align:center;
+}
+
+.reponseV:hover,.reponseF:hover {
+    padding-left:5px;
+    font-weight: 600;
+    cursor:pointer;
+    
+}
 
 /* Partie yé comprends pas */
 form {
