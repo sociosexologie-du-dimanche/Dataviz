@@ -40,7 +40,7 @@
 
     <body> 
      
-		<div>
+		<div id="accueil">
 			<a class="scrollTo" href="#mycanvas"><canvas id="mycanvas" style="background:'white'"></canvas></a>
             <a class="scrollTo" href="#mycanvas" id="lienHaut"></a>
             <div id="banniere">
@@ -265,7 +265,7 @@
                     <p><span class="chiffre">35%</span>  seul</p>
 
 		        </div>		
-    </section>
+            </section>
             <section class="bloc_histoire">
                 <div class="titre_image">
 				    <a class="scrollTo" href="#lienHaut"><span id="anus">Anus</span></a>
@@ -274,54 +274,27 @@
                     <a class="scrollTo" href="#lienHaut"><span class="bullet"></span></a>
                 </div>
     
-    </section>
+            </section>
             <section class="bloc_histoire">
                 <div class="titre_image">
 				    <a class="scrollTo" href="#lienHaut"><span id="parthouze">Parthouse</span></a>
                     <a class="scrollTo" href="#anus"><span class="buttonUp"></span></a>
                     <a class="scrollTo" href="#lienHaut"><span class="bullet"></span></a>
                 </div>
-    </section >
+            </section >
         </section>
 
-	      
- 		
- 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		  <script>
-			$(document).ready(function() {
-				$('.scrollTo').click( function() { // Au clic sur un élément
-					var page = $(this).attr('href'); // Page cible
-					var speed = 900; // Durée de l'animation (en ms)
-					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-					return false;
-				});
-			});
-		  </script>
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="http://code.highcharts.com/highcharts.js"></script>
-		<script src="http://code.highcharts.com/modules/exporting.js"></script>
-        
-        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
-  		<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
-  		<script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
-        
+		<script src="http://code.highcharts.com/modules/exporting.js"></script>    
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>  
+    
         <script type="text/javascript" src="js/paper-full.js"></script>
 		<script type="text/paperscript" src="js/sperm.js" canvas="mycanvas"></script>
-		<script src='js/quizz.js'></script>
-
-
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-61746180-1', 'auto');
-		  ga('send', 'pageview');
-		</script>
-    
+        <script type="text/javascript" src="js/scroll.js"></script>
+		<script type="text/javascript" src='js/quizz.js'></script>
 
 
     </body>
