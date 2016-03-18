@@ -253,6 +253,12 @@ footer ul {
     transition: all .1s ease;
 }
 
+.lienCache {
+    text-decoration: none ;
+    color: #004C59 ;
+    cursor:default;
+}
+
 /* Classes pour le script quizz */
 
 .fenetre {
@@ -276,7 +282,7 @@ footer ul {
     display:table-cell;
     vertical-align: top;
     text-align : justify;
-    height:95%;
+    height: 95%;
     padding : 5px 10px ;
     -webkit-filter: blur(10px) grayscale(70%) opacity(80%);
     transition : filter 2s ;
@@ -311,6 +317,26 @@ footer ul {
     font-weight: 600;
     cursor:pointer;
     
+}
+
+#quizz1 .infographie {
+    width : 600px ;
+}
+
+/* Script infographie cathos */
+
+#chiffreInfoCathos {
+    padding : 5px 5px ;
+    margin : 15% auto 30px auto ;
+    text-align : center ;
+    font-family: 'droid-bold' ;
+    font-size : 1.2em ;
+}
+
+.oui,.non {
+    margin-right: 3px ;
+        -webkit-transition : all 0.2s ease ;
+
 }
 
 

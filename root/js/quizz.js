@@ -63,7 +63,7 @@ for (i=0, n=clics.length; i<n; i++) {                       // On 'prépare à l
             // On remplit la fenêtre commentaire
             noQuestion = idFenetre.charAt(5) - 1;
             (reponse.result) ? comm.innerHTML = textes.vrai[noQuestion]: comm.innerHTML = textes.faux[noQuestion] ;  
-            comm.style.fontWeight = 'bold' ;
+            // comm.style.fontWeight = 'bold' ;
         }
                             console.log('Fini toutes les instructions') ;
     });
