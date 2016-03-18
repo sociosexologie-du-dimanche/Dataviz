@@ -39,7 +39,7 @@
 
 
     <body> 
-     
+
 		<div id="accueil">
 			<a class="scrollTo" href="#mycanvas"><canvas id="mycanvas" style="background:'white'"></canvas></a>
             <div id="banniere">
@@ -76,6 +76,7 @@
 		
 	       
 	    <section id="corps">
+
             <p id="pIntro"> Parce que le sexe relève du plus intime pour chacun , les discours autour des pratiques sexuelles nourrisent souvent de nombreux fantasmes. Vous vous êtes peut-être déjà demandé quels étaient les petits plaisirs secrets de vos copains copines, voisins, ou encore patrons. La mauvaise nouvelle - mais plutôt bonne finalement, c'est qu'à moins de tester vous n'irez pas bien loin, c'est pourquoi certains clichés ont la vie dure. Y'a-t-il vraiment moins d'homos chez les cathos ? Sodomise-t-on plus souvent selon qu'on est de droite ou de gauche ? Testez donc maintenant vos a priori sur le sexe en toute impunité ! <span class="hidden">Promis, on ne se moquera pas si vous avez tout faux</span></p>
             
             <div><img src="Images/marmotte.jpg" width=60% /></div>
@@ -145,7 +146,17 @@
 				<h1 class="titre_subsection">LA VOITURE, DANGER N°1 DU CYCLISTE</h1>
 
 		        <p>Parmi les quelques 700 accidents cyclistes recensés à Paris en 2012, plus d'un accident sur deux implique une voiture. On observe aussi une forte proportion d'accidents cyclistes n'impliquant aucun autre type de véhicule, correspondant majoritairement à des chutes.</p>
-		        	
+		          <div id='quizz2' class="fenetre">
+                        <div id="gauge" style='width:400px;height:400px;margin:0 auto;'></div>
+                        <div class="commentaire"></div>
+                        <!--<div id="gauge" class="infographie" style='-webkit-filter:none'>
+                        </div>
+                        <div class="fenetreQuestion">
+                            <div class='question'>Avouez-le, dans l'imaginaire collectif, les fellations sont quand même plus fréquentes que les cunnilingus... Mais dans les faits ? Qui fait le plus de gâteries ? Les hommes ? Les femmes ?</div>
+                            <div class="reponseF">Les femmes, l'imaginaire collectif a toujours raison</div>
+                            <div class="reponseV">Les hommes, mais ils n'en parlent pas</div>
+                        </div>-->
+                    </div>	
 				
 
 		        <h1 class="titre_subsection" style="margin-top:30px">UNE VULNÉRABILITÉ QUI DIFFÈRE SELON L'USAGER</h1>
@@ -271,20 +282,24 @@
             </section >
         </section>
 
-
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
 		<script src="http://code.highcharts.com/modules/exporting.js"></script> 
         <script src="https://code.highcharts.com/modules/data.js"></script>
         <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>  
     
+
         <script type="text/javascript" src="js/paper-full.js"></script>
 		<script type="text/paperscript" src="js/sperm.js" canvas="mycanvas"></script>
         <script type="text/javascript" src="js/scroll.js"></script>
-		<script type="text/javascript" src='js/quizz.js'></script>
         <script type="text/javascript" src='js/cathos.js'></script>
         <script type="text/javascript" src='js/highchart1.js'></script>
+        <script type="text/javascript" src="js/gauge.js"></script>
+        
+        <script type="text/javascript" src='js/quizz.js'></script>
+
     
 
 
