@@ -1,15 +1,12 @@
 
-
 var legend1 = "<span style='font-weight:100'>Un peu</span>",
-		legend2 = "<span style='font-weight:100'>Beaucoup</span>",
-		legend3 = "<span style='font-weight:100'>Pas du <br/>tout</span>";
+    legend2 = "<span style='font-weight:100'>Beaucoup</span>",
+    legend3 = "<span style='font-weight:100'>Pas du <br/>tout</span>";
 
 
 
 
 $(function () {
-
-    // Uncomment to style it like Apple Watch
     
     if (!Highcharts.theme) {
         Highcharts.setOptions({
