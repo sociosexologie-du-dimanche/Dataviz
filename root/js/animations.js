@@ -52,6 +52,34 @@
     }) ;
 })() ;
 
+// Apparition de la liste de liens quand on clique sur le paragraphe Pam
+(function(){
+    var Pam = document.getElementById('listePam'),
+        pPam = Pam.firstElementChild,
+        liens = document.getElementById('liensPam'),
+        compteur = 0,
+        hauteurPetit = pPam.clientHeight.toString(),
+        hauteurGrand = Pam.clientHeight.toString(),
+        affiche = function(){
+            liens.style.display = 'block' ;
+        },
+        retire = function(){
+            liens.style.display = 'none' ;
+        } ;
+    Pam.style.height = hauteurPetit ;
+    liens.style.display = 'none' ;
+    pPam.addEventListener('click',function(){
+        compteur ++ ;
+        console.log(compteur) ;
+        if (compteur%2 === 1) {
+            Pam.style.height = '800px' ;
+            setTimeout(affiche,100) ;
+        } else {            
+            Pam.style.height = '80px' ;
+            setTimeout(retire,100) ;
+        };
+    });
+})();
 // Tooltip pour liste des films et sources
 (function(){
     var toolTip = document.getElementById('toolFilms'),
@@ -80,10 +108,10 @@
         a = 0,
         b = 0,
         blurer = function(e){
-            x = Math.random()*80;
+            x = Math.random()*60;
             y = Math.random()*40;
             a = Math.random()*30;
-            b = Math.random()*80;
+            b = Math.random()*70;
             if (e.target === filmList) {
                 toolTip.style.top = y+'%' ;
                 toolTip.style.left = x+'%' ;
