@@ -493,17 +493,3 @@ footer ul {
     font-weight: normal;
     font-style: normal;
 }
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'raleway';
-    src: url('Police/Raleway-Light-webfont.eot');
-    src: url('Police/Raleway-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Police/Raleway-Light-webfont.woff') format('woff'),
-         url('Police/Raleway-Light-webfont.ttf') format('truetype'),
-         url('Police/Raleway-Light-webfont.svg#droid_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
