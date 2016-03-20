@@ -32,6 +32,7 @@ p {
     padding: 2px ;
 }
 
+
 /* Volet de navigation et tooltips associés */
 .box {
 	width:20%;
@@ -133,7 +134,6 @@ footer ul {
     padding-right: 50px;
     text-align: justify;
 }
-
 
 #buttonOpen {
     background: url('Images/arrow-down.png') no-repeat top center ;
@@ -431,7 +431,6 @@ footer ul {
 }
 
 
-
 /* Script infographie cathos */
 
 #chiffreInfoCathos {
@@ -446,7 +445,6 @@ footer ul {
         -webkit-transition : all 0.2s ease ;
 
 }
-
 
 
 /* Famille de fontes */
@@ -481,6 +479,20 @@ footer ul {
          url('Police/DroidSans-webfont.woff') format('woff'),
          url('Police/DroidSans-webfont.ttf') format('truetype'),
          url('Police/DroidSans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('Police/Raleway-Light-webfont.eot');
+    src: url('Police/Raleway-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Police/Raleway-Light-webfont.woff') format('woff'),
+         url('Police/Raleway-Light-webfont.ttf') format('truetype'),
+         url('Police/Raleway-Light-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
     font-weight: normal;
     font-style: normal;
 }
