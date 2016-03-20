@@ -336,6 +336,10 @@ footer ul {
     background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/VCBwhite.jpg') no-repeat center left fixed ;
     background-size : contain;
 }
+.bloc_histoire:nth-of-type(5) {
+    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/EWS.jpg') no-repeat center left fixed ;
+    background-size: contain;
+}
 
 .titre_image {
     position:relative;

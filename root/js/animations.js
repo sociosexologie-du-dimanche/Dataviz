@@ -85,9 +85,12 @@
     var toolTip = document.getElementById('toolFilms'),
         toolIfop = document.getElementById('toolIfop'),
         fenetreBlur = document.getElementById('fenetreBlur'),
-        texte = "<p>Toutes les images en arrière plan </br>sont des captures d'écran </br>des (bons) films suivants :</p>",
+        texte = "<p>Toutes les images en arrière plan </br>sont des captures d'écran </br>des (bons) films suivants, données par ordre d'apparition :</p>",
         texteIfop = "<p>Les données utilisées pour réaliser ce site ont été récupérées auprès de l'<a href='http://www.ifop.com/?option=com_homepage' target='_blank'>Ifop</a>. Elles ont été recueillies lors d'une enquête menée à la demande du journal <a href='http://www.marianne.net/Cette-semaine-dans-Marianne-Les-Francais-la-politique-et-le-sexe_a238936.html' target='_blank'>Marianne</a>, dans le but d'étudier les relations entre sexualité et positionnement politique. Nous remercions l'Ifop d'avoir gracieusement mis à notre disposition les résultats de cette enquête.</p><p> Les graphiques interactifs ont été réalisés avec <a href='http://www.highcharts.com' target='_blank'>Highcharts</a> ou <a href='https://datawrapper.de' target='_blank'>Datawrapper</a>.</p>",
         films = [ {
+                nom : 'La mala vida',
+                lien : 'http://www.imdb.com/title/tt0188874/'
+            },{
                 nom : 'Priest',
                 lien : 'http://www.imdb.com/title/tt0110889/' ,
             },{
