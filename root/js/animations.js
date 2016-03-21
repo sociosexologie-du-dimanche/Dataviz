@@ -80,13 +80,16 @@
         };
     });
 })();
+
 // Tooltip pour liste des films et sources
 (function(){
     var toolTip = document.getElementById('toolFilms'),
         toolIfop = document.getElementById('toolIfop'),
+        toolContact = document.getElementById('toolContact'),
         fenetreBlur = document.getElementById('fenetreBlur'),
         texte = "<p>Toutes les images en arrière plan </br>sont des captures d'écran </br>des (bons) films suivants, données par ordre d'apparition :</p>",
         texteIfop = "<p>Les données utilisées pour réaliser ce site ont été récupérées auprès de l'<a href='http://www.ifop.com/?option=com_homepage' target='_blank'>Ifop</a>. Elles ont été recueillies lors d'une enquête menée à la demande du journal <a href='http://www.marianne.net/Cette-semaine-dans-Marianne-Les-Francais-la-politique-et-le-sexe_a238936.html' target='_blank'>Marianne</a>, dans le but d'étudier les relations entre sexualité et positionnement politique. Nous remercions l'Ifop d'avoir gracieusement mis à notre disposition les résultats de cette enquête.</p><p> Les graphiques interactifs ont été réalisés avec <a href='http://www.highcharts.com' target='_blank'>Highcharts</a> ou <a href='https://datawrapper.de' target='_blank'>Datawrapper</a>.</p>",
+        texteContact = "<p>Ce site a été réalisé dans le cadre du projet du cours de visualisation de données de l'<a href='http://www.ensae.fr' target='_blank'>Ensae ParisTech</a>. Vous pouvez nous contacter en allant sur nos profils <em>LinkedIn</em> :</p>",
         films = [ {
                 nom : 'La mala vida',
                 lien : 'http://www.imdb.com/title/tt0188874/'
@@ -104,8 +107,23 @@
                 lien : 'http://www.imdb.com/title/tt0120663/?ref_=nv_sr_1' ,
             }
         ],
+        contacts = [ {
+                nom : 'Celle qui a beaucoup de bonnes idées',
+                lien : 'https://www.linkedin.com/in/marie-beigelman-955a8397'
+            },{
+                nom : 'Celui qui était ultramotivé depuis le début',
+                lien : 'https://www.linkedin.com/in/ptanneau' ,
+            },{
+                nom : "Celle qui a fait preuve d'un soutien psychologique sans faille",
+                lien : 'https://fr.linkedin.com/in/kim-montalibet-1a01a265' ,
+            },{
+                nom :'Celui qui a passé quelques nuits blanches',
+                lien : 'https://fr.linkedin.com/in/romaindamian' ,
+            }
+        ],
         filmList = document.getElementById('filmList'),
         sourceDonnees = document.getElementById('sourceDonnees'),
+        auteurs = document.getElementById('auteurs'),
         x = 0,
         y = 0,
         a = 0,
@@ -120,11 +138,16 @@
                 toolTip.style.left = x+'%' ;
                 toolTip.style.opacity = '1' ;
                 toolTip.style.zIndex = '7' ;
-            } else {
+            } else if (e.target === sourceDonnees) {
                 toolIfop.style.top = a+'%' ;
                 toolIfop.style.left = b+'%' ;
                 toolIfop.style.opacity = '1' ;
                 toolIfop.style.zIndex = '7' ;
+            } else {
+                toolContact.style.top = a+'%' ;
+                toolContact.style.left = b+'%' ;
+                toolContact.style.opacity = '1' ;
+                toolContact.style.zIndex = '7' ;
             }
             fenetreBlur.style.opacity = '1' ;
             fenetreBlur.style.zIndex = '6' ;
@@ -137,10 +160,15 @@
             toolTip.style.opacity = '0' ;
             toolTip.style.zIndex = '-1' ;
             
-            toolIfop.style.top = a+'' ;
+            toolIfop.style.top = a+'%' ;
             toolIfop.style.left = b+'' ;
             toolIfop.style.opacity = '0' ;
             toolIfop.style.zIndex = '-1' ;
+            
+            toolContact.style.top = a+'%' ;
+            toolContact.style.left = b+'' ;
+            toolContact.style.opacity = '0' ;
+            toolContact.style.zIndex = '-1' ;
             
             fenetreBlur.style.opacity = '0' ;
             fenetreBlur.style.zIndex = '-1' ;
@@ -149,14 +177,21 @@
     for (i = 0,n=films.length;i<n;i++){
         texte = texte + "<p><a href=" + films[i].lien + " target='_blank'>"+films[i].nom+"</a></p>" ;
     };
+    for (i = 0,n=contacts.length;i<n;i++){
+        texteContact = texteContact + "<p><a href=" + contacts[i].lien + " target='_blank'>"+contacts[i].nom+"</a></p>"
+    }
     texte = texte + "<p> Le code javascript à l'origine des spermatozoïdes baladeurs est disponible <a href='http://paperjs.org/examples/tadpoles/' target='_blank'>ici</a>.</p>" ;
     toolTip.innerHTML = texte ;
     toolIfop.innerHTML = texteIfop ;
+    toolContact.innerHTML = texteContact ;
     
     filmList.addEventListener('click',function(e) {
         blurer(e) ;
     });
     sourceDonnees.addEventListener('click',function(e){
+        blurer(e) ;
+    });
+    auteurs.addEventListener('click',function(e) {
         blurer(e) ;
     });
     fenetreBlur.addEventListener('click',function(e){
