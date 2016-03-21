@@ -8,38 +8,13 @@
   		
     </head>
 
-    <style>
-
-		path {
-		  stroke:white;
-		  stroke-width: 1px;
-		}
-
-		.legend {
-		  font-size: 11px;
-		}
-
-		div.tooltip {   
-		  position: relative;
-		  top: -403px;
-		  left: 620px;                    
-		  width: 320px;                  
-		  height: 20px;                 
-		  padding: 2px;             
-		  font-size: 1.2em;     
-		  background-color: #FFD6DD;
-		  border: 1px;      
-		  border-radius: 8px;           
-		  pointer-events: none; 
-		  font-family: 'bebas_neueregular', Arial, sans-serif;
-		  color: #44646f;        
-		} 
-
-    </style>
 
 
     <body> 
-     
+        <div id="toolFilms"></div>
+        <div id="toolIfop"></div>
+        <div id='fenetreBlur'></div>
+
 		<div id="accueil">
 			<a class="scrollTo" href="#mycanvas"><canvas id="mycanvas" style="background:'white'"></canvas></a>
             <div id="banniere">
@@ -54,7 +29,8 @@
      		<span class="box">
 	        	<nav>
 		            <ul>
-		                <li><a class="scrollTo" href="#religion">Homosexualité et religion</a></li>
+		                <li><a class="scrollTo" href="#religion">Sexualité et religion</a></li>
+		                <li><a class="scrollTo" href="#gaterie">Une petite gâterie ?</a></li>
 		                <li><a class="scrollTo" href="#adultere">Extraconjugalité</a></li>
 		                <li><a class="scrollTo" href="#nombre">La satisfaction du nombre ?</a></li>
 		                <li><a class="scrollTo" href="#vieillir">Vieillir...</a></li>
@@ -66,9 +42,9 @@
                 
                 <footer>
 	      	             <ul style ="text-align: justify">
-                             <li><a class="link" target="_blank" href="https://www.data.gouv.fr/fr/datasets/donnees-des-accidents-corporels-de-la-circulation-routiere/"> Données de l'ifop (à préciser)</a></li></br>
-                    <li>Réalisé par nous.</li></br>
-	                        <li><a class="link" target="_blank" href="mailto:romain.damian@ensae.fr?Subject=Contact">Nous contacter<a></li>
+                            <li id="sourceDonnees">Source des données</li>
+	                        <li id="filmList">D'où viennent ces arrières-plan ?</li>
+                            <li><a target="_blank" href="mailto:romain.damian@ensae.fr?Subject=Contact">Nous contacter</a></li>
 	                    </ul>
                 </footer>	
 		      </span>
@@ -76,20 +52,18 @@
 		
 	       
 	    <section id="corps">
+
             <p id="pIntro"> Parce que le sexe relève du plus intime pour chacun , les discours autour des pratiques sexuelles nourrisent souvent de nombreux fantasmes. Vous vous êtes peut-être déjà demandé quels étaient les petits plaisirs secrets de vos copains copines, voisins, ou encore patrons. La mauvaise nouvelle - mais plutôt bonne finalement, c'est qu'à moins de tester vous n'irez pas bien loin, c'est pourquoi certains clichés ont la vie dure. Y'a-t-il vraiment moins d'homos chez les cathos ? Sodomise-t-on plus souvent selon qu'on est de droite ou de gauche ? Testez donc maintenant vos a priori sur le sexe en toute impunité ! <span class="hidden">Promis, on ne se moquera pas si vous avez tout faux</span></p>
             
-            <div><img src="Images/marmotte.jpg" width=60% /></div>
-            <div class="chiffre" style="text-align:center;"> ET paf je te balance une grosse image pour faire de la place.</div>
-            
-            <a class="scrollTo" href="#religion" style="margin:200px;"><div class="following"></div></a>
+            <div id="imgIntro"></div>
+            <a class="scrollTo" href="#religion" ><div class="following" style="margin-bottom:400px; margin-top:40px"></div></a>
 
-            
-        
+
             <section class="bloc_histoire">
                 <div class="titre_image">
-                    <a class="scrollTo" href="#accueil"><span id="religion">Cathos et homos</span></a>
+                    <a class="scrollTo" href="#accueil"><span id="religion" style='left:15%;width:70%;font-size : 2.5em'>Sexualité et pratiques religieuses</span></a>
                     <a class="scrollTo" href="#accueil"><span class="buttonUp"></span></a>
-                    <a class="scrollTo" href="#adultere"><span class="buttonDown"></span></a>
+                    <a class="scrollTo" href="#gaterie"><span class="buttonDown"></span></a>
                     <a class="scrollTo" href="#accueil"><span class="bullet"></span></a>
                 </div>
 				<h1 class="titre_subsection">Sodome et Gomore, on en est où ?</h1>
@@ -109,11 +83,21 @@
                         </div>
                     </div>
 
-                <a class="scrollTo" href="#preliminaires" style="margin:400px;"><div class="following"></div></a>
+                <a class="scrollTo" href="#preliminaires" style="margin-top:20px;"><div class="following"></div></a>
+            </section>
+            <section class='bloc_histoire'>
+		        <h1 id="preliminaires" class="titre_subsection" style="margin-top:100px">Mais alors, les pipes et tout ça, ça compte ?</h1>
                 
-		        <h1 id="preliminaires" class="titre_subsection" style="margin-top:100px">Et si l'on parle préliminaires ?</h1>
-
-                <p class="pPleinePage">La pratique du vélo à Paris semble donc moins risquée que celle du scooter. Mais qu'en est-il de la gravité des accidents ? Les cyclistes sont-ils plus vulnérables ?<p>
+                <div id='listePam'>
+                    <p class="pPleinePage">Bla bla bla on parle d'être PAM et tout ça et ensuite on dit qu'on va a préparé une petite liste d'articles plus ou moins recommandables qui permettront d'alimenter le débat lors de vos repas de famille (cliquez sur ce paragraphe pour voir les liens).</p>
+                    <div id='liensPam'>
+                        <p>Sur Huffington post : <a href='http://www.huffingtonpost.com/mandy-velez/the-problem-with-waiting-for-marriage_b_5079625.html' target='_blank'>"The problem with <em>waiting for marriage</em>"</a></p>
+                        <p>Sur Huffington post (aussi) : <a href='http://www.huffingtonpost.com/yourtango/waiting-until-im-married-to-have-sex_b_9030984.html' target='_blank'>"Waiting Until Marriage To Have Sex Doesn’t Make Me Naïve"</a></p>
+                        <p>Sur xojane.com : <a href='http://www.xojane.com/sex/true-love-waits-pledge' target='_blank'>"I waited until my wedding night to lose my virginity and I wish I hadn't."</a></p>
+                        <p>Sur aleteia.org : <a href='http://aleteia.org/2014/05/23/10-good-reasons-to-save-sex-until-marriage/' target='_blank'>"Ten good reasons to save sex until marriage"</a></p>
+                      
+                    </div>
+                </div>
                 
                 <div class="fenetre">
 				    <div class="infographie" style='-webkit-filter:none;'>
@@ -130,14 +114,43 @@
 	         	     </div>
                 </div>
                 
-            <a class="scrollTo" href="#adultere"><div class="following"></div></a>
-
+                <a class="scrollTo" href="#gaterie"><div class="following"></div></a>
 
             </section>
+            
+            <section class="bloc_histoire">
+                <div class="titre_image">
+				    <a class="scrollTo" href="#accueil"><span id="gaterie" style='font-size:2.5em'>Pratiques bucales... sexuées ?</span></a>
+                    <a class="scrollTo" href="#religion"><span class="buttonUp"></span></a>
+                    <a class="scrollTo" href="#adultere"><span class="buttonDown"></span></a>
+                    <a class="scrollTo" href="#accueil"><span class="bullet"></span></a>
+                </div>
+                
+                <div id="titreGateries">
+                    <h1 class="titre_subsection"><span id="titreGaterieSpan">Il/elle me lèche, un peu, beaucoup... pas du tout</span></h1>
+                </div>
+                
+                
+		      <div id='quizz2' class="fenetre">
+                    <div class="commentaire"></div>
+                    <div class="infographie">
+                        <div id="gauge"></div>
+                    </div>
+                    <div class="fenetreQuestion">
+                        <div class='question'>Avouez-le, dans l'imaginaire collectif, les fellations sont quand même plus fréquentes que les cunnilingus (<a href='http://www.theguardian.com/film/filmblog/2013/nov/28/oral-sex-movies-cunnilingus-problem-evan-rachel-wood' target='_blank'>et on ne parle pas du cinéma</a>)... Mais dans les faits ? Qui fait le plus de gâteries ? Les hommes ? Les femmes ?</div>
+                        <div class="reponseF">Les femmes, l'imaginaire collectif a toujours raison</div>
+                        <div class="reponseV">Les hommes, mais ils n'en parlent pas</div>
+                    </div>
+                </div>	
+                <a class="scrollTo" href="#adultere" style="margin-top:0px;"><div class="following"></div></a>
+
+                
+            </section>
+            
             <section class="bloc_histoire">
                 <div class="titre_image">
 				    <a class="scrollTo" href="#accueil"><span id="adultere">Allons voir ailleurs</span></a>
-                    <a class="scrollTo" href="#religion"><span class="buttonUp"></span></a>
+                    <a class="scrollTo" href="#gaterie"><span class="buttonUp"></span></a>
                     <a class="scrollTo" href="#nombre"><span class="buttonDown"></span></a>
                     <a class="scrollTo" href="#accueil"><span class="bullet"></span></a>
                 </div>
@@ -145,14 +158,17 @@
 				<h1 class="titre_subsection">LA VOITURE, DANGER N°1 DU CYCLISTE</h1>
 
 		        <p>Parmi les quelques 700 accidents cyclistes recensés à Paris en 2012, plus d'un accident sur deux implique une voiture. On observe aussi une forte proportion d'accidents cyclistes n'impliquant aucun autre type de véhicule, correspondant majoritairement à des chutes.</p>
-		        	
+
 				
 
 		        <h1 class="titre_subsection" style="margin-top:30px">UNE VULNÉRABILITÉ QUI DIFFÈRE SELON L'USAGER</h1>
 
 
-				<p>Suivant le type de véhicule impliqué dans l'accident, la gravité de celui-ci diffère fortement. On remarque logiquement que les accidentés cyclistes ressortent plus fréquemment indemnes de l'accident si celui-ci implique un piéton qu'une voiture. Par ailleurs, les chutes semblent occasionner des blessures conséquentes et peu de cyclistes en sortent indemnes. Rappelons toutefois que les accidents étudiés ont nécessité le déplacement de force de l'ordre sur le lieu de l'accident, impliquant soit la présence de blessés soit de dégâts matériels notables.</p>
-                            	
+				<p class="pPleinePage">Suivant le type de véhicule impliqué dans l'accident, la gravité de celui-ci diffère fortement. On remarque logiquement que les accidentés cyclistes ressortent plus fréquemment indemnes de l'accident si celui-ci implique un piéton qu'une voiture. Par ailleurs, les chutes semblent occasionner des blessures conséquentes et peu de cyclistes en sortent indemnes. Rappelons toutefois que les accidents étudiés ont nécessité le déplacement de force de l'ordre sur le lieu de l'accident, impliquant soit la présence de blessés soit de dégâts matériels notables.</p>
+                
+                <p class="pPleinePage">Suivant le type de véhicule impliqué dans l'accident, la gravité de celui-ci diffère fortement. On remarque logiquement que les accidentés cyclistes ressortent plus fréquemment indemnes de l'accident si celui-ci implique un piéton qu'une voiture. Par ailleurs, les chutes semblent occasionner des blessures conséquentes et peu de cyclistes en sortent indemnes. Rappelons toutefois que les accidents étudiés ont nécessité le déplacement de force de l'ordre sur le lieu de l'accident, impliquant soit la présence de blessés soit de dégâts matériels notables.</p>
+                
+      	
 
             </section>
             <section class="bloc_histoire">
@@ -270,22 +286,32 @@
                 </div>
             </section >
         </section>
-
-
+        
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="http://code.highcharts.com/highcharts.js"></script>
-		<script src="http://code.highcharts.com/modules/exporting.js"></script> 
+        <script src="http://code.highcharts.com/modules/exporting.js"></script> 
         <script src="https://code.highcharts.com/modules/data.js"></script>
-        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>  
-    
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
         <script type="text/javascript" src="js/paper-full.js"></script>
-		<script type="text/paperscript" src="js/sperm.js" canvas="mycanvas"></script>
-        <script type="text/javascript" src="js/scroll.js"></script>
-		<script type="text/javascript" src='js/quizz.js'></script>
-        <script type="text/javascript" src='js/cathos.js'></script>
-        <script type="text/javascript" src='js/highchart1.js'></script>
     
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script> 
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+
+		<script type="text/paperscript" src="js/sperm.js" canvas="mycanvas"></script>    
+        <script type="text/javascript" src='js/highchart1.js'></script>
+        <script type="text/javascript" src="js/scroll.js"></script>
+        <script type="text/javascript" src='js/cathos.js'></script>
+        <script type="text/javascript" src="js/gauge.js"></script>
+                
+    
+        <script type="text/javascript" src='js/quizz.js'></script>
+        <script type="text/javascript" src="js/animations.js"></script>
+
+
+       
 
 
 

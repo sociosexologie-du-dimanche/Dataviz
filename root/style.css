@@ -1,4 +1,4 @@
-/* Elements html prédéfinis */
+/* Elements html globaux */
 
 body {
     font-family: 'droid', Arial, sans-serif;
@@ -7,17 +7,25 @@ body {
 }
 
 canvas {
-            display: inline;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 80%;
-            height: 100%;
+        display: inline;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 80%;
+        height: 100%;
+        transition : -webkit-filter 0.2s ;
+        -webkit-transition : -webkit-filter 0.2s;
  }
 
-a:link {text-decoration: none;}
+a {
+    color: #004C59;
+    text-decoration: none;
+}
+a:hover {
+    opacity: 0.8 ;
+}
 
 p {
     text-align : justify;
@@ -25,7 +33,7 @@ p {
 }
 
 
-/* Volet de navigation */
+/* Volet de navigation et tooltips associés */
 .box {
 	width:20%;
 	height:100%;
@@ -36,7 +44,7 @@ p {
 	overflow-x: auto;
   	overflow-y: hidden;
   	background:#FFD6DD;
-  	box-shadow: 0 0 20px rgba(0,0,0,.30);
+  	box-shadow: 0 0 20px rgba(0,76,89,.30);
   	z-index:5;
 }
 
@@ -50,27 +58,30 @@ nav {
 	font-size:large;
 }
 
-nav ul {
+nav ul, #toolFilms ul {
     list-style-type: none;
 }
 
-nav li {
-    display: block;
-    margin-bottom: 30px;
-}
-
-nav a, footer a
-{
+nav a, footer a {
 	color: #0E5348;
     text-decoration: none;
     transition: all .1s ease;
 }
 
-nav a:hover, footer a:hover
-{
+nav a:hover, footer a:hover, #toolFilms p a:hover , #filmList:hover, #sourceDonnees:hover {
    color: #107671;
    cursor: pointer;
-   padding: 5px;
+   padding-left: 5px;
+}
+
+#toolIfop p a:hover {
+    color: #107671;
+    cursor: pointer;
+}
+
+nav ul li, #toolFilms ul li {
+    display: block ;
+    padding : 10px 10px ;
 }
 
 /* Footer */
@@ -94,7 +105,7 @@ footer ul {
 /* Fin footer */
 
 
-/* Identités */
+/* Identités du corps de document */
 #banniere {	
 	font-family: 'poetsen', serif;
     position:absolute;
@@ -118,10 +129,18 @@ footer ul {
 
 #pIntro {
     padding-top:50px;
-    padding-bottom:50px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-bottom:0px;
+    padding-left: 60px;
+    padding-right: 60px;
     text-align: justify;
+}
+
+#imgIntro {
+    margin : 0 auto ;
+    position : relative ;
+    width : 100% ;
+    height : 400px ;
+    background: url('Images/capotes.jpg') no-repeat center center;
 }
 
 #buttonOpen {
@@ -136,23 +155,135 @@ footer ul {
     opacity: 0.5;
 }
 
-#religion,#adultere,#nombre,#vieillir {
+#religion,#adultere,#nombre,#vieillir,#gaterie {
     font-family: 'poetsen', 'Gill Sans', Arial, sans-serif;
-	font-size: 3.15em;
+	font-size: 3em;
 	text-align: center;
     position:absolute;
     top:0px;
-    left:25%;
-    width:50%;
+    left:20%;
+    width:60%;
     color: #004C59;
 }
 
-#religion:hover, #adultere:hover, #nombre:hover, #vieux:hover{
+#religion:hover, #adultere:hover, #nombre:hover,#gaterie:hover, #vieux:hover{
     opacity:0.8;
 	transition: all .1s ease ;	
 }
 
-/* Classes crées */
+
+/* Identités pour les graphiques et autres animations */
+#listePam {
+    position: relative ;
+    height : 80px ;
+    width : 90%;
+    left: 5% ;
+    transition : height 1s ease;
+    -webkit-transition : height 1s ease;
+}
+
+#listePam .pPleinePage:hover {
+    cursor : pointer ;
+}
+
+#liensPam p {
+    width : 700px ;
+    text-align : left ;
+    margin : 40px auto ;
+}
+
+#liensPam p a:hover {
+    padding-left : 10px ;
+    transition : all 0.3s ease ;
+    -webkit-transition : all 0.3s ease ;
+}
+
+#gauge {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto ;
+}
+#titreGateries {
+    height : 100px ;
+    position : relative ;
+    transition: height 0.5s ease-in ;
+    -webkit-transition : all 0.5s ease-in ;
+}
+
+#videoPipe {
+    display : block;
+    margin : auto ;
+    visibility: visible;
+    opacity : 0 ;
+    transition : opacity 1s ease-in ;
+    -webkit-transition : opacity 1s ease-in ;
+}
+
+#titreGaterieSpan:hover { cursor: pointer }
+
+
+/* Identités pour l'animation tooltip */
+#toolFilms, #toolIfop {
+    opacity : 0 ;
+    padding : 10px 20px 10px 20px ;
+    position: fixed;
+    color : rgb(255,255,255) ;
+    background-color : rgba(30,30,30,0.8) ;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8) ;
+    z-index: -1 ;
+    transition: all 0.5s ;
+    -webkit-transition : all 1s ;
+}
+
+#toolFilms {
+    width : 340px ;
+    left : 90%  ;
+    top : 90% ;
+}
+
+#toolIfop {
+    width : 250px ;
+    left : 60%;
+    top : 40%;
+}
+
+#toolFilms p {
+    text-align : center ;
+}
+
+#toolIfop p {
+    text-align : left ;
+}
+
+#toolFilms p a, #toolIfop p a {
+    color : rgb(180,180,180) ;
+}
+
+#fenetreBlur {
+    background: url('Images/filtre.png') no-repeat center center ;
+    background-size : cover;
+    position : fixed ;
+    top : 0px ;
+    left : 0px ;
+    opacity : 0 ;
+    width: 100% ;
+    height: 100% ;
+    z-index: -1 ;
+    transition: opacity 0.5s ;
+    -webkit-transition : opacity 0.5s ;
+}
+
+.tooltip {
+    font-family: 'Gill Sans' ;
+    opacity : 0 ;
+    position : absolute ;
+    top : -50% ;
+    left : 70% ;
+    font-size : 1.2em ;
+}
+
+
+/* Classes de mise en forme */
 .buttonUp,.buttonDown,.bullet {
     position:absolute;
     left: 95%;
@@ -171,7 +302,6 @@ footer ul {
     background: url('Images/bullet.png') no-repeat top center ;
     top : 35px;
 }
-
 .following {
     background: url('Images/arrow-down.png') no-repeat top center ;
     width: 20px;
@@ -179,51 +309,55 @@ footer ul {
     margin: 10px auto ;
     opacity: 60%;
 }
-
 .buttonDown:hover,.buttonUp:hover,.bullet:hover,.following:hover {
     opacity: 0.5;
 }
 
 .bloc_histoire {
+    position:relative;
     width:100%;
     background: #FFFFFF;
     margin: 0px 0px 0px 0px ;
-    padding : 20px 2px 10px 2px ;
+    padding : 20px 2px 200px 10px ;
 }
-
 .bloc_histoire:nth-of-type(1) {
-    background: radial-gradient(rgba(255,255,255,0.8),white),url('Images/picto_reli.jpg') no-repeat center 50px fixed  ;
+    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/priest.jpg') no-repeat center left fixed ;
+    background-size : contain;
 }
-
 .bloc_histoire:nth-of-type(2) {
-    background: radial-gradient(rgba(255,255,255,0.8),white), url('Images/marmotte.jpg') no-repeat center 50px  fixed  ;
+    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/priest2.jpg') no-repeat center left fixed ;
+    background-size : contain;
 }
-
 .bloc_histoire:nth-of-type(3) {
-    background: radial-gradient(rgba(255,255,255,0.8),white), url('Images/danseur2.jpg') no-repeat center 50px  fixed  ;
+    background: linear-gradient(white,rgba(255,255,255,0),white), url('Images/blueV.jpg') no-repeat center left  fixed  ;
+    background-size: contain ;
+}
+.bloc_histoire:nth-of-type(4) {
+    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/VCBwhite.jpg') no-repeat center left fixed ;
+    background-size : contain;
 }
 
 .titre_image {
     position:relative;
     width:100%;
-    padding-top : 20px;
-    margin: 100px auto 20px auto;
+    margin: 0 auto 10px auto;
     display: block;
     min-height: 100px;
 }
 .titre_subsection {
-	font-family: 'droid','Gill Sans', serif;
+	font-family: 'raleway','Gill Sans', serif;
 	font-size: 1.8em;
 	text-align: center;
 	margin-top: 10px;
 	margin-bottom: 30px;
 	color: #0E5348;
 	position: relative;
+    transition : all 2s ease ;
 }
 
 .pPleinePage {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
     text-align: justify;
 }
 
@@ -235,29 +369,28 @@ footer ul {
     color:#0E5348;
     opacity:0.2;
 }
-
 .emph { 
 	color: #0092B9;
 }
-
-
 .chiffre {
     color: #CBA148; 
     font-family: 'Gill Sans', sans-serif;
     font-size: 1.2em;
     font-weight: bold;
 }
-
 .emph:hover,.chiffre:hover {
 	opacity:0.8;
     transition: all .1s ease;
 }
-
 .lienCache {
     text-decoration: none ;
     color: #004C59 ;
-    cursor:default;
+    cursor:pointer;
 }
+.lienCache:hover {    
+    opacity : 1
+}
+
 
 /* Classes pour le script quizz */
 
@@ -267,28 +400,25 @@ footer ul {
     width: 95%;
     margin: 30px auto 30px auto;
 }
-
 .infographie {
     display:table-cell;
     vertical-align: top;
     height:95%;
     padding : 5px 10px ;
-    -webkit-filter: blur(10px) grayscale(70%) opacity(80%);
+    -webkit-filter: blur(15px) grayscale(80%) opacity(40%);
     transition : filter 2s ;
     transition : -webkit-filter 2s ;
 }
-
 .commentaire {
     display:table-cell;
     vertical-align: top;
     text-align : justify;
     height: 95%;
     padding : 5px 10px ;
-    -webkit-filter: blur(10px) grayscale(70%) opacity(80%);
-    transition : filter 2s ;
-    -webkit-transition : -webkit-filter 2s ;
+    -webkit-filter: blur(15px) grayscale(80%) opacity(40%);
+    transition : filter 1s ;
+    -webkit-transition : -webkit-filter 1s ;
 }
-
 .fenetreQuestion {
     display:block;
     position:absolute;
@@ -296,22 +426,18 @@ footer ul {
     left: 15%;
     width: 70%;
     font-family: 'droid-bold';
-    -webkit-transition : -webkit- filter 3s ;
-    -webkit-transition : z-index 0.1s ;
+    -webkit-transition : -webkit- filter 2s ;
 }
-
 .question{
     text-align:center;
     margin : 20px auto 20px auto;
     width:70%;
 }
-
 .reponseV,.reponseF {
     width: 50%;
     margin: 20px auto 10px auto ;
     text-align:center;
 }
-
 .reponseV:hover,.reponseF:hover {
     padding-left:5px;
     font-weight: 600;
@@ -323,6 +449,21 @@ footer ul {
     width : 600px ;
 }
 
+#quizz2 .fenetreQuestion {
+    width : 90% ;
+    left: 5%
+}
+#quizz2 .infographie {
+    padding : 0 ;
+    width: 400px;
+    height: 400px;
+    margin : 5px auto ;
+}
+#quizz2 .commentaire{
+    padding : 10px 30px ;
+}
+
+
 /* Script infographie cathos */
 
 #chiffreInfoCathos {
@@ -332,7 +473,6 @@ footer ul {
     font-family: 'droid-bold' ;
     font-size : 1.2em ;
 }
-
 .oui,.non {
     margin-right: 3px ;
         -webkit-transition : all 0.2s ease ;
