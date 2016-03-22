@@ -58,7 +58,7 @@ nav {
 	font-size:large;
 }
 
-nav ul, #toolFilms ul {
+nav ul {
     list-style-type: none;
 }
 
@@ -68,18 +68,18 @@ nav a, footer a {
     transition: all .1s ease;
 }
 
-nav a:hover, footer a:hover, #toolFilms p a:hover , #filmList:hover, #sourceDonnees:hover {
+nav a:hover, footer a:hover, #toolFilms p a:hover,#toolContact p a:hover, #filmList:hover, #sourceDonnees:hover, #auteurs:hover {
    color: #107671;
    cursor: pointer;
    padding-left: 5px;
 }
 
-#toolIfop p a:hover {
+#toolIfop p a:hover, #lienArticles:hover {
     color: #107671;
     cursor: pointer;
 }
 
-nav ul li, #toolFilms ul li {
+nav ul li {
     display: block ;
     padding : 10px 10px ;
 }
@@ -182,10 +182,6 @@ footer ul {
     -webkit-transition : height 1s ease;
 }
 
-#listePam .pPleinePage:hover {
-    cursor : pointer ;
-}
-
 #liensPam p {
     width : 700px ;
     text-align : left ;
@@ -221,9 +217,15 @@ footer ul {
 
 #titreGaterieSpan:hover { cursor: pointer }
 
+#treemap {
+    width:600px;
+    height:300px ;
+    margin : 0 auto ;
+}
+
 
 /* Identités pour l'animation tooltip */
-#toolFilms, #toolIfop {
+#toolFilms, #toolIfop, #toolContact {
     opacity : 0 ;
     padding : 10px 20px 10px 20px ;
     position: fixed;
@@ -235,7 +237,7 @@ footer ul {
     -webkit-transition : all 1s ;
 }
 
-#toolFilms {
+#toolFilms, #toolContact {
     width : 340px ;
     left : 90%  ;
     top : 90% ;
@@ -251,11 +253,11 @@ footer ul {
     text-align : center ;
 }
 
-#toolIfop p {
+#toolIfop p, #toolContact p {
     text-align : left ;
 }
 
-#toolFilms p a, #toolIfop p a {
+#toolFilms p a, #toolIfop p a, #toolContact p a {
     color : rgb(180,180,180) ;
 }
 
@@ -333,10 +335,15 @@ footer ul {
     background-size: contain ;
 }
 .bloc_histoire:nth-of-type(4) {
-    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/VCBwhite.jpg') no-repeat center left fixed ;
+    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/titanic.jpg') no-repeat center left fixed ;
     background-size : contain;
 }
 .bloc_histoire:nth-of-type(5) {
+    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/VCBwhite.jpg') no-repeat center left fixed ;
+    background-size: contain;
+}
+
+.bloc_histoire:nth-of-type(6) {
     background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/EWS.jpg') no-repeat center left fixed ;
     background-size: contain;
 }
@@ -359,7 +366,7 @@ footer ul {
     transition : all 2s ease ;
 }
 
-.pPleinePage {
+.pPleinePage, #quizz3 p {
     padding-left: 50px;
     padding-right: 50px;
     text-align: justify;
@@ -367,6 +374,7 @@ footer ul {
 
 .hidden {
     color:#FFFFFF;
+    opacity : 0 ;
     -webkit-transition : all 0.2s ease ;
 }
 .hidden:hover {
@@ -467,6 +475,14 @@ footer ul {
     padding : 10px 30px ;
 }
 
+#quizz3 .infographie {
+    display : block ;
+    height : auto ;
+}
+#quizz3 .commentaire {
+    display:  block ;
+    height : auto ;
+}
 
 /* Script infographie cathos */
 
