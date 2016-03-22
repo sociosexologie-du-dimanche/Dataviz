@@ -13,6 +13,7 @@
     <body> 
         <div id="toolFilms"></div>
         <div id="toolIfop"></div>
+        <div id='toolContact'></div>
         <div id='fenetreBlur'></div>
 
 		<div id="accueil">
@@ -44,7 +45,7 @@
 	      	             <ul style ="text-align: justify">
                             <li id="sourceDonnees">Source des données</li>
 	                        <li id="filmList">D'où viennent ces arrières-plan ?</li>
-                            <li><a target="_blank" href="mailto:romain.damian@ensae.fr?Subject=Contact">Nous contacter</a></li>
+                            <li id="auteurs">Les auteurs</li>
 	                    </ul>
                 </footer>	
 		      </span>
@@ -89,16 +90,18 @@
 		        <h1 id="preliminaires" class="titre_subsection" style="margin-top:100px">Mais alors, les pipes et tout ça, ça compte ?</h1>
                 
                 <div id='listePam'>
+<<<<<<< HEAD
                     <p class="pPleinePage"> Si le poids de l'appartenance religieuse sur la pratique sexuelle en général semble avoir diminué - comme en témoigne la rareté de vos copains P.A.M auxquels nous conseillons la lecture de ces articles (clique!) - , la religion joue encore un rôle prépondérant dans les préférences sexuelles. </p>
+=======
+                    <p class="pPleinePage"> Si le poids de l'appartenance religieuse sur la pratique sexuelle en général semble avoir diminuée (en témoigne la rareté de vos copains PAM auxquels nous conseillons la lecture de <span id='lienArticles'>ces articles</span>), la religion joue encore un rôle prépondérant dans les préférences et activités sexuelles </p>
+>>>>>>> refs/remotes/origin/master
                    
                     <div id='liensPam'>
                         <p>Sur Huffington post : <a href='http://www.huffingtonpost.com/mandy-velez/the-problem-with-waiting-for-marriage_b_5079625.html' target='_blank'>"The problem with <em>waiting for marriage</em>"</a></p>
                         <p>Sur Huffington post (aussi) : <a href='http://www.huffingtonpost.com/yourtango/waiting-until-im-married-to-have-sex_b_9030984.html' target='_blank'>"Waiting Until Marriage To Have Sex Doesn’t Make Me Naïve"</a></p>
                         <p>Sur xojane.com : <a href='http://www.xojane.com/sex/true-love-waits-pledge' target='_blank'>"I waited until my wedding night to lose my virginity and I wish I hadn't."</a></p>
                         <p>Sur aleteia.org : <a href='http://aleteia.org/2014/05/23/10-good-reasons-to-save-sex-until-marriage/' target='_blank'>"Ten good reasons to save sex until marriage"</a></p>
-                      
                     </div>
-                  
                 </div>
                 
                 <div class="fenetre">
@@ -143,9 +146,26 @@
                         <div class="reponseV">Les hommes, mais ils n'en parlent pas</div>
                     </div>
                 </div>	
-                <a class="scrollTo" href="#adultere"><div class="following"></div></a>
+                <a class="scrollTo" href="#diploBucal"><div class="following"></div></a>
 
                 
+            </section>
+            <section class="bloc_histoire">
+                <h1 id="diploBucal" class="titre_subsection" style="margin-top:100px">Et le diplôme, ça change quoi ?</h1>
+                <p class="pPleinePage">Vous savez désormais que les hommes sont plus nombreux que les femmes à déclarer <span class="emph">sucer ou lécher le sexe de leur partenaire souvent</span>. Mais si on creuse un peu plus, est-ce qu'on voit des différences selon à qui on a affaire ? Allez, on vous aide, le diplôme, ça marche.</p>
+                
+                <div id="quizz3" class='fenetre'>
+                    <div class='infographie'><div id='treemap'></div></div>
+                    <div class='commentaire'></div>
+                    <div class='fenetreQuestion'>
+                        <div class='question'>Le diplôme a bien une influence sur la fréquence des pratiques orales... Pour qui cette influence est-elle la plus forte ?</div>
+                        <div class="reponseF">Les hommes</div>
+                        <div class="reponseV">Les femmes</div>
+                    </div>
+                </div>
+                <a class="scrollTo" href="#adultere"><div class="following"></div></a>
+
+
             </section>
             
             <section class="bloc_histoire">
@@ -300,14 +320,16 @@
 		<script src="http://code.highcharts.com/highcharts.js"></script>
         <script src="https://code.highcharts.com/highcharts-more.js"></script>
         <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+        <script src="https://code.highcharts.com/modules/treemap.js"></script>
         <script src="http://code.highcharts.com/modules/exporting.js"></script> 
         <script src="https://code.highcharts.com/modules/data.js"></script>
 
 		<script type="text/paperscript" src="js/sperm.js" canvas="mycanvas"></script>    
         <script type="text/javascript" src='js/highchart1.js'></script>
-        <script type="text/javascript" src="js/scroll.js"></script>
         <script type="text/javascript" src='js/cathos.js'></script>
         <script type="text/javascript" src="js/gauge.js"></script>
+        <script type="text/javascript" src="js/treemap.js"></script>
+
                 
     
         <script type="text/javascript" src='js/quizz.js'></script>
