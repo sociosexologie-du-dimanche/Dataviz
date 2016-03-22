@@ -217,6 +217,12 @@ footer ul {
 
 #titreGaterieSpan:hover { cursor: pointer }
 
+#treemap {
+    width:600px;
+    height:300px ;
+    margin : 0 auto ;
+}
+
 
 /* Identités pour l'animation tooltip */
 #toolFilms, #toolIfop, #toolContact {
@@ -329,10 +335,15 @@ footer ul {
     background-size: contain ;
 }
 .bloc_histoire:nth-of-type(4) {
-    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/VCBwhite.jpg') no-repeat center left fixed ;
+    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/titanic.jpg') no-repeat center left fixed ;
     background-size : contain;
 }
 .bloc_histoire:nth-of-type(5) {
+    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/VCBwhite.jpg') no-repeat center left fixed ;
+    background-size: contain;
+}
+
+.bloc_histoire:nth-of-type(6) {
     background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/EWS.jpg') no-repeat center left fixed ;
     background-size: contain;
 }
@@ -355,7 +366,7 @@ footer ul {
     transition : all 2s ease ;
 }
 
-.pPleinePage {
+.pPleinePage, #quizz3 p {
     padding-left: 50px;
     padding-right: 50px;
     text-align: justify;
@@ -363,6 +374,7 @@ footer ul {
 
 .hidden {
     color:#FFFFFF;
+    opacity : 0 ;
     -webkit-transition : all 0.2s ease ;
 }
 .hidden:hover {
@@ -463,6 +475,14 @@ footer ul {
     padding : 10px 30px ;
 }
 
+#quizz3 .infographie {
+    display : block ;
+    height : auto ;
+}
+#quizz3 .commentaire {
+    display:  block ;
+    height : auto ;
+}
 
 /* Script infographie cathos */
 
