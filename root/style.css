@@ -74,7 +74,7 @@ nav a:hover, footer a:hover, #toolFilms p a:hover,#toolContact p a:hover, #filmL
    padding-left: 5px;
 }
 
-#toolIfop p a:hover {
+#toolIfop p a:hover, #lienArticles:hover {
     color: #107671;
     cursor: pointer;
 }
@@ -180,10 +180,6 @@ footer ul {
     left: 5% ;
     transition : height 1s ease;
     -webkit-transition : height 1s ease;
-}
-
-#listePam .pPleinePage:hover {
-    cursor : pointer ;
 }
 
 #liensPam p {

@@ -56,6 +56,7 @@
 (function(){
     var Pam = document.getElementById('listePam'),
         pPam = Pam.firstElementChild,
+        motLien = document.getElementById('lienArticles'),
         liens = document.getElementById('liensPam'),
         compteur = 0,
         hauteurPetit = pPam.clientHeight.toString(),
@@ -68,7 +69,7 @@
         } ;
     Pam.style.height = hauteurPetit ;
     liens.style.display = 'none' ;
-    pPam.addEventListener('click',function(){
+    motLien.addEventListener('click',function(){
         compteur ++ ;
         console.log(compteur) ;
         if (compteur%2 === 1) {
@@ -89,7 +90,7 @@
         fenetreBlur = document.getElementById('fenetreBlur'),
         texte = "<p>Toutes les images en arrière plan </br>sont des captures d'écran </br>des (bons) films suivants, données par ordre d'apparition :</p>",
         texteIfop = "<p>Les données utilisées pour réaliser ce site ont été récupérées auprès de l'<a href='http://www.ifop.com/?option=com_homepage' target='_blank'>Ifop</a>. Elles ont été recueillies lors d'une enquête menée à la demande du journal <a href='http://www.marianne.net/Cette-semaine-dans-Marianne-Les-Francais-la-politique-et-le-sexe_a238936.html' target='_blank'>Marianne</a>, dans le but d'étudier les relations entre sexualité et positionnement politique. Nous remercions l'Ifop d'avoir gracieusement mis à notre disposition les résultats de cette enquête.</p><p> Les graphiques interactifs ont été réalisés avec <a href='http://www.highcharts.com' target='_blank'>Highcharts</a> ou <a href='https://datawrapper.de' target='_blank'>Datawrapper</a>.</p>",
-        texteContact = "<p>Ce site a été réalisé dans le cadre du projet du cours de visualisation de données de l'<a href='http://www.ensae.fr' target='_blank'>Ensae ParisTech</a>. Vous pouvez nous contacter en allant sur nos profils <em>LinkedIn</em> :</p>",
+        texteContact = "<p>Ce site a été réalisé dans le cadre du cours de visualisation de données de l'<a href='http://www.ensae.fr' target='_blank'>Ensae ParisTech</a>. Vous pouvez nous contacter en allant sur nos profils <em>LinkedIn</em> :</p>",
         films = [ {
                 nom : 'La mala vida',
                 lien : 'http://www.imdb.com/title/tt0188874/'
@@ -108,7 +109,7 @@
             }
         ],
         contacts = [ {
-                nom : 'Celle qui a beaucoup de bonnes idées',
+                nom : 'Celle qui a les bonnes idées',
                 lien : 'https://www.linkedin.com/in/marie-beigelman-955a8397'
             },{
                 nom : 'Celui qui était ultramotivé depuis le début',
@@ -117,7 +118,7 @@
                 nom : "Celle qui a fait preuve d'un soutien psychologique sans faille",
                 lien : 'https://fr.linkedin.com/in/kim-montalibet-1a01a265' ,
             },{
-                nom :'Celui qui a passé quelques nuits blanches',
+                nom :'Celui qui aime bien coder la nuit',
                 lien : 'https://fr.linkedin.com/in/romaindamian' ,
             }
         ],
