@@ -73,8 +73,16 @@
                 (reponse.result) ? comm.innerHTML = textes.vrai[noQuestion]: comm.innerHTML = textes.faux[noQuestion] ; 
                 setTimeout(action,200) ;
                 
-                if (idFenetre === 'quizz3') { // On scrolle la page sur le quizz 3 pour avoir une explication pleine page
-                    window.scrollBy(0,180) ;
+                switch (noQuestion+1) { // On scrolle la page sur le quizz 3 pour avoir une explication pleine page
+                    case 2 :
+                        window.scrollBy(0,190) ;
+                        break ;
+                    case 3 :
+                        window.scrollBy(0,175) ;
+                        break ;
+                    case 4 :
+                        window.scrollBy(0,240) ;
+                        break ;
                 }
             }
         });
