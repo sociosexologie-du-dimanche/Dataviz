@@ -15,8 +15,9 @@ canvas {
         bottom: 0;
         width: 80%;
         height: 100%;
-        transition : -webkit-filter 0.2s ;
         -webkit-transition : -webkit-filter 0.2s;
+        -moz-transition : filter 0.2s ;
+        -o-transition : -webkit-filter 0.2s ;
  }
 
 a {
@@ -66,6 +67,9 @@ nav a, footer a {
 	color: #0E5348;
     text-decoration: none;
     transition: all .1s ease;
+    -webkit-transition : all .1s ease ;
+    -moz-transition : all .1s ease ;
+    -o-transition : all .1s ease ;
 }
 
 nav a:hover, footer a:hover, #toolFilms p a:hover,#toolContact p a:hover, #filmList:hover, #sourceDonnees:hover, #auteurs:hover {
@@ -119,10 +123,10 @@ footer ul {
 #corps {
 	display:block;
 	position:absolute;
-	width : 75% ;
+	width : 70% ;
 	top:105%;
 	margin-right:auto;
-	margin-left:2%;
+	margin-left:4%;
 	background:#FFFFFF;
 	overflow-x:auto;
 }
@@ -168,7 +172,10 @@ footer ul {
 
 #religion:hover, #adultere:hover, #nombre:hover,#gaterie:hover, #vieux:hover{
     opacity:0.8;
-	transition: all .1s ease ;	
+	transition: all .1s ease ;
+    -webkit-transition : all .1s ease ;
+    -moz-transition : all .1s ease ;
+    -o-transition : all .1s ease ;
 }
 
 
@@ -180,6 +187,8 @@ footer ul {
     left: 5% ;
     transition : height 1s ease;
     -webkit-transition : height 1s ease;
+    -moz-transition : height 1s ease ;
+    -o-transition : height 1s ease ;
 }
 
 #liensPam p {
@@ -192,6 +201,8 @@ footer ul {
     padding-left : 10px ;
     transition : all 0.3s ease ;
     -webkit-transition : all 0.3s ease ;
+    -moz-transition : all .3s ease ;
+    -o-transition : all .3s ease ;
 }
 
 #gauge {
@@ -204,6 +215,8 @@ footer ul {
     position : relative ;
     transition: height 0.5s ease-in ;
     -webkit-transition : all 0.5s ease-in ;
+    -moz-transition : all .5s ease ;
+    -o-transition : all .5s ease ;
 }
 
 #videoPipe {
@@ -213,6 +226,8 @@ footer ul {
     opacity : 0 ;
     transition : opacity 1s ease-in ;
     -webkit-transition : opacity 1s ease-in ;
+    -moz-transition : opacity 1s ease-in ;
+    -o-transition : opacity 1s ease-in ;
 }
 
 #titreGaterieSpan:hover { cursor: pointer }
@@ -233,8 +248,10 @@ footer ul {
     background-color : rgba(30,30,30,0.8) ;
     box-shadow: 0 0 20px rgba(0,0,0,0.8) ;
     z-index: -1 ;
-    transition: all 0.5s ;
+    transition: all 1s ;
     -webkit-transition : all 1s ;
+    -moz-transition : all 1s ;
+    -o-transition : all 1s ;
 }
 
 #toolFilms, #toolContact {
@@ -273,6 +290,9 @@ footer ul {
     z-index: -1 ;
     transition: opacity 0.5s ;
     -webkit-transition : opacity 0.5s ;
+    -moz-transition : opacity 0.5s ;
+    -o-transition : opacity 0.5s ;
+
 }
 
 .tooltip {
@@ -325,27 +345,45 @@ footer ul {
 .bloc_histoire:nth-of-type(1) {
     background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/priest.jpg') no-repeat center left fixed ;
     background-size : contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
 }
 .bloc_histoire:nth-of-type(2) {
     background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/priest2.jpg') no-repeat center left fixed ;
     background-size : contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
 }
 .bloc_histoire:nth-of-type(3) {
     background: linear-gradient(white,rgba(255,255,255,0),white), url('Images/blueV.jpg') no-repeat center left  fixed  ;
-    background-size: contain ;
+    background-size : contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
 }
 .bloc_histoire:nth-of-type(4) {
     background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/titanic.jpg') no-repeat center left fixed ;
     background-size : contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
 }
 .bloc_histoire:nth-of-type(5) {
     background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/VCBwhite.jpg') no-repeat center left fixed ;
     background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
 }
 
 .bloc_histoire:nth-of-type(6) {
     background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/EWS.jpg') no-repeat center left fixed ;
     background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
 }
 
 .titre_image {
@@ -364,6 +402,9 @@ footer ul {
 	color: #0E5348;
 	position: relative;
     transition : all 2s ease ;
+    -webkit-transition : all 2s ease ;
+    -moz-transition : all 2s ease ;
+    -o-transition : all 2s ease ;
 }
 
 .pPleinePage, #quizz3 p {
@@ -375,7 +416,11 @@ footer ul {
 .hidden {
     color:#FFFFFF;
     opacity : 0 ;
+    transition : all 0.2s ease ;
     -webkit-transition : all 0.2s ease ;
+    -moz-transition : all 0.2s ease ;
+    -o-transition : all 0.2s ease ;
+
 }
 .hidden:hover {
     color:#0E5348;
@@ -393,6 +438,9 @@ footer ul {
 .emph:hover,.chiffre:hover {
 	opacity:0.8;
     transition: all .1s ease;
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -o-transition: all .1s ease;
 }
 .lienCache {
     text-decoration: none ;
@@ -417,9 +465,14 @@ footer ul {
     vertical-align: top;
     height:95%;
     padding : 5px 10px ;
+    
+    filter: blur(15px) grayscale(80%) opacity(40%);
     -webkit-filter: blur(15px) grayscale(80%) opacity(40%);
-    transition : filter 2s ;
-    transition : -webkit-filter 2s ;
+
+    -webkit-transition : -webkit-filter 2s ;
+    -moz-transition : filter 2s ;
+    -o-transition : -webkit-filter 2s ;
+
 }
 .commentaire {
     display:table-cell;
@@ -427,9 +480,14 @@ footer ul {
     text-align : justify;
     height: 95%;
     padding : 5px 10px ;
+    
+    filter: blur(15px) grayscale(80%) opacity(40%);
     -webkit-filter: blur(15px) grayscale(80%) opacity(40%);
-    transition : filter 1s ;
+    
     -webkit-transition : -webkit-filter 1s ;
+    -moz-transition : filter 1s ;
+    -o-transition : -webkit-filter 1s ;
+
 }
 .fenetreQuestion {
     display:block;
@@ -438,7 +496,11 @@ footer ul {
     left: 15%;
     width: 70%;
     font-family: 'droid-bold';
+
     -webkit-transition : -webkit- filter 2s ;
+    -moz-transition :  filter 2s ;
+    -o-transition : -webkit- filter 2s ;
+    
 }
 .question{
     text-align:center;
@@ -475,6 +537,11 @@ footer ul {
     padding : 10px 30px ;
 }
 
+#infographiePam .commentaire, #infographiePam .infographie {
+    -webkit-filter : none ;
+    filter : none ;
+}
+
 #quizz3 .infographie {
     display : block ;
     height : auto ;
@@ -495,8 +562,10 @@ footer ul {
 }
 .oui,.non {
     margin-right: 3px ;
-        -webkit-transition : all 0.2s ease ;
-
+    transition : all 0.2s ease ;
+    -webkit-transition : all 0.2s ease ;
+    -moz-transition : all 0.2s ease ;
+    -o-transition : all 0.2s ease ;
 }
 
 
