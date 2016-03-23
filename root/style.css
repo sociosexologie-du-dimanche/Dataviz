@@ -123,10 +123,10 @@ footer ul {
 #corps {
 	display:block;
 	position:absolute;
-	width : 75% ;
+	width : 70% ;
 	top:105%;
 	margin-right:auto;
-	margin-left:2%;
+	margin-left:4%;
 	background:#FFFFFF;
 	overflow-x:auto;
 }
