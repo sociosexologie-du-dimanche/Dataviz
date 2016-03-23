@@ -37,10 +37,12 @@ $(function () {
         },
         series: [{
             name: 'Ont déjà eu une relation sexuelle avec plus de deux personnes en même temps',
-            data: [22, 17, 16, 13, 14, 21]
+            data: [22, 17, 16, 13, 14, 21],
+            visible : false
         }, {
             name: 'Ont déjà eu une relation homosexuelle',
-            data: [16, 15, 18, 11, 10, 15]
+            data: [16, 15, 18, 11, 10, 15],
+            visible : false
         }, {
             name: 'Ont déjà pratiqué la pénétration anale',
             data: [55, 53, 51, 49, 50, 57]
