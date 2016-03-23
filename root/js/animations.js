@@ -2,8 +2,14 @@
 (function(){
     var corps = document.getElementById('corps'),
         canvas = document.getElementById('mycanvas');
-    corps.addEventListener('mouseover',function() { canvas.style.WebkitFilter = 'blur(5px)'}) ;
-    corps.addEventListener('mouseout',function() { canvas.style.WebkitFilter = 'none'}) ;
+    corps.addEventListener('mouseover',function() { 
+        canvas.style.WebkitFilter = 'blur(5px)' ;
+        canvas.style.filter = 'blur(5px)' ;
+    });
+    corps.addEventListener('mouseout',function() { 
+        canvas.style.WebkitFilter = 'none' ;
+        canvas.style.filter = 'none' ;
+    });
 })();
 
 // Apparition de la vidéo quand on clique sur le titre pour la section gâteries
