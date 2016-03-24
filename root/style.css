@@ -159,7 +159,7 @@ footer ul {
     opacity: 0.5;
 }
 
-#religion,#adultere,#nombre,#vieillir,#gaterie {
+#religion,#adultere,#nombre,#vieillir,#gaterie,#anus {
     font-family: 'poetsen', 'Gill Sans', Arial, sans-serif;
 	font-size: 3em;
 	text-align: center;
@@ -170,7 +170,7 @@ footer ul {
     color: #004C59;
 }
 
-#religion:hover, #adultere:hover, #nombre:hover,#gaterie:hover, #vieux:hover{
+#religion:hover, #adultere:hover, #nombre:hover,#gaterie:hover, #vieux:hover, #anus:hover{
     opacity:0.8;
 	transition: all .1s ease ;
     -webkit-transition : all .1s ease ;
@@ -183,8 +183,6 @@ footer ul {
 #listePam {
     position: relative ;
     height : 80px ;
-    width : 90%;
-    left: 5% ;
     transition : height 1s ease;
     -webkit-transition : height 1s ease;
     -moz-transition : height 1s ease ;
@@ -211,7 +209,7 @@ footer ul {
     margin: 0 auto ;
 }
 #titreGateries {
-    height : 100px ;
+    height : 50px ;
     position : relative ;
     transition: height 0.5s ease-in ;
     -webkit-transition : all 0.5s ease-in ;
@@ -337,10 +335,10 @@ footer ul {
 
 .bloc_histoire {
     position:relative;
-    width:100%;
+    width:97%;
     background: #FFFFFF;
-    margin: 0px 0px 0px 0px ;
-    padding : 20px 2px 200px 10px ;
+    margin: 0px auto 0px auto ;
+    padding : 20px 0px 200px 0px ;
 }
 .bloc_histoire:nth-of-type(1) {
     background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/priest.jpg') no-repeat center left fixed ;
@@ -397,8 +395,8 @@ footer ul {
 	font-family: 'raleway','Gill Sans', serif;
 	font-size: 1.8em;
 	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 30px;
+	margin-top: 0px;
+	margin-bottom: 50px;
 	color: #0E5348;
 	position: relative;
     transition : all 2s ease ;
@@ -407,9 +405,9 @@ footer ul {
     -o-transition : all 2s ease ;
 }
 
-.pPleinePage, #quizz3 p {
-    padding-left: 50px;
-    padding-right: 50px;
+.pPleinePage, .commentaire p {
+    padding-left: 60px;
+    padding-right: 60px;
     text-align: justify;
 }
 
@@ -457,15 +455,14 @@ footer ul {
 .fenetre {
     position: relative;
     display:block;
-    width: 95%;
-    margin: 30px auto 30px auto;
+    width: 100%;
+    margin: 10px auto 30px auto;
 }
 .infographie {
-    display:table-cell;
-    vertical-align: top;
-    height:95%;
-    padding : 5px 10px ;
-    
+    display:block;
+    width : 100%;
+    padding : 0px 0px ;
+    margin : 20px 0px 0px 0px ;
     filter: blur(15px) grayscale(80%) opacity(40%);
     -webkit-filter: blur(15px) grayscale(80%) opacity(40%);
 
@@ -475,12 +472,10 @@ footer ul {
 
 }
 .commentaire {
-    display:table-cell;
-    vertical-align: top;
+    display:block;
     text-align : justify;
-    height: 95%;
-    padding : 5px 10px ;
-    
+    padding : 0px 0px ;
+    margin : 10px auto ;
     filter: blur(15px) grayscale(80%) opacity(40%);
     -webkit-filter: blur(15px) grayscale(80%) opacity(40%);
     
@@ -516,11 +511,11 @@ footer ul {
     padding-left:5px;
     font-weight: 600;
     cursor:pointer;
-    
 }
 
 #quizz1 .infographie {
     width : 600px ;
+    margin : 0px auto ;
 }
 
 #quizz2 .fenetreQuestion {
@@ -531,24 +526,15 @@ footer ul {
     padding : 0 ;
     width: 400px;
     height: 400px;
-    margin : 5px auto ;
+    margin : 0px auto ;
 }
 #quizz2 .commentaire{
-    padding : 10px 30px ;
+    padding : 5px 10px ;
 }
 
 #infographiePam .commentaire, #infographiePam .infographie {
     -webkit-filter : none ;
     filter : none ;
-}
-
-#quizz3 .infographie {
-    display : block ;
-    height : auto ;
-}
-#quizz3 .commentaire {
-    display:  block ;
-    height : auto ;
 }
 
 /* Script infographie cathos */
