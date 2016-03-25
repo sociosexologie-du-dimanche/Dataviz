@@ -6,21 +6,25 @@
         reponse2V = "<p> Effectivement ! Il paraît que les femmes vont plus souvent dans les détails que les hommes lors de leurs conversations entre amis... On entend rarement un homme aller dans le détail à propos de ce qu'il a fait ou pas à sa partenaire la nuit dernière. On entend d'ailleurs encore trop rarement un homme parler de sexe en laissant entendre qu'il était là pour le plaisir de l'autre...</p><p>Mais dans les faits, on constate qu'<span class='emph'>une proportion plus grande d'hommes (49%) que de femmes (36%) <em>suce ou lèche souvent le sexe de son/sa partenaire</em></span>. Inversement, <span class='chiffre'>15%</span> des femmes déclarent ne jamais le faire, contre <em>seulement</em> <span class='chiffre'>11%</span> des hommes. Au fond, c'est plutôt clair, quel que soit le sexe de votre partenaire, les gâteries, c'est bien, mangez-en.</p>",
         reponse2F = "<p> Ah, l'imaginaire collectif et les faits... deux choses radicalement différentes ! Il est vrai que dans une société androcentrée, une conséquence <em>attendue</em> de la domination masculine serait que les gâteries soient plutôt données par les femmes et reçues par les hommes... et bien non, et tant mieux !</p><p>On constate qu'<span class='emph'>une proportion plus grande d'hommes (49%) que de femmes (36%) <em>suce ou lèche souvent le sexe de son/sa partenaire</em></span>. Inversement, <span class='chiffre'>15%</span> des femmes déclarent ne jamais le faire, contre <em>seulement</em> <span class='chiffre'>11%</span> des hommes. Au fond, c'est plutôt clair, quel que soit le sexe de votre partenaire, les gâteries, c'est bien, mangez-en.</p>",
         reponse3F = "<p>Bien tenté, mais non ! Parmi les hommes disposant d'un diplôme supérieur au baccalauréat, <span class='chiffre'>48%</span> déclarent sucer ou lécher souvent le sexe de leur partenaire. Parmi ceux ayant un diplôme inférieur au baccalauréat, ils sont <span class='chiffre'>50%</span> ! Inversement, <span class='chiffre'>13%</span> des premiers déclarent ne jamais le faire, contre <span class='chiffre'>13%</span> pour les seconds. La différence n'est de fait pas énorme, et elle est plus grande chez les femmes.</p><p> Chez les femmes, l'effet du diplôme est inversé. Les diplômées sont plus nombreuses à utiliser leur bouche <span class='emph'>souvent</span> et moins nombreuses à ne le faire <span class='emph'>jamais</span>. Que traduit cet effet opposé entre les hommes et les femmes ? L'éducation contribue à réduire les différences de pratiques sexuelles entre hommes et femmes, comme ça tout le monde profite des talents lingaux de l'autre sexe ! Sur l'infographie ci-dessus, on vous résume toutes ces informations.</p><p class='hidden'> Pour les attentifs qui ont remarqué que la longueur des barres ne correspond pas au pourcentage donné : elle correspond à la proportion relative des répondants entre les deux modalités <em>souvent</em> et <em>jamais</em>, afin de mieux comparer les différentes séries. La somme des pourcentages ne fait pas 100, et c'est normal !</p>",
-        reponse3V="<p>C'est bien ça ! Parmi les femmes disposant d'un diplôme supérieur au baccalauréat, <span class='chiffre'>36%</span> déclarent sucer ou lécher souvent le sexe de leur partenaire. Parmi celles ayant un diplôme inférieur au baccalauréat, elles sont <span class='chiffre'>29%</span>. Inversement, <span class='chiffre'>14%</span> des premières déclarent ne jamais le faire, contre <span class='chiffre'>18%</span> pour les secondes. Ces écarts sont plus grands que chez les hommes, environ deux fois plus grands.</p><p> Chez les hommes, l'effet du diplôme est inversé. Les diplômés sont moins nombreux à utiliser leur bouche <span class='emph'>souvent</span> et plus nombreux à ne le faire <span class='emph'>jamais</span>. Que traduit cet effet opposé entre les hommes et les femmes ? L'éducation contribue à réduire les différences de pratiques sexuelles entre hommes et femmes, comme ça tout le monde profite des talents lingaux de l'autre sexe ! Sur l'infographie ci-dessus, on vous résume toutes ces informations.</p><p class='hidden'> Pour les  attentifs qui ont remarqué que la longueur des barres ne correspond pas au pourcentage donné : elle correspond à la proportion relative des répondants entre les deux modalités <em>souvent</em> et <em>jamais</em>, afin de mieux comparer les différentes séries. La somme des pourcentages ne fait pas ça, et c'est normal !</p>",
+        reponse3V="<p>C'est bien ça ! Parmi les femmes disposant d'un diplôme supérieur au baccalauréat, <span class='chiffre'>36%</span> déclarent sucer ou lécher souvent le sexe de leur partenaire. Parmi celles ayant un diplôme inférieur au baccalauréat, elles sont <span class='chiffre'>29%</span>. Inversement, <span class='chiffre'>14%</span> des premières déclarent ne jamais le faire, contre <span class='chiffre'>18%</span> pour les secondes. Ces écarts sont plus grands que chez les hommes, environ deux fois plus grands.</p><p> Chez les hommes, l'effet du diplôme est inversé. Les diplômés sont moins nombreux à utiliser leur bouche <span class='emph'>souvent</span> et plus nombreux à ne le faire <span class='emph'>jamais</span>. Que traduit cet effet opposé entre les hommes et les femmes ? L'éducation contribue à réduire les différences de pratiques sexuelles entre hommes et femmes, comme ça tout le monde profite des talents lingaux de l'autre sexe ! Sur l'infographie ci-dessus, on vous résume toutes ces informations.</p><p class='hidden'> Pour les  attentifs qui ont remarqué que la longueur des barres ne correspond pas au pourcentage donné : elle correspond à la proportion relative des répondants entre les deux modalités <em>souvent</em> et <em>jamais</em>, afin de mieux comparer les différentes séries. La somme des pourcentages ne fait pas 100, et c'est normal !</p>",
         reponse4V="<p> Oui... et Non! Si la pratique de la sodomie est plus faible chez les électeurs du Modem-UDI et UMP (11% et 12%) contre 17% et 16% chez les PS et les Verts, les électeurs FN sont tête du classement avec le Front de gauche avec 22% des électeurs ayant déjà pratique la pénétration anale. On retrouve d'ailleurs le même schéma concernant les rapports homosexuels : FN et Front de Gauche sont en tête, avec respectivement 59% et 57% des électeurs ayant déjà eu une relation sexuelle avec quelqu'un du même sexe contre 51% en moyenne chez les autres partis. En voilà une valeur commune!</p>",
         reponse4F="<p> Oui... et Non! Si la pratique de la sodomie est plus faible chez les électeurs du Modem-UDI et UMP (11% et 12%) contre 17% et 16% chez les PS et les Verts, les électeurs FN sont tête du classement avec le Front de gauche avec 22% des électeurs ayant déjà pratique la pénétration anale. On retrouve d'ailleurs le même schéma concernant les rapports homosexuels : FN et Front de Gauche sont en tête, avec respectivement 59% et 57% des électeurs ayant déjà eu une relation sexuelle avec quelqu'un du même sexe contre 51% en moyenne chez les autres partis. En voilà une valeur commune!</p>",
+        reponse5V="bla bla bla",
+        reponse5F=reponse5V,
     textes = {
         vrai : [
             reponse1V ,
             reponse2V ,
             reponse3V ,
             reponse4V ,
+            reponse5V ,
         ],
         faux : [
             reponse1F ,
             reponse2F ,
             reponse3F , 
             reponse4F ,
+            reponse5F ,
     ]},scroller = function(){};
     
     
@@ -28,6 +32,7 @@
     document.querySelector("#quizz2 .commentaire").innerHTML = reponse2V ;
      document.querySelector("#quizz3 .commentaire").innerHTML = reponse3V ;
      document.querySelector("#quizz4 .commentaire").innerHTML = reponse4V ;
+    document.querySelector("#quizz5 .commentaire").innerHTML = reponse5V ;
 
 //-------------------------------------------------------------
 // Début du script        
@@ -73,8 +78,18 @@
                 (reponse.result) ? comm.innerHTML = textes.vrai[noQuestion]: comm.innerHTML = textes.faux[noQuestion] ; 
                 setTimeout(action,200) ;
                 
-                if (idFenetre === 'quizz3') { // On scrolle la page sur le quizz 3 pour avoir une explication pleine page
-                    window.scrollBy(0,180) ;
+                switch (noQuestion+1) { // On scrolle la page sur le quizz 3 pour avoir une explication pleine page
+                    case 2 :
+                        window.scrollBy(0,190) ;
+                        break ;
+                    case 3 :
+                        window.scrollBy(0,175) ;
+                        break ;
+                    case 4 :
+                        window.scrollBy(0,240) ;
+                        break ;
+                    case 5 :
+                        window.scrollBy(0,480) ;
                 }
             }
         });
