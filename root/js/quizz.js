@@ -9,18 +9,22 @@
         reponse3V="<p>C'est bien ça ! Parmi les femmes disposant d'un diplôme supérieur au baccalauréat, <span class='chiffre'>36%</span> déclarent sucer ou lécher souvent le sexe de leur partenaire. Parmi celles ayant un diplôme inférieur au baccalauréat, elles sont <span class='chiffre'>29%</span>. Inversement, <span class='chiffre'>14%</span> des premières déclarent ne jamais le faire, contre <span class='chiffre'>18%</span> pour les secondes. Ces écarts sont plus grands que chez les hommes, environ deux fois plus grands.</p><p> Chez les hommes, l'effet du diplôme est inversé. Les diplômés sont moins nombreux à utiliser leur bouche <span class='emph'>souvent</span> et plus nombreux à ne le faire <span class='emph'>jamais</span>. Que traduit cet effet opposé entre les hommes et les femmes ? L'éducation contribue à réduire les différences de pratiques sexuelles entre hommes et femmes, comme ça tout le monde profite des talents lingaux de l'autre sexe ! Sur l'infographie ci-dessus, on vous résume toutes ces informations.</p><p class='hidden'> Pour les  attentifs qui ont remarqué que la longueur des barres ne correspond pas au pourcentage donné : elle correspond à la proportion relative des répondants entre les deux modalités <em>souvent</em> et <em>jamais</em>, afin de mieux comparer les différentes séries. La somme des pourcentages ne fait pas 100, et c'est normal !</p>",
         reponse4V="<p> Oui... et Non! Si la pratique de la sodomie est plus faible chez les électeurs du Modem-UDI et UMP (11% et 12%) contre 17% et 16% chez les PS et les Verts, les électeurs FN sont tête du classement avec le Front de gauche avec 22% des électeurs ayant déjà pratique la pénétration anale. On retrouve d'ailleurs le même schéma concernant les rapports homosexuels : FN et Front de Gauche sont en tête, avec respectivement 59% et 57% des électeurs ayant déjà eu une relation sexuelle avec quelqu'un du même sexe contre 51% en moyenne chez les autres partis. En voilà une valeur commune!</p>",
         reponse4F="<p> Oui... et Non! Si la pratique de la sodomie est plus faible chez les électeurs du Modem-UDI et UMP (11% et 12%) contre 17% et 16% chez les PS et les Verts, les électeurs FN sont tête du classement avec le Front de gauche avec 22% des électeurs ayant déjà pratique la pénétration anale. On retrouve d'ailleurs le même schéma concernant les rapports homosexuels : FN et Front de Gauche sont en tête, avec respectivement 59% et 57% des électeurs ayant déjà eu une relation sexuelle avec quelqu'un du même sexe contre 51% en moyenne chez les autres partis. En voilà une valeur commune!</p>",
+        reponse5V="bla bla bla",
+        reponse5F=reponse5V,
     textes = {
         vrai : [
             reponse1V ,
             reponse2V ,
             reponse3V ,
             reponse4V ,
+            reponse5V ,
         ],
         faux : [
             reponse1F ,
             reponse2F ,
             reponse3F , 
             reponse4F ,
+            reponse5F ,
     ]},scroller = function(){};
     
     
@@ -28,6 +32,7 @@
     document.querySelector("#quizz2 .commentaire").innerHTML = reponse2V ;
      document.querySelector("#quizz3 .commentaire").innerHTML = reponse3V ;
      document.querySelector("#quizz4 .commentaire").innerHTML = reponse4V ;
+    document.querySelector("#quizz5 .commentaire").innerHTML = reponse5V ;
 
 //-------------------------------------------------------------
 // Début du script        
@@ -83,6 +88,8 @@
                     case 4 :
                         window.scrollBy(0,240) ;
                         break ;
+                    case 5 :
+                        window.scrollBy(0,480) ;
                 }
             }
         });

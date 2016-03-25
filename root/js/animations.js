@@ -1,7 +1,8 @@
 // Flouter le canvas quand mouseouver sur le corps, déflouter quand en sort
 (function(){
     var corps = document.getElementById('corps'),
-        canvas = document.getElementById('mycanvas');
+        canvas = document.getElementById('mycanvas'),
+        aurevoir = document.getElementById('aurevoir');
     corps.addEventListener('mouseover',function() { 
         canvas.style.WebkitFilter = 'blur(5px)' ;
         canvas.style.filter = 'blur(5px)' ;
@@ -16,9 +17,12 @@
 (function(){
     var videoPipe = document.createElement('iframe'),
         titreGaterie = document.getElementById('titreGateries'),
+        titreSatis = document.getElementById('titreSatis'),
         compteur = 0,
         compteurMouseOver = 0,
+        compteurMouseOver2 = 0,
         toolTip = document.createElement('div'),
+        toolTip2 = document.createElement('div'),
         affiche = function(){
             videoPipe.style.opacity = '1' ;
         },
@@ -32,9 +36,12 @@
     videoPipe.allowFullscreen = false ;
     
     toolTip.setAttribute('class','tooltip') ;
+    toolTip2.setAttribute('class','tooltip') ;
     toolTip.innerHTML = "Un bonus se cache </br> derrière le titre..." ;
+    toolTip2.innerHTML = "Oui, ce titre est plutôt déprimant..." ;
 
     titreGaterie.appendChild(toolTip) ;
+    titreSatis.appendChild(toolTip2) ;
 
     titreGaterie.addEventListener('click',function(){
         compteur++ ;
@@ -55,6 +62,13 @@
     }) ;
     titreGaterie.firstElementChild.firstElementChild.addEventListener('mouseout',function(){
         toolTip.style.opacity = '0' ;
+    }) ;
+    titreSatis.firstElementChild.firstElementChild.addEventListener('mouseover',function(){
+        compteurMouseOver2++ ;
+        if (compteurMouseOver2 === 1 ) { toolTip2.style.opacity = '1' } ;
+    }) ;
+    titreSatis.firstElementChild.firstElementChild.addEventListener('mouseout',function(){
+        toolTip2.style.opacity = '0' ;
     }) ;
 })() ;
 
@@ -93,10 +107,12 @@
     var toolTip = document.getElementById('toolFilms'),
         toolIfop = document.getElementById('toolIfop'),
         toolContact = document.getElementById('toolContact'),
+        toolAurevoir = document.getElementById('toolAurevoir'),
         fenetreBlur = document.getElementById('fenetreBlur'),
         texte = "<p>Toutes les images en arrière plan </br>sont des captures d'écran </br>des (bons) films suivants, données par ordre d'apparition :</p>",
         texteIfop = "<p>Les données utilisées pour réaliser ce site ont été récupérées auprès de l'<a href='http://www.ifop.com/?option=com_homepage' target='_blank'>Ifop</a>. Elles ont été recueillies lors d'une enquête menée à la demande du journal <a href='http://www.marianne.net/Cette-semaine-dans-Marianne-Les-Francais-la-politique-et-le-sexe_a238936.html' target='_blank'>Marianne</a>, dans le but d'étudier les relations entre sexualité et positionnement politique. Nous remercions l'Ifop d'avoir gracieusement mis à notre disposition les résultats de cette enquête.</p><p> Les graphiques interactifs ont été réalisés avec <a href='http://www.highcharts.com' target='_blank'>Highcharts</a>.</p>",
         texteContact = "<p>Ce site a été réalisé dans le cadre du cours de visualisation de données de l'<a href='http://www.ensae.fr' target='_blank'>Ensae ParisTech</a>. Vous pouvez nous contacter en utilisant les liens suivants :</p>",
+        texteAurevoir = "Changer ce paragraphe en mettant : remerciements d'avoir vu le site, bla bla, boutons de partage fb twitter in, et une petite liste de lecture pour aller plus loin.",
         films = [ {
                 nom : 'La mala vida',
                 lien : 'http://www.imdb.com/title/tt0188874/'
@@ -131,6 +147,7 @@
         filmList = document.getElementById('filmList'),
         sourceDonnees = document.getElementById('sourceDonnees'),
         auteurs = document.getElementById('auteurs'),
+        goodbye = document.getElementById('buttonGoodbye'),
         x = 0,
         y = 0,
         a = 0,
@@ -150,11 +167,14 @@
                 toolIfop.style.left = b+'%' ;
                 toolIfop.style.opacity = '1' ;
                 toolIfop.style.zIndex = '7' ;
-            } else {
+            } else if (e.target === auteurs){
                 toolContact.style.top = a+'%' ;
                 toolContact.style.left = b+'%' ;
                 toolContact.style.opacity = '1' ;
                 toolContact.style.zIndex = '7' ;
+            } else {
+                toolAurevoir.style.opacity = '1' ;
+                toolAurevoir.style.zIndex= '7' ;
             }
             fenetreBlur.style.opacity = '1' ;
             fenetreBlur.style.zIndex = '6' ;
@@ -177,6 +197,9 @@
             toolContact.style.opacity = '0' ;
             toolContact.style.zIndex = '-1' ;
             
+            toolAurevoir.style.opacity = '0' ;
+            toolAurevoir.style.zIndex = '-1' ;
+            
             fenetreBlur.style.opacity = '0' ;
             fenetreBlur.style.zIndex = '-1' ;
         };
@@ -191,7 +214,7 @@
     toolTip.innerHTML = texte ;
     toolIfop.innerHTML = texteIfop ;
     toolContact.innerHTML = texteContact ;
-    
+    toolAurevoir.innerHTML = texteAurevoir ;
     filmList.addEventListener('click',function(e) {
         blurer(e) ;
     });
@@ -200,6 +223,9 @@
     });
     auteurs.addEventListener('click',function(e) {
         blurer(e) ;
+    });
+    goodbye.addEventListener('click',function(e) {
+       blurer(e) ; 
     });
     fenetreBlur.addEventListener('click',function(e){
         cleaner(e) ;
