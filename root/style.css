@@ -122,9 +122,9 @@ footer ul {
 
 #corps {
 	display:block;
-	position:absolute;
+	position:relative;
 	width : 70% ;
-	top:105%;
+    margin-top : 105%;
 	margin-right:auto;
 	margin-left:4%;
 	background:#FFFFFF;
@@ -159,7 +159,7 @@ footer ul {
     opacity: 0.5;
 }
 
-#religion,#adultere,#nombre,#vieillir,#gaterie,#anus {
+#religion,#gaterie,#politique,#satisfaction {
     font-family: 'poetsen', 'Gill Sans', Arial, sans-serif;
 	font-size: 3em;
 	text-align: center;
@@ -177,6 +177,8 @@ footer ul {
     -moz-transition : all .1s ease ;
     -o-transition : all .1s ease ;
 }
+
+
 
 
 /* Identités pour les graphiques et autres animations */
@@ -238,7 +240,7 @@ footer ul {
 
 
 /* Identités pour l'animation tooltip */
-#toolFilms, #toolIfop, #toolContact {
+#toolFilms, #toolIfop, #toolContact, #toolAurevoir {
     opacity : 0 ;
     padding : 10px 20px 10px 20px ;
     position: fixed;
@@ -250,6 +252,12 @@ footer ul {
     -webkit-transition : all 1s ;
     -moz-transition : all 1s ;
     -o-transition : all 1s ;
+}
+
+#toolAurevoir {
+    width : 400px ;
+    left : 25% ;
+    top : 30% ;
 }
 
 #toolFilms, #toolContact {
@@ -322,6 +330,7 @@ footer ul {
     background: url('Images/bullet.png') no-repeat top center ;
     top : 35px;
 }
+
 .following {
     background: url('Images/arrow-down.png') no-repeat top center ;
     width: 20px;
@@ -329,13 +338,26 @@ footer ul {
     margin: 10px auto ;
     opacity: 60%;
 }
-.buttonDown:hover,.buttonUp:hover,.bullet:hover,.following:hover {
+
+.goodbye {
+    background : url('Images/stop.png') no-repeat top center ;
+    background-size : contain ;
+    width: 25px;
+    height: 25px;
+    margin: 20px auto 50px auto ;
+    opacity: 60%;
+}
+.buttonDown:hover,.buttonUp:hover,.bullet:hover,.following:hover,.goodbye:hover {
     opacity: 0.5;
+}
+
+.goodbye:hover {
+    cursor: pointer ;
 }
 
 .bloc_histoire {
     position:relative;
-    width:97%;
+    width:100%;
     background: #FFFFFF;
     margin: 0px auto 0px auto ;
     padding : 20px 0px 200px 0px ;
@@ -453,7 +475,7 @@ footer ul {
 /* Classes pour le script quizz */
 
 .fenetre {
-    position: relative;
+    position:relative;
     display:block;
     width: 100%;
     margin: 10px auto 30px auto;
