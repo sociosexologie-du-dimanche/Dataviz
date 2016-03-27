@@ -9,8 +9,10 @@
         reponse3V="<p>C'est bien ça ! Parmi les femmes disposant d'un diplôme supérieur au baccalauréat, <span class='chiffre'>36%</span> déclarent sucer ou lécher souvent le sexe de leur partenaire. Parmi celles ayant un diplôme inférieur au baccalauréat, elles sont <span class='chiffre'>29%</span>. Inversement, <span class='chiffre'>14%</span> des premières déclarent ne jamais le faire, contre <span class='chiffre'>18%</span> pour les secondes. Ces écarts sont plus grands que chez les hommes, environ deux fois plus grands.</p><p> Chez les hommes, l'effet du diplôme est inversé. Les diplômés sont moins nombreux à utiliser leur bouche <span class='emph'>souvent</span> et plus nombreux à ne le faire <span class='emph'>jamais</span>. Que traduit cet effet opposé entre les hommes et les femmes ? L'éducation contribue à réduire les différences de pratiques sexuelles entre hommes et femmes, comme ça tout le monde profite des talents lingaux de l'autre sexe ! Sur l'infographie ci-dessus, on vous résume toutes ces informations.</p><p class='hidden'> Pour les  attentifs qui ont remarqué que la longueur des barres ne correspond pas au pourcentage donné : elle correspond à la proportion relative des répondants entre les deux modalités <em>souvent</em> et <em>jamais</em>, afin de mieux comparer les différentes séries. La somme des pourcentages ne fait pas 100, et c'est normal !</p>",
         reponse4V="<p> Oui... et Non! Il est vrai que la pratique de la sodomie est un peu plus courante chez les gauchos que chez les droitistes: <span class='chiffre'>53%</span> <span class='emph'>des électeurs PS </span> et <span class='chiffre'>51%</span> <span class='emph'>des écologistes ont déclaré avoir déjà pratiqué la pénétration anale </span> contre<span class='chiffre'> 50% </span> <span class='emph'> des électeurs UMP </span> et <span class='chiffre'> 49% </span> <span class='emph'> des électeurs du Modem-UDI  </span>. Ces derniers sont également les plus frileux en matière d'homosexualité. Ainsi,<span class='chiffre'> 10% </span> <span class='emph'> des électeurs UMP ont déclarés avoir eu une relation homosexuelle <\span>, contre <span class='chiffre'>15%<\span> des électeurs PS. <\p> Mais c'est en fait aux extrêmes que la fête est plus folle. <span class='emph'> Front de Gauche et Front national </span> gagnent ainsi le prix des plus décoincés avec respectivement <span class='chiffre'> 59% </span> et <span class='chiffre'>57%</span> des électeurs ayant déjà pratiqué la sodomie. C'est à dire en moyenne <span class='chiffre'> 8 points </span> <span class='emph'> de pourcentage de plus que les électeurs plus modérés! </span> On retrouve d'ailleurs le même schéma en U conçernant <span class='emph'>les expériences sexuelles avec plus de deux personnes en même temps</span>. FN et Front de Gauche sont en tête, avec respectivement <span class='chiffre'>22% et 21%</span> de leurs électeurs ayant déjà donné de l'amour à plusieurs personnes en même temps. En voilà une valeur commune!</p>",
         reponse4F="<p> Oui... et Non! Il est vrai que la pratique de la sodomie est un peu plus courante chez les gauchos que chez les droitistes: <span class='chiffre'>53%</span> <span class='emph'>des électeurs PS </span> et <span class='chiffre'>51%</span> <span class='emph'>des écologistes ont déclaré avoir déjà pratiqué la pénétration anale </span> contre<span class='chiffre'> 50% </span> <span class='emph'> des électeurs UMP </span> et <span class='chiffre'> 49% </span> <span class='emph'> des électeurs du Modem-UDI  </span>. Ces derniers sont également les plus frileux en matière d'homosexualité. Ainsi,<span class='chiffre'> 10% </span> <span class='emph'> des électeurs UMP ont déclarés avoir eu une relation homosexuelle <\span>, contre <span class='chiffre'>15%<\span> des électeurs PS. <\p> Mais c'est en fait aux extrêmes que la fête est plus folle. <span class='emph'> Front de Gauche et Front national </span> gagnent ainsi le prix des plus décoincés avec respectivement <span class='chiffre'> 59% </span> et <span class='chiffre'>57%</span> des électeurs ayant déjà pratiqué la sodomie. C'est à dire en moyenne <span class='chiffre'> 8 points </span> <span class='emph'> de pourcentage de plus que les électeurs plus modérés! </span> On retrouve d'ailleurs le même schéma en U conçernant <span class='emph'>les expériences sexuelles avec plus de deux personnes en même temps</span>. FN et Front de Gauche sont en tête, avec respectivement <span class='chiffre'>22% et 21%</span> de leurs électeurs ayant déjà donné de l'amour à plusieurs personnes en même temps. En voilà une valeur commune!</p>",
-        reponse5V="bla bla bla",
-        reponse5F=reponse5V,
+        reponse5V="<p> Vive la constance ! En effet, parmi les individus <span class='emph'>peu ou pas satisfaits</span> de leur vie sexuelle, les moins insatisfaits sont les individus déclarant n'avoir eu qu'<span class='emph'>un seul partenaire</span>. Parmi ces amants uniques, <span class='chiffre'>1 sur 4</span> est peu satisfait voire pas satisfait du tout, contre <span class='chiffre'>1 sur 3</span> pour les petits lapins ayant eu entre quatre et cinq partenaires différents !</p><p>On constate de fait qu'à partir de deux partenaires, <span class='emph'>les taux d'insatisfaction sont globalement les mêmes</span>, qu'il y ait eu deux partenaires ou dix-huit ! Comment l'expliquer ? Valeur particulière de la première conquête et complicité extrême de l'unique ? Niveau d'exigence qui augmente avec la diversité ? La réponse est entre vos mains ! <span class='hidden'>vos mains, pas vos jambes...</span></p>",
+        reponse5F="<p>Tant pis pour Barney ! Car oui, parmi les individus <span class='emph'>peu ou pas satisfaits</span> de leur vie sexuelle, les moins insatisfaits sont les individus déclarant n'avoir eu qu'<span class='emph'>un seul partenaire</span>. Parmi ces amants uniques, <span class='chiffre'>1 sur 4</span> est peu satisfait voire pas satisfait du tout, contre <span class='chiffre'>1 sur 3</span> pour les petits lapins ayant eu entre quatre et cinq partenaires différents !</p><p>On constate de fait qu'à partir de deux partenaires, <span class='emph'>les taux d'insatisfaction sont globalement les mêmes</span>, qu'il y ait eu deux partenaires ou dix-huit ! Comment l'expliquer ? Valeur particulière de la première conquête et complicité extrême de l'unique ? Niveau d'exigence qui augmente avec la diversité ? La réponse est entre vos mains ! <span class='hidden'>oui vos mains, pas vos jambes</span></p>",
+        reponse6F="<p>...c'est le cas de <em>seulement</em> <span class='chiffre'>14%</span> des couples non-cohabitants</p><p>...tandis qu'on en trouve <span class='chiffre'>1 sur 2</span> parmi les couples non cohabitants</p>",
+        reponse6V=reponse6F,
     textes = {
         vrai : [
             reponse1V ,
@@ -18,6 +20,7 @@
             reponse3V ,
             reponse4V ,
             reponse5V ,
+            reponse6V ,
         ],
         faux : [
             reponse1F ,
@@ -25,6 +28,7 @@
             reponse3F , 
             reponse4F ,
             reponse5F ,
+            reponse6F ,
     ]},
         scroller = function(){};
     
@@ -34,6 +38,7 @@
      document.querySelector("#quizz3 .commentaire").innerHTML = reponse3V ;
      document.querySelector("#quizz4 .commentaire").innerHTML = reponse4V ;
     document.querySelector("#quizz5 .commentaire").innerHTML = reponse5V ;
+    document.querySelector('#quizz6 .commentaire').innerHTML = reponse6V ;
 
 //-------------------------------------------------------------
 // Début du script        
@@ -56,7 +61,8 @@
             comm.style.filter = 'none' ;
             
             question.style.zIndex = '-1' ;  // On passe la fenêtre question derrière pour pas pouvoir cliquer dessus
-        };
+        },
+        comLat = document.getElementById('comLat');
 
     for (i=0, n=clics.length; i<n; i++) {                       // On 'prépare à l'écoute' toutes les fenêtres de la page
         clics[i].addEventListener('click',function(e){
@@ -79,7 +85,7 @@
                 (reponse.result) ? comm.innerHTML = textes.vrai[noQuestion]: comm.innerHTML = textes.faux[noQuestion] ; 
                 setTimeout(action,200) ;
                 
-                switch (noQuestion+1) { // On scrolle la page sur le quizz 3 pour avoir une explication pleine page
+                switch (noQuestion+1) { // On scrolle la page selon le quizz
                     case 2 :
                         window.scrollBy(0,190) ;
                         break ;
@@ -90,7 +96,13 @@
                         window.scrollBy(0,270) ;
                         break ;
                     case 5 :
-                        window.scrollBy(0,480) ;
+                        window.scrollBy(0,340) ;
+                        break ;
+                    case 6 :
+                        comLat.style.filter = 'none' ;
+                        comLat.style.WebkitFilter = 'none' ;
+                        window.scrollBy(0,300) ;
+                        break ;
                 }
             }
         });

@@ -3,7 +3,7 @@ $(function () {
         chart: {
             type: 'bar'
         },
-             		colors: ['#CBA148', '#107671', '#004C59'],
+             		colors: ['#004C59','#107671'],
 
         title: {
             text: ''
