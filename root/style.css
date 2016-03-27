@@ -159,7 +159,7 @@ footer ul {
     opacity: 0.5;
 }
 
-#religion,#gaterie,#politique,#satisfaction {
+#religion,#gaterie,#politique,#satisfaction,#vieux {
     font-family: 'poetsen', 'Gill Sans', Arial, sans-serif;
 	font-size: 3em;
 	text-align: center;
@@ -179,7 +179,10 @@ footer ul {
 }
 
 
-
+#bonusNathan {
+    width : 200px ;
+    margin : 40px auto 20px auto ;
+}
 
 /* Identités pour les graphiques et autres animations */
 #listePam {
@@ -359,7 +362,7 @@ footer ul {
 }
 
 .goodbye {
-    background : url('Images/stop.png') no-repeat top center ;
+    background : url('Images/stop.png') no-repeat center bottom ;
     background-size : contain ;
     width: 25px;
     height: 25px;
@@ -410,7 +413,7 @@ footer ul {
     -o-background-size: cover;
 }
 .bloc_histoire:nth-of-type(5) {
-    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/VCB.jpg') no-repeat center center fixed ;
+    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/') no-repeat center center fixed ;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -419,6 +422,22 @@ footer ul {
 
 .bloc_histoire:nth-of-type(6) {
     background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/EWS.jpg') no-repeat center center fixed ;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.bloc_histoire:nth-of-type(7) {
+    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/VCB.jpg') no-repeat center center fixed ;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.bloc_histoire:nth-of-type(8) {
+    background: linear-gradient(white,rgba(255,255,255,0),white),url('Images/HEM.jpg') no-repeat center center fixed ;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;

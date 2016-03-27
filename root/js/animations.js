@@ -150,7 +150,7 @@
         toolContact = document.getElementById('toolContact'),
         toolAurevoir = document.getElementById('toolAurevoir'),
         fenetreBlur = document.getElementById('fenetreBlur'),
-        texte = "<p>Toutes les images en arrière plan </br>sont des captures d'écran </br>des (bons) films suivants, données par ordre d'apparition :</p>",
+        texte = "<p>Toutes les images en arrière plan </br>sont des captures d'écran </br>des (bons) films suivants, donnés par ordre d'apparition :</p>",
         texteIfop = "<p>Les données utilisées pour réaliser ce site ont été récupérées auprès de l'<a href='http://www.ifop.com/?option=com_homepage' target='_blank'>Ifop</a>. Elles ont été recueillies lors d'une enquête menée à la demande du journal <a href='http://www.marianne.net/Cette-semaine-dans-Marianne-Les-Francais-la-politique-et-le-sexe_a238936.html' target='_blank'>Marianne</a>, dans le but d'étudier les relations entre sexualité et positionnement politique. Nous remercions l'Ifop d'avoir gracieusement mis à notre disposition les résultats de cette enquête.</p><p> Les graphiques interactifs ont été réalisés avec <a href='http://www.highcharts.com' target='_blank'>Highcharts</a>.</p>",
         texteContact = "<p>Ce site a été réalisé dans le cadre du cours de visualisation de données de l'<a href='http://www.ensae.fr' target='_blank'>Ensae ParisTech</a>. Vous pouvez nous contacter en utilisant les liens suivants :</p>",
         texteAurevoir = "Changer ce paragraphe en mettant : remerciements d'avoir vu le site, bla bla, boutons de partage fb twitter in, et une petite liste de lecture pour aller plus loin.",
@@ -164,11 +164,17 @@
                 nom :'Blue Valentine',
                 lien : 'http://www.imdb.com/title/tt1120985/?ref_=fn_al_tt_1' ,
             },{
-                nom :'Vicky Cristina Barcelona',
-                lien : 'http://www.imdb.com/title/tt0497465/?ref_=nv_sr_1' ,
+                nom:'American History X',
+                lien: '#',
             },{
                 nom :'Eyes Wide Shut',
                 lien : 'http://www.imdb.com/title/tt0120663/?ref_=nv_sr_1' ,
+            },{
+                nom :'Vicky Cristina Barcelona',
+                lien : 'http://www.imdb.com/title/tt0497465/?ref_=nv_sr_1' ,
+            },{
+                nom: 'Harold and Maude',
+                lien : '#',
             }
         ],
         contacts = [ {
