@@ -578,6 +578,42 @@ footer ul {
     filter : none ;
 }
 
+#quizz6 .commentaire,#quizz6 .infographie {
+    display:table-cell;
+    width: 50% ;
+    padding-top : 170px ;
+    margin : 10px auto ;
+    filter: blur(15px) grayscale(80%) opacity(40%);
+    -webkit-filter: blur(15px) grayscale(80%) opacity(40%);
+    -webkit-transition : -webkit-filter 1s ;
+    -moz-transition : filter 1s ;
+    -o-transition : -webkit-filter 1s ;
+}
+
+#quizz6 .infographie p {
+    text-align: center ;
+    padding : 10px 40px 20px 60px ;
+}
+#quizz6 .commentaire p {
+    text-align: center ;
+    padding : 10px 60px 20px 40px ;
+}
+
+#quizz6 .infographie {
+    background: url('Images/cohab.png') no-repeat top center ;
+}
+
+#quizz6 .commentaire {
+    background: url('Images/noncohab.png') no-repeat top center ;
+}
+
+#comLat {
+    filter: blur(15px) grayscale(80%) opacity(40%);
+    -webkit-filter: blur(15px) grayscale(80%) opacity(40%);
+    -webkit-transition : -webkit-filter 1s ;
+    -moz-transition : filter 1s ;
+    -o-transition : -webkit-filter 1s ;
+}
 /* Script infographie cathos */
 
 #chiffreInfoCathos {
