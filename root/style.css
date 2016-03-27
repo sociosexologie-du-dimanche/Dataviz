@@ -210,6 +210,7 @@ footer ul {
     height: 400px;
     margin: 0 auto ;
 }
+
 #titreGateries {
     height : 50px ;
     position : relative ;
@@ -219,7 +220,7 @@ footer ul {
     -o-transition : all .5s ease ;
 }
 
-#videoPipe {
+#videoPipe, #videoBarney {
     display : block;
     margin : auto ;
     visibility: visible;
@@ -231,6 +232,20 @@ footer ul {
 }
 
 #titreGaterieSpan:hover { cursor: pointer }
+#spanBarney:hover {
+    cursor : pointer ;
+    font-weight : 600 ;
+}
+
+#pBarney {
+    height : 100px ;
+    position : relative ;
+    transition: height 0.5s ease-in ;
+    -webkit-transition : all 0.5s ease-in ;
+    -moz-transition : all .5s ease ;
+    -o-transition : all .5s ease ;
+}
+
 
 #treemap {
     width:600px;
@@ -280,7 +295,7 @@ footer ul {
     text-align : left ;
 }
 
-#toolFilms p a, #toolIfop p a, #toolContact p a {
+#toolFilms p a, #toolIfop p a, #toolContact p a, .tooltip a {
     color : rgb(180,180,180) ;
 }
 
@@ -305,10 +320,14 @@ footer ul {
     font-family: 'Gill Sans' ;
     opacity : 0 ;
     position : absolute ;
-    top : -50% ;
+    top : -20px ;
     left : 70% ;
-    font-size : 1.2em ;
+    background-color: rgba(30,30,30,0.9) ;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6) ;
+    color : rgb(255,255,255) ;
+    padding : 10px 7px ;
 }
+
 
 
 /* Classes de mise en forme */

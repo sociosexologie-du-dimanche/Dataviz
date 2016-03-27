@@ -18,16 +18,22 @@
     var videoPipe = document.createElement('iframe'),
         titreGaterie = document.getElementById('titreGateries'),
         titreSatis = document.getElementById('titreSatis'),
+        videoBarney = document.createElement('iframe'),
+        pBarney = document.getElementById('pBarney'),
+        spanBarney = document.getElementById('spanBarney'),
         compteur = 0,
+        compteurBarney = 0,
         compteurMouseOver = 0,
         compteurMouseOver2 = 0,
         toolTip = document.createElement('div'),
         toolTip2 = document.createElement('div'),
-        affiche = function(){
-            videoPipe.style.opacity = '1' ;
+        toolTipInsep = document.createElement('div'),
+        questionInsep = document.getElementById('spanInsep'),
+        affiche = function(video){
+            video.style.opacity = '1' ;
         },
-        retire = function(){
-            titreGaterie.removeChild(videoPipe);
+        retire = function(bloc,video){
+            bloc.removeChild(video);
         };
     videoPipe.setAttribute('id','videoPipe') ;
     videoPipe.width = '420' ;
@@ -35,24 +41,51 @@
     videoPipe.src = 'https://www.youtube.com/embed/ZyZBkGETvE8';
     videoPipe.allowFullscreen = false ;
     
+    videoBarney.setAttribute('id','videoBarney') ;
+    videoBarney.width = '420' ;
+    videoBarney.height = '315' ;
+    videoBarney.src = 'https://www.youtube.com/embed/NpnG044XzIo';
+    videoBarney.allowFullscreen = false ;
+    
     toolTip.setAttribute('class','tooltip') ;
     toolTip2.setAttribute('class','tooltip') ;
+    toolTipInsep.setAttribute('class','tooltip') ;
     toolTip.innerHTML = "Un bonus se cache </br> derrière le titre..." ;
     toolTip2.innerHTML = "Oui, ce titre est plutôt déprimant..." ;
+    toolTipInsep.innerHTML =  "Vous savez, <a href='https://fr.wikipedia.org/wiki/Inséparable' target='_blank'>ces petits perroquets</a> qui passent souvent toute leur vie avec le même partenaire." ;
 
     titreGaterie.appendChild(toolTip) ;
     titreSatis.appendChild(toolTip2) ;
+    spanInsep.parentElement.appendChild(toolTipInsep) ;
+    
 
     titreGaterie.addEventListener('click',function(){
         compteur++ ;
         if (compteur%2===1) {
             titreGaterie.appendChild(videoPipe);
-            titreGateries.style.height = '600px';
-            setTimeout(affiche,200) ;
+            titreGaterie.style.height = '600px';
+            setTimeout(function(){
+                affiche(videoPipe) ;
+            },200) ;
         } else {
             titreGaterie.style.height = '50px';
             videoPipe.style.opacity = '0' ;
-            setTimeout(retire,1000) ;
+            setTimeout(function(){
+                       retire(titreGaterie,videoPipe) ;
+            },1000) ;
+        };
+    });
+    
+    spanBarney.addEventListener('click',function(){
+        compteurBarney++ ;
+        if (compteurBarney%2===1) {
+            pBarney.appendChild(videoBarney);
+            pBarney.style.height = '600px';
+            setTimeout(function(){ affiche(videoBarney) },200) ;
+        } else {
+            pBarney.style.height = '100px';
+            videoBarney.style.opacity = '0' ;
+            setTimeout(function(){ retire(pBarney,videoBarney) },1000) ;
         };
     });
     // Création d'un tooltip !
@@ -69,6 +102,14 @@
     }) ;
     titreSatis.firstElementChild.firstElementChild.addEventListener('mouseout',function(){
         toolTip2.style.opacity = '0' ;
+    }) ;
+    questionInsep.addEventListener('mouseover',function(){
+        toolTipInsep.style.opacity = '1' ;
+    }) ;
+    questionInsep.addEventListener('mouseout',function(){
+        setTimeout(function(){
+            toolTipInsep.style.opacity = '0' ;
+        },3000);
     }) ;
 })() ;
 
