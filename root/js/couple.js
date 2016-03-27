@@ -1,5 +1,5 @@
 $(function() {
-  $('#container').highcharts({
+  $('#couple').highcharts({
     chart: {
       type: 'bar'
     },
@@ -8,7 +8,7 @@ $(function() {
       text: 'Stacked bar chart'
     },
     xAxis: {
-      categories: ['En couple cohabitant', 'En couple non cohabitant', 'Célibataire ayant déjà été en couple', 'Célibataire n\'ayant jamais été en couple']
+      categories: ['En couple cohabitant', 'En couple non cohabitant', 'CÃ©libataire ayant dÃ©jÃ  Ã©tÃ© en couple', 'CÃ©libataire n\'ayant jamais Ã©tÃ© en couple']
     },
     yAxis: {
       min: 0,
