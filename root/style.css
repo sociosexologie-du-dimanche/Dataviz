@@ -169,18 +169,21 @@ footer ul {
     opacity: 0.5;
 }
 
-#religion,#gaterie,#politique,#satisfaction,#vieux {
+h1 {
     font-family: 'poetsen', 'Gill Sans', Arial, sans-serif;
-	font-size: 3em;
+    display: inline-block;
+	font-size: 2.5em;
 	text-align: center;
-    position:absolute;
+    position: absolute;
+    margin : 0 ;
+    padding : 0 ;
     top:0px;
-    left:20%;
-    width:60%;
+    left:15%;
+    width:70%;
     color: #004C59;
 }
 
-#religion:hover, #adultere:hover, #nombre:hover,#gaterie:hover, #vieux:hover, #anus:hover{
+h1:hover {
     opacity:0.8;
 	transition: all .1s ease ;
     -webkit-transition : all .1s ease ;
@@ -188,6 +191,19 @@ footer ul {
     -o-transition : all .1s ease ;
 }
 
+h2 {
+	font-family: 'raleway','Gill Sans', serif;
+	font-size: 1.8em;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 50px;
+	color: #0E5348;
+	position: relative;
+    transition : all 2s ease ;
+    -webkit-transition : all 2s ease ;
+    -moz-transition : all 2s ease ;
+    -o-transition : all 2s ease ;
+}
 
 #bonusNathan {
     width : 200px ;
@@ -461,19 +477,7 @@ footer ul {
     display: block;
     min-height: 100px;
 }
-.titre_subsection {
-	font-family: 'raleway','Gill Sans', serif;
-	font-size: 1.8em;
-	text-align: center;
-	margin-top: 0px;
-	margin-bottom: 50px;
-	color: #0E5348;
-	position: relative;
-    transition : all 2s ease ;
-    -webkit-transition : all 2s ease ;
-    -moz-transition : all 2s ease ;
-    -o-transition : all 2s ease ;
-}
+
 
 .pPleinePage, .commentaire p {
     padding-left: 60px;
