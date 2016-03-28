@@ -1,13 +1,10 @@
 # Dataviz
 
 ## Index.html
-- ajouter arrière-plan American History X et Mala Vida
-- changer titres_images en H1
-- voir googleanalytics
-- modifier source images boutons
-- modifier titre page dans les boutons (reddit twitter)
-- relecture complète
-- publication sur le gh-pages sociosexologie-du-dimanche.github.io/fr
+- traduction en anglais (dont relier les pages)
+- élargir la conclusion
+- corriger coquilles
+
 
 ## Version mobile
 - mettre à jour les textes + infographies sans les animations
