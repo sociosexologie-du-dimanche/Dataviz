@@ -2,7 +2,6 @@
 
 ## Index.html
 - merger les branches une fois travail sur structure fini
-- ajouter arrière-plan American History X et Mala Vida
 - relecture complète
 - publication sur le gh-pages sociosexologie-du-dimanche.github.io/fr (dont googleanalytics)
 
