@@ -1,9 +1,7 @@
 # Dataviz
 
 ## Index.html
-- merger les branches une fois travail sur structure fini
-- relecture complète
-- publication sur le gh-pages sociosexologie-du-dimanche.github.io/fr (dont googleanalytics)
+
 
 ## Version mobile
 - mettre à jour les textes + infographies sans les animations
