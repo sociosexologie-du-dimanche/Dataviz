@@ -2,6 +2,7 @@
 
 ## Index.html
 - ajouter arrière-plan American History X et Mala Vida
+- changer titres_images en H1
 - voir googleanalytics
 - modifier source images boutons
 - modifier titre page dans les boutons (reddit twitter)
