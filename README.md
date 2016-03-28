@@ -1,6 +1,9 @@
 # Dataviz
 
 ## Index.html
+- traduction en anglais (dont relier les pages)
+- élargir la conclusion
+- corriger coquilles
 
 
 ## Version mobile
