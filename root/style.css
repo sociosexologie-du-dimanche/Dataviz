@@ -53,10 +53,8 @@ nav {
 	font-family: 'droid-bold', Arial, sans-serif;
     color: #0E5348;
 	width:180px;
-	left: 0px;
 	text-align:left;
 	background:#FFD6DD;
-	font-size:large;
 }
 
 nav ul {
@@ -88,16 +86,28 @@ nav ul li {
     padding : 10px 10px ;
 }
 
+
+#buttons {
+    width : 180px ;
+    margin : 40px 0px 30px 30px ;
+}
+
+#buttons img {
+width: 27px;
+padding: 1px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
 /* Footer */
 
 footer {
     padding-top: 10px;
+    margin-top : 40% ;
     margin-right: 2px;
-    margin-left: 2px;
+    margin-left: 30px;
     display: block;
-    position : fixed;
     width:180px;
-    bottom : 2px;
     font-size : 0.8em;
     font-family: 'droid-bold';
 }
@@ -275,7 +285,7 @@ footer ul {
 #toolAurevoir {
     width : 400px ;
     left : 25% ;
-    top : 30% ;
+    top : 5% ;
 }
 
 #toolFilms, #toolContact {
