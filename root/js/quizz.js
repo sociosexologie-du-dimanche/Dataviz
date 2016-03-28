@@ -13,6 +13,8 @@
         reponse5F="<p>Tant pis pour Barney ! Car oui, parmi les individus <span class='emph'>peu ou pas satisfaits</span> de leur vie sexuelle, les moins insatisfaits sont les individus déclarant n'avoir eu qu'<span class='emph'>un seul partenaire</span>. Parmi ces amants uniques, <span class='chiffre'>1 sur 4</span> est peu satisfait voire pas satisfait du tout, contre <span class='chiffre'>1 sur 3</span> pour les petits lapins ayant eu entre quatre et cinq partenaires différents !</p><p>On constate de fait qu'à partir de deux partenaires, <span class='emph'>les taux d'insatisfaction sont globalement les mêmes</span>, qu'il y ait eu deux partenaires ou dix-huit ! Comment l'expliquer ? Valeur particulière de la première conquête et complicité extrême de l'unique ? Niveau d'exigence qui augmente avec la diversité ? La réponse est entre vos mains ! <span class='hidden'>oui vos mains, pas vos jambes</span></p>",
         reponse6F="<p>...c'est le cas de <em>seulement</em> <span class='chiffre'>14%</span> des couples non-cohabitants</p><p>...tandis qu'on en trouve <span class='chiffre'>1 sur 2</span> parmi les couples non cohabitants</p>",
         reponse6V=reponse6F,
+        reponse7F="<p>Quel pessimisme ! La proportion de répondants ayant une activité sexuelle modérée mais régulière (environ une fois par semaine) est <span class='emph'>la même quel que soit l'âge</span> : <span class='chiffre'>45%</span> (cliquez sur la légende du graphique). Il reste vrai que les moins de 25 ans sont en tête avec <span class='chiffre'>15%</span> d'entre eux qui s'aiment près d'un jour sur deux. Chez les plus de 65 ans ayant un tel rythme, on passe à... <span class='chiffre'>2%</span>.</p><p>Pas de panique cependant, entre 50 et 65 ans, on compte encore <span class='chiffre'>1 répondant sur 4</span> avec un rythme d'<span class='emph'>au moins deux fois par semaine</span>. Mieux : en cumulant les effectifs, on compte <span class='emph'>plus de la moitié des plus de 65 ans qui ne répondent pas jamais</span>... Bonne nouvelle, donc, on continue à se faire plaisir quand on vieillit, mais avec une touche de modération !</p>",
+        reponse7V="<p>C'est beau ! Effectivement, la proportion de répondants ayant une activité sexuelle modérée mais régulière (environ une fois par semaine) est <span class='emph'>la même quel que soit l'âge</span> : <span class='chiffre'>45%</span> (cliquez sur la légende du graphique). En revanche, les moins de 25 ans restent en tête avec <span class='chiffre'>15%</span> d'entre eux qui s'aiment près d'un jour sur deux. Chez les plus de 65 ans ayant un tel rythme, on passe à... <span class='chiffre'>2%</span>.</p><p>Pas de panique cependant, entre 50 et 65 ans, on compte encore <span class='chiffre'>1 répondant sur 4</span> avec un rythme d'<span class='emph'>au moins deux fois par semaine</span>. Mieux : en cumulant les effectifs, on compte <span class='emph'>plus de la moitié des plus de 65 ans qui ne répondent pas jamais</span>... Bonne nouvelle, donc, on continue à se faire plaisir quand on vieillit, mais avec une touche de modération !</p>",
     textes = {
         vrai : [
             reponse1V ,
@@ -21,6 +23,7 @@
             reponse4V ,
             reponse5V ,
             reponse6V ,
+            reponse7V ,
         ],
         faux : [
             reponse1F ,
@@ -29,16 +32,19 @@
             reponse4F ,
             reponse5F ,
             reponse6F ,
+            reponse7F ,
     ]},
         scroller = function(){};
     
     
     document.querySelector("#quizz1 .commentaire").innerHTML = reponse1V ;
     document.querySelector("#quizz2 .commentaire").innerHTML = reponse2V ;
-     document.querySelector("#quizz3 .commentaire").innerHTML = reponse3V ;
-     document.querySelector("#quizz4 .commentaire").innerHTML = reponse4V ;
+    document.querySelector("#quizz3 .commentaire").innerHTML = reponse3V ;
+    document.querySelector("#quizz4 .commentaire").innerHTML = reponse4V ;
     document.querySelector("#quizz5 .commentaire").innerHTML = reponse5V ;
     document.querySelector('#quizz6 .commentaire').innerHTML = reponse6V ;
+    document.querySelector('#quizz7 .commentaire').innerHTML = reponse7V ;
+
 
 //-------------------------------------------------------------
 // Début du script        
@@ -101,6 +107,9 @@
                     case 6 :
                         comLat.style.filter = 'none' ;
                         comLat.style.WebkitFilter = 'none' ;
+                        window.scrollBy(0,300) ;
+                        break ;
+                    case 7 :
                         window.scrollBy(0,300) ;
                         break ;
                 }

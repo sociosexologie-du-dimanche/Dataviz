@@ -1,12 +1,18 @@
 # Dataviz
 
-## Choses à faire 
->*(n'hésitez pas à modifier ce fichier au fur et à mesure que vous faites des trucs)*
+## Index.html
+- ajouter arrière-plan American History X et Mala Vida
+- changer titres_images en H1
+- voir googleanalytics
+- modifier source images boutons
+- modifier titre page dans les boutons (reddit twitter)
+- relecture complète
+- publication sur le gh-pages sociosexologie-du-dimanche.github.io/fr
 
-- convertir les infographies infogr.am en highcharts ou datawrapper (Romain)
-- écrire les paragraphes qui accompagnent les infographies
-- trouver un divertissement de temps en temps (liens vers des articles, petites vidéos, etc.)
-- ajouter les scripts google analytics (Romain)
-- trouver un hébergeur pour le site (gratuit ? payant et je pimpe ?)
-- diffusion du site
+## Version mobile
+- mettre à jour les textes + infographies sans les animations
+- reprendre conclusion en plus court en bas de page
+- mettre boutons partage pour smartphone en bas de page
+- tester si ça marche bien sur smartphone
 
+## Traduction de la page ../fr et de la page ../fr-mobile

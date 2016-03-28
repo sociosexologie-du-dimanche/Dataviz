@@ -150,10 +150,10 @@
         toolContact = document.getElementById('toolContact'),
         toolAurevoir = document.getElementById('toolAurevoir'),
         fenetreBlur = document.getElementById('fenetreBlur'),
-        texte = "<p>Toutes les images en arrière plan </br>sont des captures d'écran </br>des (bons) films suivants, données par ordre d'apparition :</p>",
+        texte = "<p>Toutes les images en arrière plan </br>sont des captures d'écran </br>des (bons) films suivants, donnés par ordre d'apparition :</p>",
         texteIfop = "<p>Les données utilisées pour réaliser ce site ont été récupérées auprès de l'<a href='http://www.ifop.com/?option=com_homepage' target='_blank'>Ifop</a>. Elles ont été recueillies lors d'une enquête menée à la demande du journal <a href='http://www.marianne.net/Cette-semaine-dans-Marianne-Les-Francais-la-politique-et-le-sexe_a238936.html' target='_blank'>Marianne</a>, dans le but d'étudier les relations entre sexualité et positionnement politique. Nous remercions l'Ifop d'avoir gracieusement mis à notre disposition les résultats de cette enquête.</p><p> Les graphiques interactifs ont été réalisés avec <a href='http://www.highcharts.com' target='_blank'>Highcharts</a>.</p>",
         texteContact = "<p>Ce site a été réalisé dans le cadre du cours de visualisation de données de l'<a href='http://www.ensae.fr' target='_blank'>Ensae ParisTech</a>. Vous pouvez nous contacter en utilisant les liens suivants :</p>",
-        texteAurevoir = "Changer ce paragraphe en mettant : remerciements d'avoir vu le site, bla bla, boutons de partage fb twitter in, et une petite liste de lecture pour aller plus loin.",
+        texteAurevoir = "<p>Nous remercions nos plus curieux lecteurs qui sont parvenus en bas de page (et ont eu l'idée de cliquer sur la petite croix) de leur attention. Nous remercions (encore) également l'Ifop pour la mise à disposition de ces précieuses données agrégées. Malgré tout notre sérieux travail, les résultats présentés ici ne permettent en aucun cas de tirer des liens de causalité... Non, ce n'est pas parce que vous n'avez eu qu'une relation sexuelle que vous êtes le plus satisfait dans votre cercle d'amis. Nous espérons cependant vous avoir surpris, distrait et pourquoi pas instruit !</p><p>Vous pourrez désormais clouer le bec à votre copine Odile qui essaye de vous en mettre plein la vue avec son nombre de partenaires sexuels qui dépasse la trentaine : de toute façon, c'est pas le nombre qui compte !</p><p>Il vous sera également possible de justifier vos appartenances politiques pas toujours bien vues par l'ouverture sexuelle de leurs adhérents. Ah non ! Ca, ce serait tirer de mauvaises conclusions des chiffres...</p><p>Et si vous voulez être adorable, partagez cette page avec vos amis, vos parents, vos grands-parents, vos collègues, avec Aurélie Phillipeti ou Emma Watson... ca nous donnera une bonne note !</p>",
         films = [ {
                 nom : 'La mala vida',
                 lien : 'http://www.imdb.com/title/tt0188874/'
@@ -164,11 +164,17 @@
                 nom :'Blue Valentine',
                 lien : 'http://www.imdb.com/title/tt1120985/?ref_=fn_al_tt_1' ,
             },{
-                nom :'Vicky Cristina Barcelona',
-                lien : 'http://www.imdb.com/title/tt0497465/?ref_=nv_sr_1' ,
+                nom:'American History X',
+                lien: '#',
             },{
                 nom :'Eyes Wide Shut',
                 lien : 'http://www.imdb.com/title/tt0120663/?ref_=nv_sr_1' ,
+            },{
+                nom :'Vicky Cristina Barcelona',
+                lien : 'http://www.imdb.com/title/tt0497465/?ref_=nv_sr_1' ,
+            },{
+                nom: 'Harold and Maude',
+                lien : '#',
             }
         ],
         contacts = [ {
