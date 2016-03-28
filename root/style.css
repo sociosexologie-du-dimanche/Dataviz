@@ -49,12 +49,27 @@ p {
   	z-index:5;
 }
 
+
+#liensVersions {
+    width:180px;
+    font-family: 'droid', Arial, serif ;
+    margin : 10px auto ;
+}
+#Uk {
+    position : absolute ;
+    right : 10px ;
+    background : url('Images/ukflag.jpg') no-repeat top left ;
+    width : 40px ;
+    height : 30px ;
+}
+#Uk:hover {
+    right : 8px ;
+}
 nav {
 	font-family: 'droid-bold', Arial, sans-serif;
     color: #0E5348;
 	width:180px;
 	text-align:left;
-	background:#FFD6DD;
 }
 
 nav ul {
@@ -209,6 +224,8 @@ h2 {
     width : 200px ;
     margin : 40px auto 20px auto ;
 }
+
+
 
 /* Identités pour les graphiques et autres animations */
 #listePam {
