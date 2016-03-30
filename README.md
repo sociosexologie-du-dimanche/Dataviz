@@ -7,6 +7,7 @@
 
 
 ## Version mobile
-- minify js et css
 - traduire sur ..github.io/en-mobile
+- minify js et css
+
 
